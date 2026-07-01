@@ -12,7 +12,7 @@
   --paper:#F9F7F0;--paper2:#FFFDF5;--navy:#1B3A5C;--blue:#2563A8;
   --ink:#1A1A2E;--muted:#5A5A72;--yellow:#FFD93D;--coral:#E8604C;
   --green:#3DB88A;--sky:#4D96FF;--orange:#FF9F43;--lilac:#A29BFE;
-  --grid:rgba(0,0,120,.05);--hand:'Caveat',cursive;--body:'Inter',sans-serif;
+  --grid:rgba(0,0,120,.09);--hand:'Caveat',cursive;--body:'Inter',sans-serif;
   --shadow:0 6px 32px rgba(27,58,92,.13);--r:14px;
 }
 html{scroll-behavior:smooth;}
@@ -263,6 +263,9 @@ footer .f-legal{line-height:1.9;text-align:center;}
   section,.hero,.hook{padding:56px 24px;}
   nav{padding:12px 20px;}
   .hero{max-width:100%;padding:48px 24px;}
+  .hero-illus img{width:100%;height:auto;min-height:unset;object-fit:contain;}
+  .hero-inner{grid-template-columns:1fr 1fr !important;align-items:start;}
+  .hero-illus{order:2;}
   .fw-grid,.team-grid,.infos-grid,.lv-grid{grid-template-columns:1fr;}
   .d-panel.active{grid-template-columns:1fr;}
   .pace-grid{grid-template-columns:1fr 1fr;}
@@ -273,6 +276,7 @@ footer .f-legal{line-height:1.9;text-align:center;}
 }
 @media(max-width:600px){
   .hero-ctas,.final-btns{flex-direction:column;align-items:center;}
+  .hero-illus img{min-height:180px;max-height:240px;}
   .pace-grid,.day-tabs,.beta-cols,.postit-board{grid-template-columns:1fr;flex-direction:column;}
 }
 </style>
@@ -289,7 +293,7 @@ footer .f-legal{line-height:1.9;text-align:center;}
 <section class="hero bg-grid" id="home">
   <div class="rv hero-inner">
     <div class="hero-text">
-      <div class="hero-badge">🚀 Programme pilote · 6 à 8 places · Paris · 17-18 sept.</div>
+      <div class="hero-badge">🚀 Le programme · Paris · 17-18 sept.</div>
       <h1 class="hero-title"><span style="white-space:nowrap;">Le professionnel</span><br><em>augmenté</em></h1>
       <p class="hero-sub">
         De l'IA qui vous assiste à l'IA qui vous amplifie.<br>
@@ -297,7 +301,7 @@ footer .f-legal{line-height:1.9;text-align:center;}
       </p>
       <div class="hero-pills">
         <div class="pill">📍 Présentiel</div>
-        <div class="pill">👥 6 à 8 participants</div>
+        <div class="pill">👥 Limité à 8 participants</div>
         <div class="pill">⏱ 14h de formation</div>
       </div>
       <div class="hero-ctas">
@@ -313,38 +317,105 @@ footer .f-legal{line-height:1.9;text-align:center;}
 
 <!-- HOOK -->
 <section class="hook bg-grid2 rv" id="hook">
-  <div class="hook-bg">20%</div>
+  <div class="hook-bg">75%</div>
   <div class="hook-inner">
-    <p class="hook-lead" style="margin-bottom:16px;">La plupart des professionnels n'utilisent que<br><span style="color:#fff;font-family:var(--hand);font-size:1.2em;">20 %</span> des capacités des&nbsp;IA.</p>
-    <p style="font-family:var(--hand);font-size:1rem;color:rgba(255,255,255,.6);margin-bottom:28px;font-style:italic;">ChatGPT, Claude, Gemini, Copilot, Mistral et d'autres…</p>
-    <p class="hook-body">Ils s'en servent pour aller plus vite. Pas pour penser autrement. Le résultat : une exécution accélérée - mais une posture stratégique qui stagne. Ce programme ne vous donne pas de prompts miracles. Il reprogramme votre façon de raisonner avec l'IA - pour que vous soyez celui qui pilote, pas celui qui subit.</p>
+    <p class="hook-lead" style="margin-bottom:16px;"><span style="color:#fff;font-family:var(--hand);font-size:1.2em;">75 % des professionnels disent que l'IA</span><br><em style="color:var(--yellow);font-style:normal;">augmente leur charge de travail.</em></p>
+    <p style="font-family:var(--hand);font-size:.85rem;color:rgba(255,255,255,.4);margin-bottom:28px;">Microsoft Work Trend Index, 2024</p>
+    <p class="hook-body">L'IA ne fait pas de miracles. Elle amplifie ce que vous lui apportez, le meilleur comme le pire. Ce programme ne vous donne pas de prompts miracles. Il vous apprend à penser <em>avec</em> l'IA : pour gagner du temps, booster votre créativité, monter en compétence, soigner votre employabilité et reprendre le recul stratégique que le quotidien efface. Un partenaire cognitif, pas une charge de plus.</p>
   </div>
 </section>
 
 <!-- INTRO PROGRAMME -->
 <section style="background:linear-gradient(135deg,var(--sky) 0%,var(--blue) 100%);padding:64px 60px;color:#fff;">
   <div style="max-width:860px;margin:0 auto;" class="rv">
-    <span style="font-family:var(--hand);font-size:1rem;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:16px;">17-18 septembre · Paris</span>
-    <h2 style="font-family:var(--hand);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:#fff;margin-bottom:20px;line-height:1.25;">Deux jours pour reprendre la main sur votre rapport à l'IA</h2>
-    <p style="font-size:1.05rem;color:rgba(255,255,255,.8);line-height:1.8;margin-bottom:36px;">Pas un webinaire. Pas un MOOC. Un espace de travail en présentiel, en petit groupe, sur vos vraies situations - pour que vous repartiez avec une méthode, pas une liste de prompts.</p>
+    <span style="font-family:var(--hand);font-size:1rem;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:20px;">17-18 septembre · Paris</span>
+    <h2 style="font-family:var(--hand);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;color:#fff;margin-bottom:20px;line-height:1.1;">Votre formation commence<br>avant que vous arriviez</h2>
+    <p style="font-size:1rem;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:40px;max-width:520px;">Deux jours. Huit participants. Vos cas réels. Pour ne plus jamais travailler comme avant.</p>
+
+    <!-- MÉMO PERSONNALISÉ -->
+    <div style="background:#fff;border-radius:20px;padding:32px 36px;margin-bottom:36px;box-shadow:0 12px 48px rgba(0,0,0,.22);">
+      <!-- En-tête carte -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:6px;">
+        <div style="font-family:var(--hand);font-size:.75rem;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.14em;">Formation sur mesure garantie</div>
+        <div style="background:var(--green);border-radius:100px;padding:4px 14px;font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.04em;">INÉDIT</div>
+      </div>
+      <p style="font-family:var(--hand);font-size:1.35rem;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:20px;">Votre situation. Vos exercices. Vos livrables.</p>
+
+      <!-- Corps structuré en deux niveaux de lecture -->
+      <p style="font-size:.93rem;color:var(--ink);line-height:1.75;margin-bottom:14px;">Un questionnaire boosté à l'IA cartographie vos tâches, vos irritants et vos vrais leviers : là où vous perdez du temps, là où votre créativité est bridée, là où votre expertise est sous-exploitée. L'objectif : identifier précisément comment l'IA peut devenir votre partenaire cognitif au quotidien.</p>
+      <p style="font-size:.93rem;color:var(--muted);line-height:1.75;margin-bottom:24px;">Résultat : un mémo personnalisé envoyé avant J1. Il identifie les exercices qui s'intégreront dans votre parcours et garantit des livrables finaux collés à vos vrais besoins. 20 % de théorie pour comprendre ce que vous manipulez et le faire plus intelligemment. 80 % de mise en pratique sur vos situations réelles et vos cas métier.</p>
+
+      <!-- Frise ①②③ -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid rgba(27,58,92,.1);border-radius:12px;overflow:hidden;">
+        <div style="padding:16px 18px;border-right:1px solid rgba(27,58,92,.1);">
+          <div style="font-family:var(--hand);font-size:1.5rem;font-weight:900;color:var(--blue);line-height:1;">①</div>
+          <div style="font-size:.8rem;font-weight:700;color:var(--ink);margin-top:6px;line-height:1.5;">Vous complétez l'IAudit™ cadreIActif</div>
+          <div style="font-size:.72rem;color:var(--muted);margin-top:4px;">Exclusif · Boosté à l'IA · Avant J1</div>
+        </div>
+        <div style="padding:16px 18px;border-right:1px solid rgba(27,58,92,.1);background:rgba(37,99,168,.18);">
+          <div style="font-family:var(--hand);font-size:1.5rem;font-weight:900;color:var(--blue);line-height:1;">②</div>
+          <div style="font-size:.8rem;font-weight:700;color:var(--ink);margin-top:6px;line-height:1.5;">Vous recevez votre diagnostic</div>
+          <div style="font-size:.72rem;color:var(--muted);margin-top:4px;">Vos leviers, vos priorités IA</div>
+        </div>
+        <div style="padding:16px 18px;background:var(--yellow);">
+          <div style="font-family:var(--hand);font-size:1.5rem;font-weight:900;color:var(--navy);line-height:1;">③</div>
+          <div style="font-size:.8rem;font-weight:700;color:var(--navy);margin-top:6px;line-height:1.5;">J1 démarre fort, dans le vif du sujet</div>
+          <div style="font-size:.72rem;color:var(--navy);opacity:.7;margin-top:4px;">Opérationnel dès la 1ère heure</div>
+        </div>
+      </div>
+    </div>
+
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
       <div style="background:rgba(255,255,255,.08);border-radius:14px;padding:20px 22px;border:1px solid rgba(255,255,255,.12);">
-        <div style="font-size:1.5rem;margin-bottom:8px;">🚂</div>
+        <div style="margin-bottom:12px;">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Flèche dynamique avec élan -->
+            <path d="M6 22 L32 22" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M24 14 L33 22 L24 30" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 15 L14 15" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 29 L14 29" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 22 L7 22" stroke="rgba(255,255,255,.2)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
         <div style="font-family:var(--hand);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:6px;">Prendre le train en marche</div>
-        <p style="font-size:.9rem;color:rgba(255,255,255,.7);margin:0;line-height:1.6;">Vous ne partirez pas de zéro - vous partirez de là où vous en êtes.</p>
+        <p style="font-size:.9rem;color:rgba(255,255,255,.7);margin:0;line-height:1.6;">Vous ne partirez pas de zéro. Vous partirez de là où vous en êtes.</p>
       </div>
       <div style="background:rgba(255,255,255,.08);border-radius:14px;padding:20px 22px;border:1px solid rgba(255,255,255,.12);">
-        <div style="font-size:1.5rem;margin-bottom:8px;">🧭</div>
+        <div style="margin-bottom:12px;">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ancre / méthode solide -->
+            <circle cx="22" cy="12" r="5" stroke="#fff" stroke-width="2.8"/>
+            <path d="M22 17 L22 36" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M12 25 C12 36 32 36 32 25" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M14 17 L30 17" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
         <div style="font-family:var(--hand);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:6px;">Se former, ne pas subir</div>
         <p style="font-size:.9rem;color:rgba(255,255,255,.7);margin:0;line-height:1.6;">L'IA évolue vite. Mieux vaut une méthode robuste que courir après les outils.</p>
       </div>
       <div style="background:rgba(255,255,255,.08);border-radius:14px;padding:20px 22px;border:1px solid rgba(255,255,255,.12);">
-        <div style="font-size:1.5rem;margin-bottom:8px;">⏱️</div>
+        <div style="margin-bottom:12px;">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sablier + éclair -->
+            <path d="M12 6 L32 6 L32 8 L22 20 L22 24 L32 36 L32 38 L12 38 L12 36 L22 24 L22 20 L12 8 Z" stroke="#fff" stroke-width="2.8" stroke-linejoin="round"/>
+            <path d="M16 10 L28 10" stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 34 L28 34" stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M24 15 L19 22 L23 22 L18 29" stroke="var(--yellow)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <div style="font-family:var(--hand);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:6px;">Gagner du temps réel</div>
-        <p style="font-size:.9rem;color:rgba(255,255,255,.7);margin:0;line-height:1.6;">Pas des astuces isolées - un gain structurel sur votre façon de travailler.</p>
+        <p style="font-size:.9rem;color:rgba(255,255,255,.7);margin:0;line-height:1.6;">Pas des astuces isolées. Un impact durable sur votre façon de travailler.</p>
       </div>
       <div style="background:rgba(255,255,255,.08);border-radius:14px;padding:20px 22px;border:1px solid rgba(255,255,255,.12);">
-        <div style="font-size:1.5rem;margin-bottom:8px;">🎯</div>
+        <div style="margin-bottom:12px;">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Silhouette + flèche montante -->
+            <circle cx="18" cy="12" r="5" stroke="#fff" stroke-width="2.8"/>
+            <path d="M8 38 C8 29 28 29 28 38" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M34 8 L34 26" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M28 14 L34 8 L40 14" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <div style="font-family:var(--hand);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:6px;">Soigner son employabilité</div>
         <p style="font-size:.9rem;color:rgba(255,255,255,.7);margin:0;line-height:1.6;">L'IA redessine les compétences attendues. Anticiper, c'est se protéger.</p>
       </div>
@@ -363,84 +434,82 @@ footer .f-legal{line-height:1.9;text-align:center;}
     <p class="s-sub" style="margin:0 auto;">N'allégez pas votre agenda pour venir. Apportez vos dossiers en cours. Chaque bloc travaille sur des situations réelles que vous apportez - et produit quelque chose d'utilisable dès le lendemain.</p>
   </div>
   <div class="day-tabs rv">
-    <button class="d-tab active" onclick="showDay(1,this)">📘 Jour 1 - Comprendre, cadrer, construire sa méthode</button>
-    <button class="d-tab" onclick="showDay(2,this)">📗 Jour 2 - Veille, contenu, visibilité, responsabilité</button>
+    <button class="d-tab active" onclick="showDay(1,this)">📘 Jour 1 — Comprendre, dialoguer, produire</button>
+    <button class="d-tab" onclick="showDay(2,this)">📗 Jour 2 — Exister, analyser, orchestrer</button>
   </div>
   <div id="day-1" class="d-panel active rv">
     <div class="mod">
       <div class="mod-header">
         <div class="mod-picto" style="background:rgba(255,159,67,.15);">🧭</div>
-        <div class="mod-meta">
-          <div class="mod-num">Bloc 1</div></div>
+        <div class="mod-meta"><div class="mod-num">Bloc 1 · Matin</div></div>
       </div>
-      <h4>L'IA telle qu'elle est vraiment - comprendre pour choisir</h4>
-      <p class="mod-desc">Pas de magie, pas de mystère. Vous comprenez comment fonctionne un LLM pour cesser de tâtonner et adopter la bonne posture - quelle que soit la plateforme imposée par votre organisation.</p>
-      </div>
+      <h4>L'IA telle qu'elle est vraiment — comprendre pour choisir</h4>
+      <p class="mod-desc">Pas de magie, pas de mystère. Vous comprenez comment fonctionne un modèle de langage pour cesser de tâtonner et adopter la bonne posture - que vous utilisiez les outils imposés par votre organisation, ceux que vous avez déjà adoptés, ou ceux que vous allez découvrir ici.</p>
+    </div>
     <div class="mod">
       <div class="mod-header">
         <div class="mod-picto" style="background:rgba(77,150,255,.12);">💬</div>
-        <div class="mod-meta">
-          <div class="mod-num">Bloc 2</div></div>
+        <div class="mod-meta"><div class="mod-num">Bloc 2 · Matin</div></div>
       </div>
-      <h4>L'art du Dialogue Augmenté</h4>
-      <p class="mod-desc">Passer de la simple commande au brief de niveau direction. Obtenir un livrable précis, reproductible, calibré sur vos exigences - pas sur celles d'un prompt générique.</p>
-      </div>
+      <h4>L'art du dialogue augmenté</h4>
+      <p class="mod-desc">Passer de la simple commande au brief de niveau direction. Obtenir un livrable précis, reproductible, calibré sur vos exigences. Apprendre à formuler, puis à penser différemment. Immédiatement mis en pratique sur vos cas réels, révélés par votre IAudit™.</p>
+    </div>
     <div class="mod">
       <div class="mod-header">
-        <div class="mod-picto" style="background:rgba(232,96,76,.12);">⚡</div>
-        <div class="mod-meta">
-          <div class="mod-num">Bloc 3</div></div>
+        <div class="mod-picto" style="background:rgba(61,184,138,.12);">✍️</div>
+        <div class="mod-meta"><div class="mod-num">Bloc 3 · Après-midi</div></div>
       </div>
-      <h4>PACE™ - Du dialogue augmenté au raisonnement augmenté</h4>
-      <p class="mod-desc">Au bloc 2, vous apprenez à formuler. Ici, vous apprenez à penser différemment. PACE™ est un protocole cognitif pour challenger vos décisions, sortir de vos angles morts et structurer vos raisonnements avec l'IA - appliqué en live sur un cas réel que vous apportez.</p>
-      </div>
+      <h4>Produire plus vite sans perdre votre singularité</h4>
+      <p class="mod-desc">Emails, comptes-rendus, rapports, présentations, contenus éditoriaux et bien d'autres formats que vous n'attendiez pas : calibrer l'IA sur votre voix, pas l'inverse. Produire plus vite sans perdre ce qui vous rend reconnaissable et crédible.</p>
+    </div>
     <div class="mod">
       <div class="mod-header">
-        <div class="mod-picto" style="background:rgba(162,155,254,.15);">⚙️</div>
-        <div class="mod-meta">
-          <div class="mod-num">Bloc 4</div></div>
+        <div class="mod-picto" style="background:rgba(77,150,255,.12);">🔍</div>
+        <div class="mod-meta"><div class="mod-num">Bloc 4 · Après-midi</div></div>
       </div>
-      <h4>Vos données au service de vos décisions - sans coder</h4>
-      <p class="mod-desc">Transformer vos fichiers, tableaux et reportings en véritables aides à la décision - sans changer d'outil, sans apprendre à coder, sans dépendre du service IT.</p>
-      </div>
+      <h4>Veille informationnelle automatisée — une longueur d'avance, en permanence</h4>
+      <p class="mod-desc">Construire un système de veille qui travaille pour vous : rester à la pointe sans y passer des heures, anticiper les tendances, et faire de votre niveau d'information un vrai marqueur de différenciation. Avec les bons réflexes pour ne jamais citer ce que vous n'avez pas vérifié.</p>
+    </div>
+    <div style="text-align:center;padding-top:32px;">
+      <button onclick="switchDay(2)" style="background:none;border:1.5px solid rgba(27,58,92,.18);border-radius:100px;padding:10px 24px;cursor:pointer;font-family:var(--hand);font-size:.95rem;color:var(--muted);display:inline-flex;align-items:center;gap:8px;transition:all .2s;" onmouseover="this.style.borderColor='var(--navy)';this.style.color='var(--navy)'" onmouseout="this.style.borderColor='rgba(27,58,92,.18)';this.style.color='var(--muted)'"><strong style="color:var(--ink);">Jour 2</strong> — Exister, analyser, orchestrer <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
   </div>
   <div id="day-2" class="d-panel rv">
     <div class="mod">
       <div class="mod-header">
-        <div class="mod-picto" style="background:rgba(77,150,255,.12);">🔍</div>
-        <div class="mod-meta">
-          <div class="mod-num">Bloc 5</div></div>
-      </div>
-      <h4>Veille sectorielle automatisée - et esprit critique face à l'IA</h4>
-      <p class="mod-desc">Construire un système de veille qui travaille pour vous - et développer les bons réflexes pour ne jamais citer ce que vous n'avez pas vérifié. Fini les heures de recherche manuelle.</p>
-      </div>
-    <div class="mod">
-      <div class="mod-header">
-        <div class="mod-picto" style="background:rgba(61,184,138,.12);">✍️</div>
-        <div class="mod-meta">
-          <div class="mod-num">Bloc 6</div></div>
-      </div>
-      <h4>Produire plus vite sans perdre votre singularité</h4>
-      <p class="mod-desc">Calibrer la machine sur votre voix - pas l'inverse. Produire plus vite sans perdre ce qui vous rend reconnaissable et crédible.</p>
-      </div>
-    <div class="mod">
-      <div class="mod-header">
         <div class="mod-picto" style="background:rgba(255,217,61,.2);">📡</div>
-        <div class="mod-meta">
-          <div class="mod-num">Bloc 7</div></div>
+        <div class="mod-meta"><div class="mod-num">Bloc 5 · Matin</div></div>
       </div>
-      <h4>Être cité par l'IA - pas noyé dans la masse</h4>
-      <p class="mod-desc">Quand vos clients interrogent ChatGPT ou Perplexity, votre nom apparaît-il ? Vous comprenez la bascule du SEO au GEO et optimisez vos contenus pour exister dans les réponses des IA.</p>
+      <h4>De l'expertise à l'impact : convaincre en interne, rayonner en externe</h4>
+      <p class="mod-desc">Préparer une prise de parole, défendre un choix stratégique, construire un argumentaire pour votre direction, soigner votre profil LinkedIn ou valoriser votre expertise dans votre réseau : l'IA devient votre partenaire de posture. Pour que ce que vous savez faire soit enfin aussi visible que ce que vous faites vraiment.</p>
+    </div>
+    <div class="mod">
+      <div class="mod-header">
+        <div class="mod-picto" style="background:rgba(162,155,254,.15);">⚙️</div>
+        <div class="mod-meta"><div class="mod-num">Bloc 6 · Matin</div></div>
       </div>
+      <h4>Vos données au service de vos décisions — sans coder</h4>
+      <p class="mod-desc">Faire parler vos fichiers, tableaux et reportings pour rendre visible ce qui se cache dans la donnée. Transformer vos données brutes en signaux clairs, appropriables par tous, pour communiquer, décider et agir avec bien plus de clarté.</p>
+    </div>
+    <div class="mod">
+      <div class="mod-header">
+        <div class="mod-picto" style="background:rgba(162,155,254,.2);">🤖</div>
+        <div class="mod-meta"><div class="mod-num">Bloc 7 · Après-midi</div></div>
+      </div>
+      <h4>L'IA agentique — quand votre assistant devient un orchestrateur</h4>
+      <p class="mod-desc">Assistants personnalisés, agents autonomes, processus entiers délégués à l'IA : ce bloc ouvre une perspective que peu de professionnels ont encore entrevue - et dessine ce que votre environnement de travail pourrait devenir.</p>
+    </div>
     <div class="mod">
       <div class="mod-header">
         <div class="mod-picto" style="background:rgba(27,58,92,.1);">🗺️</div>
-        <div class="mod-meta">
-          <div class="mod-num">Bloc 8</div></div>
+        <div class="mod-meta"><div class="mod-num">Bloc 8 · Fin de journée</div></div>
       </div>
-      <h4>Ce que vous avez le droit de déléguer - et ce qui reste votre responsabilité</h4>
-      <p class="mod-desc">Données confidentielles, IA Act, biais de délégation, bonnes pratiques éthiques : ce bloc vous donne un cadre opérationnel clair. Vous repartez avec un plan d'action individuel et chiffré pour les 90 prochains jours - activable dès lundi matin.</p>
-      </div>
+      <h4>Ce que vous avez le droit de déléguer — et ce qui reste votre responsabilité</h4>
+      <p class="mod-desc">Sécurité des données, conformité légale, impact réel de l'IA : ce bloc vous donne une boussole pour déléguer sans risque et adopter une posture responsable. Vous repartez avec un plan d'action pour les 90 prochains jours, à mettre en œuvre dès le lendemain.</p>
+    </div>
+    <div style="text-align:center;padding-top:32px;">
+      <button onclick="switchDay(1)" style="background:none;border:1.5px solid rgba(27,58,92,.18);border-radius:100px;padding:10px 24px;cursor:pointer;font-family:var(--hand);font-size:.95rem;color:var(--muted);display:inline-flex;align-items:center;gap:8px;transition:all .2s;" onmouseover="this.style.borderColor='var(--navy)';this.style.color='var(--navy)'" onmouseout="this.style.borderColor='rgba(27,58,92,.18)';this.style.color='var(--muted)'"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <strong style="color:var(--ink);">Jour 1</strong> — Comprendre, dialoguer, produire</button>
+    </div>
   </div>
 </section>
 
@@ -460,7 +529,7 @@ footer .f-legal{line-height:1.9;text-align:center;}
       <div class="diag-list">
         <div class="diag-item">
           <div class="diag-head">L'effet "loterie"</div>
-          <p class="diag-body">Vos résultats avec ChatGPT ou Claude sont inégaux - parfois brillants, parfois totalement hors sujet. Vous perdez un temps précieux à tâtonner.</p>
+          <p class="diag-body">Vos résultats avec ChatGPT ou Claude sont inégaux - parfois intéressants, souvent trop standardisés pour être vraiment utiles. Vous perdez un temps précieux à tâtonner.</p>
         </div>
         <div class="diag-item">
           <div class="diag-head">Le "secrétaire amélioré"</div>
@@ -468,11 +537,11 @@ footer .f-legal{line-height:1.9;text-align:center;}
         </div>
         <div class="diag-item">
           <div class="diag-head">L'infobésité et le doute</div>
-          <p class="diag-body">Vous passez des heures à trier l'information sectorielle, tout en redoutant les hallucinations de l'IA dans vos notes de cadrage.</p>
+          <p class="diag-body">Vous passez des heures à faire de la veille ou à chercher des informations, tout en redoutant de citer quelque chose que l'IA a inventé.</p>
         </div>
         <div class="diag-item">
-          <div class="diag-head">Le risque d'invisibilité (GEO)</div>
-          <p class="diag-body">Les professionnels posent désormais leurs questions directement aux IA. Si Claude ou Perplexity ne citent pas votre expertise, vous n'existez plus.</p>
+          <div class="diag-head">Savoir faire vs. se faire savoir</div>
+          <p class="diag-body">Vous avez des choses à dire et à montrer, mais sans la bonne posture, votre savoir-faire reste invisible, en interne comme à l'extérieur.</p>
         </div>
       </div>
     </div>
@@ -480,20 +549,20 @@ footer .f-legal{line-height:1.9;text-align:center;}
       <div class="fw-card-title" style="color:var(--green);margin-bottom:20px;">Après 2 jours de formation</div>
       <div class="diag-list">
         <div class="diag-item">
-          <div class="diag-head" style="color:var(--green);">1 à 2h de haute valeur libérées par jour</div>
-          <p class="diag-body">En automatisant vos tâches chronophages - reportings, retraitement de données, tableurs.</p>
+          <div class="diag-head" style="color:var(--green);">Du temps libéré pour ce qui compte</div>
+          <p class="diag-body">Vos tâches chronophages sont déléguées à l'IA. Vous récupérez du temps pour ce qui a vraiment de la valeur.</p>
         </div>
         <div class="diag-item">
-          <div class="diag-head" style="color:var(--green);">Une méthode universelle et transférable</div>
-          <p class="diag-body">PACE™ est utilisable quel que soit l'outil imposé par votre entreprise (ChatGPT, Claude, Copilot…).</p>
+          <div class="diag-head" style="color:var(--green);">Votre voix préservée — et amplifiée</div>
+          <p class="diag-body">Vous produisez plus vite, sans sonner comme tout le monde. L'IA est calibrée sur vous, pas l'inverse.</p>
         </div>
         <div class="diag-item">
-          <div class="diag-head" style="color:var(--green);">Un sparring-partner stratégique</div>
-          <p class="diag-body">Capable de challenger vos projets et jouer l'avocat du diable avant vos réunions de gouvernance.</p>
+          <div class="diag-head" style="color:var(--green);">Une longueur d'avance et une expertise visible</div>
+          <p class="diag-body">Veille automatisée, influence interne renforcée, posture lisible à l'extérieur : vous existez là où ça compte.</p>
         </div>
         <div class="diag-item">
-          <div class="diag-head" style="color:var(--green);">5 livrables activables dès le lundi matin</div>
-          <p class="diag-body">Plan à 90 jours, assistants configurés, système de veille automatisé - opérationnels immédiatement.</p>
+          <div class="diag-head" style="color:var(--green);">Des cas d'usage traités, pas juste évoqués</div>
+          <p class="diag-body">Vous repartez avec des réponses concrètes aux situations que vous avez apportées, pas des slides à relire chez vous.</p>
         </div>
       </div>
     </div>
@@ -511,7 +580,7 @@ footer .f-legal{line-height:1.9;text-align:center;}
     <div>
       <div style="display:inline-block;background:rgba(255,255,255,.22);color:#fff;font-family:var(--hand);font-size:.95rem;font-weight:700;padding:5px 16px;border-radius:100px;margin-bottom:22px;border:1px solid rgba(255,255,255,.4);">✦ Groupe pilote · 17-18 sept. 2026 · Paris</div>
       <h2 style="font-family:var(--hand);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;">Montez à bord avant que les places soient prises !</h2>
-      <p style="font-size:1rem;color:rgba(255,255,255,.9);line-height:1.8;margin-bottom:32px;">Ce format de lancement est un laboratoire restreint à 6 à 8 participants maximum, à Paris les <strong style="color:#fff;text-decoration:underline;text-underline-offset:3px;">17-18 septembre 2026</strong> (lieu à confirmer). En échange de vos feedbacks de bêta-testeur à J+30, vous accédez à une formation d'exception - avec un diagnostic personnalisé, deux formateurs dédiés, et un suivi post-formation - à un tarif que vous ne retrouverez plus.</p>
+      <p style="font-size:1rem;color:rgba(255,255,255,.9);line-height:1.8;margin-bottom:32px;">Ce premier groupe est restreint à 8 participants maximum, à Paris les <strong style="color:#fff;text-decoration:underline;text-underline-offset:3px;">17-18 septembre 2026</strong> (lieu à confirmer). En échange de vos retours à J+15, vous accédez à une formation d'exception - avec un diagnostic personnalisé, deux formateurs dédiés, et un suivi post-formation - à un tarif de lancement que vous ne retrouverez plus.</p>
 
       <ul style="list-style:none;display:flex;flex-direction:column;gap:14px;">
         <li style="display:flex;gap:14px;align-items:flex-start;font-size:.95rem;color:#fff;line-height:1.6;background:rgba(255,255,255,.12);border-radius:12px;padding:12px 16px;">
@@ -520,7 +589,7 @@ footer .f-legal{line-height:1.9;text-align:center;}
         </li>
         <li style="display:flex;gap:14px;align-items:flex-start;font-size:.95rem;color:#fff;line-height:1.6;background:rgba(255,255,255,.12);border-radius:12px;padding:12px 16px;">
           <span style="background:#fff;color:#f97316;font-weight:700;font-size:.75rem;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.15em;">✓</span>
-          <span><strong>Suivi individuel renforcé à J+30</strong> - débrief structuré post-formation avec Isabelle.</span>
+          <span><strong>Suivi individuel renforcé à J+15</strong> - débrief structuré post-formation avec Isabelle.</span>
         </li>
         <li style="display:flex;gap:14px;align-items:flex-start;font-size:.95rem;color:#fff;line-height:1.6;background:rgba(255,255,255,.12);border-radius:12px;padding:12px 16px;">
           <span style="background:#fff;color:#f97316;font-weight:700;font-size:.75rem;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.15em;">✓</span>
@@ -531,18 +600,24 @@ footer .f-legal{line-height:1.9;text-align:center;}
 
     <!-- COLONNE DROITE : carte prix -->
     <div style="background:#fff;border-radius:24px;padding:32px 28px;box-shadow:0 20px 60px rgba(0,0,0,.18);">
-      <p style="font-family:var(--hand);font-size:.85rem;font-weight:700;color:var(--coral);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;">Tarif bêta exclusif</p>
-      <div style="font-family:var(--hand);font-size:1.6rem;color:rgba(0,0,0,.25);text-decoration:line-through;line-height:1;margin-bottom:4px;">1 490 €</div>
-      <div style="font-family:var(--hand);font-size:4rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:4px;">650 €</div>
+      <p style="font-family:var(--hand);font-size:1.25rem;font-weight:900;color:var(--coral);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;">Tarif de lancement</p>
+      <p style="font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:14px;">Prix exceptionnel réservé aux 8 premiers participants — ne sera plus disponible après ce groupe pilote.</p>
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:6px;">
+        <div style="font-family:var(--hand);font-size:1.8rem;color:rgba(0,0,0,.25);text-decoration:line-through;line-height:1;">950 €</div>
+        <div style="font-family:var(--hand);font-size:4rem;font-weight:900;color:var(--navy);line-height:1;">390 €</div>
+      </div>
       <div style="font-size:.78rem;color:var(--muted);margin-bottom:24px;">TVA exonérée · art. 261-4-4° CGI</div>
       <div style="border-top:1px solid rgba(0,0,0,.08);padding-top:18px;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;">
         <div style="display:flex;gap:8px;font-size:.82rem;color:var(--ink);line-height:1.5;"><span style="color:var(--green);flex-shrink:0;font-weight:700;">✓</span>Diagnostic personnalisé inclus</div>
-        <div style="display:flex;gap:8px;font-size:.82rem;color:var(--ink);line-height:1.5;"><span style="color:var(--green);flex-shrink:0;font-weight:700;">✓</span>14h · 8 blocs · 6 à 8 participants</div>
-        <div style="display:flex;gap:8px;font-size:.82rem;color:var(--ink);line-height:1.5;"><span style="color:var(--green);flex-shrink:0;font-weight:700;">✓</span>Suivi J+30 inclus</div>
+        <div style="display:flex;gap:8px;font-size:.82rem;color:var(--ink);line-height:1.5;"><span style="color:var(--green);flex-shrink:0;font-weight:700;">✓</span>14h · 8 blocs · limité à 8 participants</div>
+        <div style="display:flex;gap:8px;font-size:.82rem;color:var(--ink);line-height:1.5;"><span style="color:var(--green);flex-shrink:0;font-weight:700;">✓</span>Suivi J+15 inclus</div>
         <div style="display:flex;gap:8px;font-size:.82rem;color:var(--ink);line-height:1.5;"><span style="color:var(--green);flex-shrink:0;font-weight:700;">✓</span>Payable en 1 ou 2 fois</div>
       </div>
       <button onclick="openPopup()" style="width:100%;background:#f97316;color:#fff;font-family:var(--hand);font-size:1.05rem;font-weight:700;padding:15px;border-radius:100px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(249,115,22,.35);transition:transform .15s,box-shadow .15s;margin-bottom:10px;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(249,115,22,.5)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 16px rgba(249,115,22,.35)'">✏ Je réserve mon appel découverte</button>
       <p style="text-align:center;font-size:.75rem;color:var(--muted);margin:0;">Sans engagement · Réponse sous 24h</p>
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(0,0,0,.07);">
+        <p style="font-size:.75rem;color:var(--muted);line-height:1.6;margin:0;font-style:italic;">En contrepartie de ce tarif de lancement, nous vous demanderons un retour structuré à J+15 pour affiner et améliorer la V2 du programme avec vos premiers testeurs.</p>
+      </div>
     </div>
 
   </div>
@@ -638,7 +713,7 @@ footer .f-legal{line-height:1.9;text-align:center;}
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">Qu'est-ce que ça veut dire être bêta-testeur ?<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-      <div class="faq-a">C'est participer activement au premier cycle d'une formation en cours de construction. Vous bénéficiez d'un tarif exceptionnel (650€ HT au lieu de 1 490€), d'un suivi renforcé à J+30 et d'une place dans la co-construction de la V2. En échange, on vous demande un débrief structuré à J+30, un feedback honnête sur le contenu et la pédagogie, et l'attitude d'un partenaire engagé - pas d'un simple consommateur. Vous participez à quelque chose, pas à un produit fini.</div>
+      <div class="faq-a">C'est participer activement au premier cycle d'une formation en cours de construction. Vous bénéficiez d'un tarif de lancement exceptionnel (390€ HT au lieu de 950€), d'un suivi renforcé à J+15 et d'une place dans la co-construction de la V2. En échange, on vous demande un débrief structuré à J+15, un feedback honnête sur le contenu et la pédagogie, et l'attitude d'un partenaire engagé - pas d'un simple consommateur. Vous participez à quelque chose, pas à un produit fini.</div>
     </div>
 
     <div class="faq-item">
@@ -713,11 +788,6 @@ footer .f-legal{line-height:1.9;text-align:center;}
       <h2>Parlons de votre situation</h2>
       <p class="popup-sub">Choisissez un créneau dans mon agenda. Aucun engagement - juste 15 minutes pour voir si ce programme est fait pour vous.</p>
     </div>
-    <div class="popup-feats">
-      <div class="p-feat"><div class="p-icon">🎯</div><p>On cadre votre situation</p></div>
-      <div class="p-feat"><div class="p-icon">💬</div><p>Toutes vos questions</p></div>
-      <div class="p-feat"><div class="p-icon">🤝</div><p>Sans engagement</p></div>
-    </div>
     <div class="popup-body">
       <div style="width:100%;height:650px;overflow:scroll" id="my-cal-inline-15min"></div>
       <p class="popup-contact">
@@ -750,6 +820,12 @@ function showDay(n,btn){
   document.querySelectorAll('.d-panel').forEach(function(p){p.classList.remove('active');});
   btn.classList.add('active');
   document.getElementById('day-'+n).classList.add('active');
+}
+function switchDay(n){
+  var tabs=document.querySelectorAll('.d-tab');
+  var btn=tabs[n-1];
+  showDay(n,btn);
+  document.querySelector('.day-tabs').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function toggleFaq(btn){
   var item=btn.closest('.faq-item');
