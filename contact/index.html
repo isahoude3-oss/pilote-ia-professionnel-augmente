@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — cadreIActif</title>
+<meta name="description" content="Discutons de vos enjeux. Réservez un échange de 15 minutes ou écrivez-nous directement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body class="bg-grid">
+<nav id="site-nav"></nav>
+
+<div class="breadcrumb"><a href="/">Accueil</a> / Contact</div>
+<div class="page-hero rv">
+  <span class="s-eyebrow">Contact</span>
+  <h1>Discutons de vos enjeux</h1>
+  <p>Un échange de 15 minutes, sans engagement, pour clarifier votre besoin et voir si cadreIActif peut vous aider. Vous pouvez aussi nous écrire directement.</p>
+</div>
+
+<section class="bg-grid2">
+  <div class="contact-grid rv">
+    <form class="contact-form" method="POST" action="mailto:isabellehoudaille@icloud.com" enctype="text/plain">
+      <label for="c-name">Nom &amp; prénom</label>
+      <input type="text" id="c-name" name="Nom" required>
+      <label for="c-email">Email</label>
+      <input type="email" id="c-email" name="Email" required>
+      <label for="c-profile">Vous êtes</label>
+      <select id="c-profile" name="Profil">
+        <option>Un particulier / cadre</option>
+        <option>Une entreprise</option>
+        <option>Une association ou un réseau</option>
+        <option>Autre</option>
+      </select>
+      <label for="c-message">Votre message</label>
+      <textarea id="c-message" name="Message" placeholder="Décrivez brièvement votre contexte et votre besoin..."></textarea>
+      <button type="submit" class="btn-primary">✉ Envoyer par email</button>
+      <p style="text-align:center;font-size:.82rem;color:var(--muted);margin-top:14px;">Ouvre votre messagerie avec le message pré-rempli. Vous préférez un échange oral ? <a href="#" onclick="openPopup();return false;" style="color:var(--blue);">Réservez un créneau</a>.</p>
+    </form>
+    <div class="contact-card">
+      <h3>Autrement</h3>
+      <p>Email : <a href="mailto:isabellehoudaille@icloud.com">isabellehoudaille@icloud.com</a></p>
+      <p>Site : <a href="https://www.cadreiactif.fr" target="_blank">www.cadreiactif.fr</a></p>
+      <p>LinkedIn : <a href="https://www.linkedin.com/in/isabellehoudaille-ia-digital-innovation-creativite/" target="_blank">Isabelle Houdaille</a></p>
+      <p style="margin-top:20px;">SASU · 4 rue Jean Jaurès, 92270 Bois-Colombes</p>
+      <p style="font-size:.78rem;color:rgba(255,255,255,.5);">TVA exonérée - art. 261-4-4° CGI · SIREN 100 634 658</p>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<div class="overlay" id="overlay" onclick="handleOverlay(event)"><div id="site-popup"></div></div>
+<script src="/assets/main.js"></script>
+</body>
+</html>
