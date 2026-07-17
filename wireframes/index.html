@@ -112,14 +112,19 @@ nav.site{position:sticky;top:0;z-index:100;display:flex;align-items:center;justi
 
 /* Placeholder abstrait tant qu'aucune vraie vidéo/photo "équipe en situation" n'est fournie */
 .hero-media.placeholder{background:var(--navy);}
-.kb-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;}
-.kb-b1{width:46vw;height:46vw;background:var(--blue);top:-14vw;left:-10vw;animation:kbFloat1 19s ease-in-out infinite;}
-.kb-b2{width:38vw;height:38vw;background:var(--yellow);bottom:-16vw;right:-8vw;animation:kbFloat2 23s ease-in-out infinite;}
-.kb-b3{width:34vw;height:34vw;background:var(--lilac);top:32%;left:58%;animation:kbFloat3 26s ease-in-out infinite;}
-@keyframes kbFloat1{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(4vw,3vw) scale(1.08);}}
-@keyframes kbFloat2{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-3vw,-3vw) scale(1.1);}}
-@keyframes kbFloat3{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-3vw,2vw) scale(.94);}}
-@media(prefers-reduced-motion:reduce){.kb-blob{animation:none !important;}}
+
+/* Scène illustrée : équipe + IA en co-construction autour d'un écran */
+.hero-scene-svg{width:100%;height:100%;display:block;}
+.hp{animation:hpBob 5.2s ease-in-out infinite;}
+.hp-back{animation-delay:0s;}
+.hp-left{animation-delay:.3s;}
+.hp-right{animation-delay:.9s;}
+@keyframes hpBob{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.hp-screen{animation:hpScreenGlow 3.6s ease-in-out infinite;}
+@keyframes hpScreenGlow{0%,100%{opacity:.16;}50%{opacity:.36;}}
+.hp-bubble{opacity:0;animation:hpBubble 4.6s ease-in infinite;animation-delay:var(--by,0s);}
+@keyframes hpBubble{0%{opacity:0;transform:translateY(0) scale(.6);}14%{opacity:.9;transform:translateY(-8px) scale(1);}72%{opacity:.65;transform:translateY(-78px) scale(1);}100%{opacity:0;transform:translateY(-120px) scale(.82);}}
+@media(prefers-reduced-motion:reduce){.hp,.hp-screen,.hp-bubble{animation:none !important;opacity:.75 !important;}}
 @media(max-width:720px){.hero{min-height:auto;padding-top:64px;padding-bottom:48px;}}
 
 /* 6 ATELIERS (offres) — grille détaillée cible + contenu */
@@ -311,15 +316,40 @@ footer.site{background:#0F1C2E;color:rgba(255,255,255,.55);padding:52px 48px 30p
 </nav>
 
 <section class="hero hero-flat hero-video" id="home">
-  <!-- Emplacement média : remplacer ce placeholder par une vidéo courte en boucle
-       (ou une série de photos) montrant l'équipe/les participants en situation de travail.
-       Exemple prêt à l'emploi une fois le fichier fourni :
+  <!-- Scène illustrée : équipe + IA en co-construction autour d'un écran.
+       Si une vraie vidéo est fournie, remplacer ce bloc par :
        <video autoplay muted loop playsinline poster="/assets/hero-poster.jpg"><source src="/assets/hero-loop.mp4" type="video/mp4"></video> -->
   <div class="hero-media placeholder" aria-hidden="true">
-    <div class="kb-blob kb-b1"></div>
-    <div class="kb-blob kb-b2"></div>
-    <div class="kb-blob kb-b3"></div>
-    <span class="hero-media-note">📹 Emplacement vidéo « équipe en situation » — à remplacer par vos visuels</span>
+    <svg class="hero-scene-svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <g id="hp-person">
+          <circle cx="40" cy="28" r="16" fill="none" stroke="currentColor" stroke-width="4"/>
+          <path d="M12 70c0-15.464 12.536-28 28-28s28 12.536 28 28" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </defs>
+
+      <path d="M300 566 L900 566" stroke="rgba(255,255,255,.22)" stroke-width="3" stroke-linecap="round"/>
+
+      <g class="hp hp-back">
+        <g style="color:rgba(255,255,255,.5)"><use href="#hp-person" transform="translate(560,140) scale(1.15)"/></g>
+      </g>
+      <g class="hp hp-left">
+        <g style="color:var(--yellow)"><use href="#hp-person" transform="translate(325,225) scale(1.55)"/></g>
+      </g>
+      <g class="hp hp-right">
+        <g style="color:var(--sky)"><use href="#hp-person" transform="translate(755,225) scale(1.55)"/></g>
+      </g>
+
+      <rect x="540" y="420" width="180" height="120" rx="10" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.5)" stroke-width="3"/>
+      <rect x="556" y="436" width="148" height="88" rx="4" class="hp-screen" fill="var(--sky)" opacity=".18"/>
+      <path d="M500 566 L540 540 L720 540 L760 566 Z" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+
+      <g class="hp-bubble" style="--by:0s"><circle cx="600" cy="378" r="10" fill="var(--yellow)"/></g>
+      <g class="hp-bubble" style="--by:1.1s"><circle cx="652" cy="356" r="8" fill="var(--sky)"/></g>
+      <g class="hp-bubble" style="--by:2.2s"><circle cx="562" cy="346" r="7" fill="var(--lilac)"/></g>
+      <g class="hp-bubble" style="--by:3.3s"><circle cx="628" cy="326" r="6" fill="var(--green)"/></g>
+    </svg>
+    <span class="hero-media-note">🎨 Scène illustrée — équipe + IA en co-construction. Remplaçable par une vraie vidéo si vous en fournissez une.</span>
   </div>
   <div class="hero-inner rv">
     <div class="hero-badge">✦ Conseil, formation &amp; coaching IA</div>
