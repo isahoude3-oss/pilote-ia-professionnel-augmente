@@ -86,7 +86,8 @@ nav.site{position:sticky;top:0;z-index:100;display:flex;align-items:center;justi
 .pg-sub{font-size:1.05rem;color:var(--muted);line-height:1.75;max-width:640px;margin-bottom:28px;}
 .pg-sub strong{color:var(--graphite);font-weight:600;}
 .pg-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;}
-.pill{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid rgba(30,30,30,.14);padding:7px 14px;border-radius:3px;font-size:.82rem;font-weight:500;color:var(--graphite);}
+.pill{display:flex;align-items:center;gap:7px;background:#fff;border:1px solid rgba(30,30,30,.14);padding:7px 14px;border-radius:3px;font-size:.82rem;font-weight:500;color:var(--graphite);}
+.pill svg{width:15px;height:15px;flex-shrink:0;color:var(--orange-dark);}
 .pg-ctas{display:flex;gap:14px;flex-wrap:wrap;}
 
 /* Espace visuel réservé (photo à intégrer) */
@@ -110,26 +111,33 @@ nav.site{position:sticky;top:0;z-index:100;display:flex;align-items:center;justi
 .hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
 .hero-photo-wrap{position:relative;}
-.hero-photo-blob{position:absolute;inset:-6% -10% -10% -6%;background:linear-gradient(160deg,var(--orange-light),var(--or) 130%);border-radius:32% 68% 62% 38%/38% 42% 58% 62%;opacity:.9;z-index:0;}
-.hero-photo-frame{position:relative;z-index:1;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(30,30,30,.16);border:6px solid #fff;}
+.hero-photo-frame{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(30,30,30,.16);border:6px solid #fff;}
 .hero-photo-frame img{width:100%;display:block;object-fit:cover;}
-.hero-photo-tag{position:absolute;z-index:2;bottom:-14px;left:20px;background:#fff;border-radius:100px;padding:8px 16px;box-shadow:0 10px 26px rgba(30,30,30,.14);font-size:.8rem;font-weight:700;color:var(--graphite);display:flex;align-items:center;gap:8px;}
-.hero-photo-tag span{color:var(--orange-dark);font-weight:800;}
 @media(max-width:900px){.hero-split{grid-template-columns:1fr;text-align:center;}.hero-inner{text-align:center;}.hero-pills,.hero-ctas{justify-content:center;}.hero-photo-wrap{max-width:360px;margin:32px auto 0;}}
 
 /* 6 ATELIERS (offres) */
-.atelier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1180px;margin:0 auto;}
-.atelier-card{background:#fff;border-radius:var(--r);padding:26px 24px;border:1px solid rgba(30,30,30,.08);box-shadow:var(--shadow);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;position:relative;}
+/* Groupes persona (BtoC / BtoB / Associations) — remplace la grille plate des 6 ateliers */
+.persona-group{max-width:1180px;margin:0 auto 52px;}
+.persona-group:last-child{margin-bottom:0;}
+.persona-head{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px;}
+.persona-head h3{font-family:var(--hand);font-size:1.25rem;font-weight:800;color:var(--graphite);line-height:1.3;letter-spacing:-.005em;}
+
+.atelier-grid{display:grid;gap:22px;}
+.atelier-grid.cols-3{grid-template-columns:repeat(3,1fr);}
+.atelier-grid.cols-2{grid-template-columns:repeat(2,1fr);max-width:800px;}
+.atelier-grid.cols-1{display:flex;}
+.atelier-grid.cols-1 .atelier-card{max-width:390px;}
+
+.atelier-card{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid rgba(30,30,30,.08);box-shadow:var(--shadow);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;position:relative;width:100%;}
 .atelier-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(30,30,30,.12);}
-.at-num{position:absolute;top:-14px;left:22px;width:30px;height:30px;border-radius:3px;background:var(--orange-dark);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--hand);font-weight:700;font-size:1rem;}
-.atelier-card h3{font-family:var(--hand);font-size:1.2rem;font-weight:800;color:var(--graphite);margin:10px 0 12px;line-height:1.25;}
-.at-audience{display:flex;gap:7px;align-items:flex-start;font-size:.78rem;font-weight:600;color:var(--muted);background:rgba(30,30,30,.04);border-radius:4px;padding:7px 10px;margin-bottom:12px;line-height:1.5;}
-.atelier-card p.at-desc{font-size:.86rem;color:var(--muted);line-height:1.65;margin-bottom:16px;flex:1;}
+.atelier-visual{background:linear-gradient(135deg,var(--orange-wash) 0%,var(--brume) 100%);min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--orange-dark);text-align:center;padding:20px;border-bottom:1px solid rgba(30,30,30,.07);}
+.atelier-visual svg{width:28px;height:28px;opacity:.55;}
+.atelier-visual span{font-size:.72rem;color:var(--muted);max-width:230px;line-height:1.45;}
+.atelier-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1;}
+.at-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:3px;background:var(--graphite);color:#fff;font-family:var(--hand);font-weight:700;font-size:.85rem;margin-bottom:12px;flex-shrink:0;}
+.atelier-card h3{font-family:var(--hand);font-size:1.15rem;font-weight:800;color:var(--graphite);margin-bottom:10px;line-height:1.25;}
+.at-hook{font-size:.87rem;color:var(--muted);line-height:1.65;margin-bottom:16px;flex:1;}
 .atelier-card .at-link{font-size:.83rem;font-weight:700;color:var(--orange-dark);display:inline-flex;align-items:center;gap:6px;}
-.at-blue{border-top:3px solid var(--orange);}
-.at-orange{border-top:3px solid var(--graphite);}
-.at-navy{border-top:3px solid var(--graphite);}
-.at-green{border-top:3px solid var(--cendre);}
 
 /* SECTIONS */
 section{padding:76px 48px;}
@@ -280,7 +288,7 @@ footer.site{background:#FBF1EC;color:var(--cendre);padding:52px 48px 30px;font-s
 
 /* RESPONSIVE */
 @media(max-width:1000px){
-  .atelier-grid,.pillar-grid,.trust-grid,.hub-grid.cols-3,.skill-grid,.benefit-grid,.footer-grid{grid-template-columns:1fr 1fr;}
+  .atelier-grid.cols-3,.atelier-grid.cols-2,.pillar-grid,.trust-grid,.hub-grid.cols-3,.skill-grid,.benefit-grid,.footer-grid{grid-template-columns:1fr 1fr;}
   .founder-grid{grid-template-columns:1fr;text-align:center;}
   .founder-portrait{margin:0 auto;}
 }
@@ -288,7 +296,9 @@ footer.site{background:#FBF1EC;color:var(--cendre);padding:52px 48px 30px;font-s
   section,.hero,.pg-hero,.pba-step{padding-left:22px;padding-right:22px;}
   nav.site{padding:12px 18px;}
   .nav-links{display:none;}
-  .atelier-grid,.pillar-grid,.trust-grid,.hub-grid,.hub-grid.cols-3,.skill-grid,.benefit-grid,.footer-grid,.contact-grid,.postit-board{grid-template-columns:1fr;}
+  .atelier-grid.cols-3,.atelier-grid.cols-2,.pillar-grid,.trust-grid,.hub-grid,.hub-grid.cols-3,.skill-grid,.benefit-grid,.footer-grid,.contact-grid,.postit-board{grid-template-columns:1fr;}
+  .atelier-grid.cols-1{flex-direction:column;}
+  .atelier-grid.cols-1 .atelier-card{max-width:100%;}
   footer.site{padding:36px 20px 24px;}
 }
 
@@ -320,9 +330,9 @@ footer.site{background:#FBF1EC;color:var(--cendre);padding:52px 48px 30px;font-s
         décuple vos compétences et sécurise votre usage de l'intelligence artificielle.
         <strong>Pas de transformation abstraite : de la performance opérationnelle, de la créativité augmentée, du sens.</strong></p>
       <div class="hero-pills">
-        <div class="pill">🎯 Résultats concrets, pas de gadgets</div>
-        <div class="pill">🔒 Sécurité, RGPD &amp; gouvernance des données</div>
-        <div class="pill">🤝 Approche humaine et terrain</div>
+        <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.3"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg> Résultats concrets, pas de gadgets</div>
+        <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg> Sécurité, RGPD &amp; gouvernance des données</div>
+        <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="2.6"/><path d="M3 19c0-2.8 2.2-4.5 5-4.5s5 1.7 5 4.5"/><circle cx="17" cy="9" r="2"/><path d="M14.8 19c.3-1.8 1.7-3.2 3.7-3.4"/></svg> Approche humaine et terrain</div>
       </div>
       <div class="hero-ctas">
         <a class="btn-primary" href="/nouvelle-charte/contact/index.html">☎ Réserver un échange</a>
@@ -330,71 +340,118 @@ footer.site{background:#FBF1EC;color:var(--cendre);padding:52px 48px 30px;font-s
       </div>
     </div>
     <div class="hero-photo-wrap rv">
-      <div class="hero-photo-blob" aria-hidden="true"></div>
       <div class="hero-photo-frame">
         <img src="/nouvelle-charte/assets/isabelle-portrait.jpg" alt="Isabelle Houdaille, fondatrice de cadreIActif">
       </div>
-      <div class="hero-photo-tag">👋 <span>Isabelle Houdaille</span> — fondatrice</div>
     </div>
   </div>
 </section>
 
-<!-- 6 ATELIERS — cible + contenu, visibles dès l'accueil -->
+<!-- 6 ATELIERS — regroupés par persona, visibles dès l'accueil -->
 <section class="bg-grid2" id="pour-qui">
   <div class="s-head rv">
     <span class="s-eyebrow">Nos ateliers</span>
-    <h2 class="s-title">6 ateliers, <span class="hl-y">chacun pour un besoin précis</span></h2>
-    <p class="s-sub" style="margin:0 auto;">Pas de discours générique sur « la transformation IA ». Pour chaque atelier : à qui il s'adresse et en quoi il consiste concrètement.</p>
+    <h2 class="s-title">6 ateliers, <span class="hl-y">un point d'entrée pour chaque situation</span></h2>
+    <p class="s-sub" style="margin:0 auto;">Pas de discours générique sur « la transformation IA ». Trouvez votre situation, cliquez sur le bloc qui vous parle : chaque carte ouvre sa page dédiée.</p>
   </div>
-  <div class="atelier-grid rv">
-    <a class="atelier-card at-blue" href="/nouvelle-charte/pour-vous/cadre-augmente.html">
-      <div class="at-num">1</div>
+
+  <div class="persona-group rv">
+    <div class="persona-head">
       <span class="seg-chip seg-btoc">BtoC · Individuels</span>
-      <h3>Le Cadre Augmenté</h3>
-      <div class="at-audience">👤 <span><b>Pour qui :</b> individuels en évolution de carrière, cadres en repositionnement.</span></div>
-      <p class="at-desc">En quoi ça consiste : un coaching individuel où l'IA sert de copilote et de miroir pour clarifier vos choix professionnels et structurer votre pensée.</p>
-      <span class="at-link">Découvrir l'atelier →</span>
-    </a>
-    <a class="atelier-card at-blue" href="/nouvelle-charte/pour-vous/cockpit-ia.html">
-      <div class="at-num">2</div>
-      <span class="seg-chip seg-btoc">BtoC · Individuels</span>
-      <h3>Le Cockpit IA</h3>
-      <div class="at-audience">👤 <span><b>Pour qui :</b> individuels qui veulent intégrer l'IA à leur travail quotidien.</span></div>
-      <p class="at-desc">En quoi ça consiste : des routines et outils prêts à l'emploi — veille automatisée, production calibrée, agents — pour gagner du temps réel, pas des astuces isolées.</p>
-      <span class="at-link">Découvrir l'atelier →</span>
-    </a>
-    <a class="atelier-card at-orange" href="/nouvelle-charte/solutions-entreprises/communication/production-editoriale.html">
-      <div class="at-num">3</div>
-      <span class="seg-chip seg-btob">BtoB · Communication</span>
-      <h3>Production Éditoriale &amp; Contenus</h3>
-      <div class="at-audience">👤 <span><b>Pour qui :</b> équipes de communication et de contenu en entreprise.</span></div>
-      <p class="at-desc">En quoi ça consiste : structurer une production éditoriale IA-augmentée (articles, réseaux sociaux, supports internes) qui reste fidèle à votre voix de marque.</p>
-      <span class="at-link">Découvrir l'atelier →</span>
-    </a>
-    <a class="atelier-card at-orange" href="/nouvelle-charte/solutions-entreprises/communication/metier-communicant.html">
-      <div class="at-num">4</div>
-      <span class="seg-chip seg-btob">BtoB · Communication</span>
-      <h3>Efficacité du Métier de Communicant</h3>
-      <div class="at-audience">👤 <span><b>Pour qui :</b> chargés et responsables de communication.</span></div>
-      <p class="at-desc">En quoi ça consiste : outiller le quotidien du communicant — veille, reporting direction, préparation de prise de parole — pour qu'il se concentre sur la stratégie.</p>
-      <span class="at-link">Découvrir l'atelier →</span>
-    </a>
-    <a class="atelier-card at-navy" href="/nouvelle-charte/solutions-entreprises/transformation-pilotage/index.html">
-      <div class="at-num">5</div>
-      <span class="seg-chip seg-btob">BtoB · Management</span>
-      <h3>Transformation &amp; Pilotage Managérial</h3>
-      <div class="at-audience">👤 <span><b>Pour qui :</b> managers, DSI et RH.</span></div>
-      <p class="at-desc">En quoi ça consiste : cadrer et sécuriser le déploiement de l'IA à l'échelle d'une équipe — RGPD, gouvernance des usages, conduite du changement.</p>
-      <span class="at-link">Découvrir l'atelier →</span>
-    </a>
-    <a class="atelier-card at-green" href="/nouvelle-charte/solutions-entreprises/associations-reseaux/index.html">
-      <div class="at-num">6</div>
+      <h3>Vous êtes cadre ou en transition professionnelle ?</h3>
+    </div>
+    <div class="atelier-grid cols-2">
+      <a class="atelier-card" href="/nouvelle-charte/pour-vous/cadre-augmente.html">
+        <div class="atelier-visual">
+          <svg class="ps-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+          <span>Photo à intégrer — un cadre en séance de coaching, échange humain au centre.</span>
+        </div>
+        <div class="atelier-body">
+          <span class="at-num">1</span>
+          <h3>Le Cadre Augmenté</h3>
+          <p class="at-hook">Vous voulez reprendre la main sur votre trajectoire professionnelle ? L'IA devient votre copilote de réflexion — jamais votre remplaçant.</p>
+          <span class="at-link">Découvrir l'atelier →</span>
+        </div>
+      </a>
+      <a class="atelier-card" href="/nouvelle-charte/pour-vous/cockpit-ia.html">
+        <div class="atelier-visual">
+          <svg class="ps-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+          <span>Photo à intégrer — une personne au travail, l'IA en soutien discret du quotidien.</span>
+        </div>
+        <div class="atelier-body">
+          <span class="at-num">2</span>
+          <h3>Le Cockpit IA</h3>
+          <p class="at-hook">Vous voulez que l'IA s'intègre enfin à votre quotidien sans vous faire perdre votre singularité ? Des routines concrètes, pas des astuces isolées.</p>
+          <span class="at-link">Découvrir l'atelier →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="persona-group rv">
+    <div class="persona-head">
+      <span class="seg-chip seg-btob">BtoB · Entreprises</span>
+      <h3>Vous dirigez une équipe ou une organisation ?</h3>
+    </div>
+    <div class="atelier-grid cols-3">
+      <a class="atelier-card" href="/nouvelle-charte/solutions-entreprises/communication/production-editoriale.html">
+        <div class="atelier-visual">
+          <svg class="ps-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+          <span>Photo à intégrer — une équipe communication en atelier de production, collaboration visible.</span>
+        </div>
+        <div class="atelier-body">
+          <span class="at-num">3</span>
+          <h3>Production Éditoriale &amp; Contenus</h3>
+          <p class="at-hook">Votre équipe veut produire plus de contenus sans perdre sa voix de marque ? On structure une production IA-augmentée qui reste fidèle à vous.</p>
+          <span class="at-link">Découvrir l'atelier →</span>
+        </div>
+      </a>
+      <a class="atelier-card" href="/nouvelle-charte/solutions-entreprises/communication/metier-communicant.html">
+        <div class="atelier-visual">
+          <svg class="ps-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+          <span>Photo à intégrer — un(e) communicant(e) en veille, posture experte et détendue.</span>
+        </div>
+        <div class="atelier-body">
+          <span class="at-num">4</span>
+          <h3>Efficacité du Métier de Communicant</h3>
+          <p class="at-hook">Vous croulez sous la veille et le reporting ? On outille votre quotidien pour libérer du temps sur la stratégie.</p>
+          <span class="at-link">Découvrir l'atelier →</span>
+        </div>
+      </a>
+      <a class="atelier-card" href="/nouvelle-charte/solutions-entreprises/transformation-pilotage/index.html">
+        <div class="atelier-visual">
+          <svg class="ps-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+          <span>Photo à intégrer — un comité managérial en réunion de pilotage, ambiance de confiance.</span>
+        </div>
+        <div class="atelier-body">
+          <span class="at-num">5</span>
+          <h3>Transformation &amp; Pilotage Managérial</h3>
+          <p class="at-hook">Vous devez déployer l'IA à l'échelle d'une équipe sans risque ? On cadre RGPD, gouvernance et conduite du changement.</p>
+          <span class="at-link">Découvrir l'atelier →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="persona-group rv">
+    <div class="persona-head">
       <span class="seg-chip seg-assoc">Associations &amp; Réseaux</span>
-      <h3>Associations &amp; Réseaux</h3>
-      <div class="at-audience">👤 <span><b>Pour qui :</b> ESS, fondations, fédérations.</span></div>
-      <p class="at-desc">En quoi ça consiste : mesurer votre impact, piloter vos projets et valoriser votre action auprès de vos financeurs et parties prenantes, avec des moyens limités.</p>
-      <span class="at-link">Découvrir l'atelier →</span>
-    </a>
+      <h3>Vous portez un projet associatif ou un réseau ?</h3>
+    </div>
+    <div class="atelier-grid cols-1">
+      <a class="atelier-card" href="/nouvelle-charte/solutions-entreprises/associations-reseaux/index.html">
+        <div class="atelier-visual">
+          <svg class="ps-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+          <span>Photo à intégrer — une équipe associative en réunion de terrain, engagement humain.</span>
+        </div>
+        <div class="atelier-body">
+          <span class="at-num">6</span>
+          <h3>Associations &amp; Réseaux</h3>
+          <p class="at-hook">Vous devez prouver votre impact avec des moyens limités ? On pilote vos projets et on convainc vos financeurs, sans data scientist.</p>
+          <span class="at-link">Découvrir l'atelier →</span>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
