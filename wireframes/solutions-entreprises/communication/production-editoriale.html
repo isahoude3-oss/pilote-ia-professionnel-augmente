@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Production Éditoriale & Contenus | cadreIActif</title>
+<meta name="description" content="cadreIActif structure votre production éditoriale IA-augmentée sans perdre votre voix de marque.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --paper:#F9F7F0;--paper2:#FFFDF5;--navy:#1B3A5C;--blue:#2563A8;
+  --ink:#1A1A2E;--muted:#5A5A72;--yellow:#FFD93D;--coral:#E8604C;
+  --green:#3DB88A;--sky:#4D96FF;--orange:#FF9F43;--lilac:#A29BFE;
+  --grid:rgba(0,0,120,.09);--hand:'Caveat',cursive;--body:'Inter',sans-serif;
+  --shadow:0 6px 32px rgba(27,58,92,.13);--r:14px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+.bg-grid{background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;}
+.bg-grid2{background-color:var(--paper2);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+
+/* WIREFRAME UTILITY BAR — outil de navigation pour la revue de maquette, hors charte finale */
+.wf-bar{background:#0F1C2E;color:rgba(255,255,255,.82);font-size:.72rem;padding:8px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;position:relative;z-index:200;font-family:var(--body);}
+.wf-bar b{color:#fff;font-weight:700;letter-spacing:.02em;}
+.wf-bar .wf-tag{background:var(--coral);color:#fff;font-weight:700;border-radius:100px;padding:2px 10px;font-size:.68rem;letter-spacing:.04em;}
+.wf-bar select{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:4px 8px;font-size:.72rem;font-family:var(--body);margin-left:auto;}
+.wf-bar select option{color:#000;}
+
+/* NAV */
+nav.site{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 48px;background:rgba(249,247,240,.96);backdrop-filter:blur(12px);border-bottom:2px solid rgba(27,58,92,.1);box-shadow:0 2px 16px rgba(27,58,92,.07);gap:24px;}
+.nav-logo{font-family:var(--hand);font-size:1.5rem;font-weight:700;color:var(--navy);white-space:nowrap;text-decoration:none;}
+.nav-logo span{color:var(--blue);}
+.nav-links{display:flex;align-items:center;gap:4px;flex:1;justify-content:center;}
+.nav-item{position:relative;}
+.nav-link{display:flex;align-items:center;gap:4px;padding:10px 14px;font-size:.86rem;font-weight:600;color:var(--navy);text-decoration:none;border-radius:8px;transition:background .15s;cursor:pointer;background:none;border:none;font-family:var(--body);}
+.nav-link:hover,.nav-item.active .nav-link{background:rgba(27,58,92,.08);}
+.nav-item.active .nav-link{color:var(--blue);}
+.nav-drop{position:absolute;top:100%;left:0;margin-top:8px;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(27,58,92,.18);border:1.5px solid rgba(27,58,92,.08);padding:10px;min-width:280px;opacity:0;pointer-events:none;transform:translateY(6px);transition:all .18s;}
+.nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-drop a{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--ink);}
+.nav-drop a:hover{background:rgba(37,99,168,.07);}
+.nav-drop a b{font-family:var(--hand);font-size:1rem;color:var(--navy);font-weight:700;}
+.nav-drop a small{font-size:.76rem;color:var(--muted);line-height:1.4;}
+.btn-nav{background:var(--navy);color:#fff;padding:10px 20px;border-radius:100px;font-size:.83rem;font-weight:600;cursor:pointer;border:none;font-family:var(--body);transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.btn-nav:hover{background:var(--blue);transform:translateY(-1px);}
+
+/* BREADCRUMB */
+.crumb{padding:16px 48px 0;font-size:.8rem;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap;max-width:1200px;margin:0 auto;}
+.crumb a{color:var(--blue);text-decoration:none;}
+.crumb a:hover{text-decoration:underline;}
+.crumb .seg{background:rgba(27,58,92,.07);color:var(--navy);font-weight:700;padding:2px 10px;border-radius:100px;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;}
+
+/* BUTTONS */
+.btn-primary{background:var(--navy);color:#fff;padding:15px 30px;border-radius:100px;font-size:.95rem;font-weight:600;cursor:pointer;border:none;font-family:var(--body);transition:all .2s;display:inline-flex;align-items:center;gap:8px;text-decoration:none;}
+.btn-primary:hover{background:var(--blue);transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,168,.3);}
+.btn-ghost{background:transparent;color:var(--navy);padding:15px 28px;border-radius:100px;font-size:.95rem;font-weight:500;cursor:pointer;border:2px solid rgba(27,58,92,.22);font-family:var(--body);transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+.btn-ghost:hover{border-color:var(--navy);background:rgba(27,58,92,.05);}
+.btn-yellow{background:var(--yellow);color:var(--navy);padding:15px 30px;border-radius:100px;font-family:var(--hand);font-size:1.1rem;font-weight:700;cursor:pointer;border:none;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+.btn-yellow:hover{background:#ffe040;transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,217,61,.4);}
+
+/* HERO générique (pages intérieures) */
+.pg-hero{padding:36px 48px 56px;max-width:1000px;margin:0 auto;}
+.pg-eyebrow{font-family:var(--hand);font-size:1.2rem;color:var(--blue);display:block;margin-bottom:10px;font-weight:700;}
+.pg-title{font-family:var(--hand);font-size:clamp(2.2rem,4.2vw,3.4rem);font-weight:700;line-height:1.15;color:var(--navy);margin-bottom:16px;}
+.pg-title em{font-style:normal;color:var(--blue);position:relative;}
+.pg-title em::after{content:'';position:absolute;left:0;bottom:-2px;right:0;height:5px;border-radius:3px;background:var(--yellow);opacity:.55;transform:rotate(-.5deg);}
+.pg-sub{font-size:1.05rem;color:var(--muted);line-height:1.75;max-width:640px;margin-bottom:28px;}
+.pg-sub strong{color:var(--navy);font-weight:600;}
+.pg-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;}
+.pill{display:flex;align-items:center;gap:6px;background:#fff;border:1.5px solid rgba(27,58,92,.14);padding:7px 14px;border-radius:100px;font-size:.82rem;font-weight:500;color:var(--navy);}
+.pg-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+
+/* Home HERO */
+.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:64px 48px 56px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 20%,rgba(77,150,255,.06) 0%,transparent 55%),radial-gradient(ellipse at 85% 80%,rgba(255,217,61,.07) 0%,transparent 50%);pointer-events:none;}
+.hero-inner{max-width:820px;margin:0 auto;position:relative;z-index:1;text-align:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--navy);padding:5px 16px;border-radius:100px;font-family:var(--hand);font-size:1rem;font-weight:700;margin-bottom:22px;transform:rotate(-1.2deg);box-shadow:2px 3px 0 rgba(0,0,0,.1);}
+.hero-title{font-family:var(--hand);font-size:clamp(2.6rem,5.4vw,4.6rem);font-weight:700;line-height:1.12;color:var(--navy);margin-bottom:20px;}
+.hero-title em{font-style:normal;color:var(--blue);position:relative;}
+.hero-title em::after{content:'';position:absolute;left:0;bottom:-3px;right:0;height:6px;border-radius:3px;background:var(--yellow);opacity:.55;transform:rotate(-.5deg);}
+.hero-sub{font-size:1.15rem;color:var(--muted);line-height:1.75;max-width:620px;margin:0 auto 32px;}
+.hero-sub strong{color:var(--navy);font-weight:600;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;justify-content:center;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
+
+/* HERO — aplat de couleur + fond photo/vidéo "terrain" (personnes au travail) en Ken Burns */
+.hero-flat{background:radial-gradient(ellipse at 30% 20%,#20416a 0%,var(--navy) 45%,#132a44 100%);}
+.hero-flat::before{content:none;}
+.hero-flat .hero-badge{box-shadow:2px 3px 0 rgba(0,0,0,.22);}
+.hero-flat .hero-title{color:#fff;text-shadow:0 3px 16px rgba(0,0,0,.4);}
+.hero-flat .hero-title em{color:var(--yellow);}
+.hero-flat .hero-title em::after{background:var(--yellow);opacity:.32;}
+.hero-flat .hero-sub{color:rgba(255,255,255,.85);text-shadow:0 2px 10px rgba(0,0,0,.35);}
+.hero-flat .hero-sub strong{color:#fff;}
+.hero-flat .pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff;backdrop-filter:blur(2px);}
+.hero-flat .btn-primary{background:var(--yellow);color:var(--navy);}
+.hero-flat .btn-primary:hover{background:#ffe040;box-shadow:0 6px 24px rgba(255,217,61,.35);}
+.hero-flat .btn-ghost{color:#fff;border-color:rgba(255,255,255,.38);}
+.hero-flat .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff;}
+
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;}
+.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:kenburns 22s ease-in-out infinite alternate;}
+.hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(175deg,rgba(19,38,61,.22) 0%,rgba(19,38,61,.42) 45%,rgba(15,28,46,.68) 100%);}
+.hero-media-note{position:absolute;left:12px;bottom:12px;z-index:1;background:rgba(0,0,0,.45);color:rgba(255,255,255,.75);font-size:.68rem;padding:4px 10px;border-radius:100px;letter-spacing:.02em;}
+@keyframes kenburns{0%{transform:scale(1) translate(0,0);}100%{transform:scale(1.14) translate(-1.5%,-2%);}}
+@media(prefers-reduced-motion:reduce){.hero-media video,.hero-media img{animation:none !important;}}
+
+/* Placeholder abstrait tant qu'aucune vraie vidéo/photo "équipe en situation" n'est fournie */
+.hero-media.placeholder{background:var(--navy);}
+.kb-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;}
+.kb-b1{width:46vw;height:46vw;background:var(--blue);top:-14vw;left:-10vw;animation:kbFloat1 19s ease-in-out infinite;}
+.kb-b2{width:38vw;height:38vw;background:var(--yellow);bottom:-16vw;right:-8vw;animation:kbFloat2 23s ease-in-out infinite;}
+.kb-b3{width:34vw;height:34vw;background:var(--lilac);top:32%;left:58%;animation:kbFloat3 26s ease-in-out infinite;}
+@keyframes kbFloat1{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(4vw,3vw) scale(1.08);}}
+@keyframes kbFloat2{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-3vw,-3vw) scale(1.1);}}
+@keyframes kbFloat3{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-3vw,2vw) scale(.94);}}
+@media(prefers-reduced-motion:reduce){.kb-blob{animation:none !important;}}
+@media(max-width:720px){.hero{min-height:auto;padding-top:64px;padding-bottom:48px;}}
+
+/* 6 ATELIERS (offres) — grille détaillée cible + contenu */
+.atelier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1180px;margin:0 auto;}
+.atelier-card{background:#fff;border-radius:18px;padding:26px 24px;border:1.5px solid rgba(27,58,92,.08);box-shadow:0 6px 24px rgba(27,58,92,.07);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;position:relative;}
+.atelier-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(27,58,92,.15);}
+.at-num{position:absolute;top:-14px;left:22px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--hand);font-weight:700;font-size:1rem;box-shadow:0 4px 10px rgba(0,0,0,.15);}
+.atelier-card h3{font-family:var(--hand);font-size:1.3rem;color:var(--navy);margin:10px 0 12px;line-height:1.25;}
+.at-audience{display:flex;gap:7px;align-items:flex-start;font-size:.78rem;font-weight:700;color:var(--blue);background:rgba(37,99,168,.08);border-radius:8px;padding:7px 10px;margin-bottom:12px;line-height:1.5;}
+.at-audience b{font-weight:700;}
+.atelier-card p.at-desc{font-size:.86rem;color:var(--muted);line-height:1.65;margin-bottom:16px;flex:1;}
+.atelier-card .at-link{font-size:.83rem;font-weight:700;color:var(--navy);display:inline-flex;align-items:center;gap:6px;}
+.at-blue{border-top:3px solid var(--blue);}
+.at-orange{border-top:3px solid var(--orange);}
+.at-navy{border-top:3px solid var(--navy);}
+.at-green{border-top:3px solid var(--green);}
+
+/* SECTIONS */
+section{padding:76px 48px;}
+.s-eyebrow{font-family:var(--hand);font-size:1.15rem;color:var(--blue);display:block;margin-bottom:10px;font-weight:700;}
+.s-title{font-family:var(--hand);font-size:clamp(2.1rem,3.5vw,2.9rem);font-weight:700;color:var(--navy);margin-bottom:16px;line-height:1.2;}
+.s-sub{font-size:1rem;color:var(--muted);line-height:1.75;max-width:640px;}
+.s-head{text-align:center;max-width:740px;margin:0 auto 52px;}
+.hl-y{position:relative;display:inline;}
+.hl-y::after{content:'';position:absolute;left:0;bottom:-1px;right:0;height:7px;background:var(--yellow);opacity:.45;z-index:-1;border-radius:4px;transform:rotate(-.4deg);}
+.wrap{max-width:1180px;margin:0 auto;}
+.wrap-md{max-width:920px;margin:0 auto;}
+
+/* 4 PILIERS (positionnement) */
+.pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1180px;margin:0 auto;}
+.pillar{border-radius:18px;padding:28px 22px;background:#fff;border:1.5px solid rgba(27,58,92,.08);transition:transform .2s;}
+.pillar:hover{transform:translateY(-4px);}
+.pillar-num{font-family:var(--hand);font-size:2.2rem;font-weight:700;line-height:1;margin-bottom:10px;}
+.pillar h4{font-family:var(--hand);font-size:1.2rem;color:var(--navy);margin-bottom:8px;line-height:1.25;}
+.pillar p{font-size:.85rem;color:var(--muted);line-height:1.6;}
+.pil1{border-top:4px solid var(--blue);}.pil1 .pillar-num{color:var(--blue);}
+.pil2{border-top:4px solid var(--lilac);}.pil2 .pillar-num{color:var(--lilac);}
+.pil3{border-top:4px solid var(--green);}.pil3 .pillar-num{color:var(--green);}
+.pil4{border-top:4px solid var(--orange);}.pil4 .pillar-num{color:var(--orange);}
+
+/* TRUST BAND (sécurité / DSI / RGPD) */
+.trust{padding:56px 48px;text-align:center;position:relative;overflow:hidden;background:var(--navy);}
+.trust-inner{position:relative;z-index:1;max-width:960px;margin:0 auto;}
+.trust h2{font-family:var(--hand);font-size:clamp(1.8rem,3.2vw,2.6rem);color:#fff;margin-bottom:14px;line-height:1.25;}
+.trust p.lead{font-size:1rem;color:rgba(255,255,255,.72);line-height:1.75;max-width:680px;margin:0 auto 40px;}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.trust-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px 18px;text-align:left;}
+.trust-item .ti-ico{font-size:1.4rem;margin-bottom:10px;}
+.trust-item h5{font-family:var(--hand);font-size:1.05rem;color:#fff;margin-bottom:6px;}
+.trust-item p{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.6;}
+
+/* FONDATRICE */
+.founder{padding:80px 48px;}
+.founder-grid{display:grid;grid-template-columns:220px 1fr;gap:44px;align-items:center;max-width:980px;margin:0 auto;}
+.founder-portrait{width:220px;height:220px;border-radius:24px;overflow:hidden;border:3px solid rgba(27,58,92,.1);box-shadow:0 16px 48px rgba(27,58,92,.16);}
+.founder-portrait img{width:100%;height:100%;object-fit:cover;}
+.founder-tag{font-family:var(--hand);font-size:1rem;font-weight:700;color:var(--blue);margin-bottom:10px;display:block;}
+.founder h2{font-family:var(--hand);font-size:clamp(1.9rem,3.2vw,2.5rem);color:var(--navy);margin-bottom:14px;line-height:1.2;}
+.founder p.bio{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:18px;}
+.founder-quote{background:var(--navy);color:#fff;padding:18px 22px;border-radius:10px;font-family:var(--hand);font-size:1.3rem;font-style:italic;line-height:1.5;display:inline-block;}
+
+/* PROBLEME / REPONSE / BENEFICE / ACTION (gabarit page offre) */
+.pba{padding:0;}
+.pba-step{padding:64px 48px;border-bottom:1px solid rgba(27,58,92,.08);}
+.pba-step:last-of-type{border-bottom:none;}
+.pba-num{display:inline-flex;align-items:center;gap:10px;font-family:var(--hand);font-size:1rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;}
+.pba-num .n{width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--body);font-size:.85rem;}
+.pba-step h2{font-family:var(--hand);font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--navy);margin-bottom:18px;line-height:1.2;max-width:760px;}
+.step-friction{background:var(--paper2);}
+.step-reponse{background:var(--paper);}
+.step-benefice{background:linear-gradient(135deg,rgba(61,184,138,.06) 0%,rgba(255,255,255,0) 60%);}
+.step-action{background:linear-gradient(135deg,var(--navy) 0%,#2563A8 100%);border-bottom:none;}
+.step-action h2{color:#fff;}
+
+.diag-list{display:flex;flex-direction:column;gap:0;max-width:760px;}
+.diag-item{padding:16px 0;border-bottom:1px solid rgba(27,58,92,.08);display:flex;gap:14px;align-items:flex-start;}
+.diag-item:last-child{border-bottom:none;}
+.diag-item .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);flex-shrink:0;margin-top:8px;}
+.diag-item p{font-size:.95rem;color:var(--ink);line-height:1.7;}
+.diag-item strong{color:var(--navy);}
+
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;}
+.skill-card{background:#fff;border:1.5px solid rgba(27,58,92,.09);border-radius:14px;padding:22px;}
+.skill-card .sk-ico{width:40px;height:40px;border-radius:10px;background:rgba(37,99,168,.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:14px;}
+.skill-card h4{font-family:var(--hand);font-size:1.1rem;color:var(--navy);margin-bottom:8px;}
+.skill-card p{font-size:.85rem;color:var(--muted);line-height:1.6;}
+
+.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;}
+.benefit-card{background:#fff;border-radius:14px;padding:22px;box-shadow:0 6px 24px rgba(27,58,92,.07);}
+.benefit-stat{font-family:var(--hand);font-size:2.4rem;font-weight:700;color:var(--green);line-height:1;margin-bottom:8px;}
+.benefit-card p{font-size:.85rem;color:var(--ink);line-height:1.6;}
+.benefit-card small{display:block;color:var(--muted);font-size:.75rem;margin-top:6px;}
+
+.action-box{max-width:720px;color:#fff;}
+.action-box p{font-size:1rem;color:rgba(255,255,255,.8);line-height:1.75;margin-bottom:28px;max-width:600px;}
+.action-links{display:flex;gap:14px;flex-wrap:wrap;}
+
+/* HUB (listing pages : /pour-vous/, /solutions-entreprises/, /formats/, /blog/) */
+.hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:960px;margin:0 auto;}
+.hub-grid.cols-3{grid-template-columns:repeat(3,1fr);max-width:1180px;}
+.hub-card{background:#fff;border-radius:18px;padding:30px;border:1.5px solid rgba(27,58,92,.08);box-shadow:0 6px 24px rgba(27,58,92,.07);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;}
+.hub-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(27,58,92,.14);}
+.hub-card .hc-tag{font-family:var(--hand);font-size:.85rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}
+.hub-card h3{font-family:var(--hand);font-size:1.4rem;color:var(--navy);margin-bottom:10px;line-height:1.25;}
+.hub-card p{font-size:.88rem;color:var(--muted);line-height:1.65;margin-bottom:16px;flex:1;}
+.hub-card .hc-link{font-size:.83rem;font-weight:700;color:var(--navy);display:inline-flex;align-items:center;gap:6px;}
+
+/* POST-IT board (infos pratiques) */
+.postit-board{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:640px;}
+.postit{border-radius:3px;padding:16px 14px;box-shadow:3px 5px 18px rgba(0,0,0,.13);position:relative;}
+.postit h4{font-family:var(--hand);font-size:1rem;font-weight:700;margin-bottom:6px;}
+.postit p{font-family:var(--hand);font-size:1rem;line-height:1.5;}
+.py{background:var(--yellow);color:#333;transform:rotate(-1.4deg);}
+.pcoral{background:var(--coral);color:#fff;transform:rotate(.9deg);}
+.pg{background:var(--green);color:#fff;transform:rotate(-.7deg);}
+.pb{background:var(--sky);color:#fff;transform:rotate(1.3deg);}
+
+/* BLOG cards */
+.blog-card{background:#fff;border-radius:16px;overflow:hidden;border:1.5px solid rgba(27,58,92,.08);box-shadow:0 6px 24px rgba(27,58,92,.07);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .2s;}
+.blog-card:hover{transform:translateY(-5px);}
+.blog-thumb{height:150px;background:linear-gradient(135deg,var(--sky),var(--lilac));display:flex;align-items:center;justify-content:center;font-family:var(--hand);font-size:2rem;color:rgba(255,255,255,.85);}
+.blog-body{padding:22px;flex:1;display:flex;flex-direction:column;}
+.blog-cat{font-size:.72rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}
+.blog-body h3{font-family:var(--hand);font-size:1.2rem;color:var(--navy);margin-bottom:10px;line-height:1.3;}
+.blog-body p{font-size:.85rem;color:var(--muted);line-height:1.6;flex:1;margin-bottom:14px;}
+.blog-meta{font-size:.75rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1020px;margin:0 auto;}
+.contact-card{background:#fff;border-radius:20px;padding:36px;border:1.5px solid rgba(27,58,92,.08);box-shadow:var(--shadow);}
+.contact-card h3{font-family:var(--hand);font-size:1.4rem;color:var(--navy);margin-bottom:14px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:6px;}
+.field input,.field select,.field textarea{width:100%;padding:11px 14px;border-radius:10px;border:1.5px solid rgba(27,58,92,.15);font-family:var(--body);font-size:.9rem;background:var(--paper2);}
+.cal-placeholder{background:var(--paper2);border:2px dashed rgba(27,58,92,.2);border-radius:16px;min-height:420px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--muted);text-align:center;padding:20px;}
+.cal-placeholder b{font-family:var(--hand);font-size:1.3rem;color:var(--navy);}
+
+/* FINAL CTA */
+.final{padding:96px 48px;text-align:center;background:linear-gradient(135deg,var(--navy) 0%,#2563A8 100%);position:relative;overflow:hidden;}
+.final h2{font-family:var(--hand);font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:14px;position:relative;line-height:1.25;}
+.final .f-sub{font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:40px;max-width:520px;margin-left:auto;margin-right:auto;position:relative;}
+.final-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;}
+
+/* FOOTER */
+footer.site{background:#0F1C2E;color:rgba(255,255,255,.55);padding:52px 48px 30px;font-size:.85rem;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:32px;max-width:1200px;margin:0 auto 36px;}
+.footer-grid .f-logo{font-family:var(--hand);font-size:1.4rem;color:#fff;font-weight:700;margin-bottom:12px;display:block;}
+.footer-grid p.tag{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6;max-width:220px;}
+.footer-col h5{font-family:var(--hand);font-size:1rem;color:#fff;margin-bottom:14px;}
+.footer-col a{display:block;color:rgba(255,255,255,.55);text-decoration:none;font-size:.82rem;padding:4px 0;}
+.footer-col a:hover{color:#fff;}
+.footer-legal{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.1);padding-top:24px;font-size:.75rem;color:rgba(255,255,255,.35);line-height:1.8;text-align:center;}
+
+/* REVEAL */
+.rv{opacity:1;}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .atelier-grid,.pillar-grid,.trust-grid,.hub-grid.cols-3,.skill-grid,.benefit-grid,.footer-grid{grid-template-columns:1fr 1fr;}
+  .founder-grid{grid-template-columns:1fr;text-align:center;}
+  .founder-portrait{margin:0 auto;}
+}
+@media(max-width:720px){
+  section,.hero,.pg-hero,.pba-step{padding-left:22px;padding-right:22px;}
+  nav.site{padding:12px 18px;}
+  .nav-links{display:none;}
+  .atelier-grid,.pillar-grid,.trust-grid,.hub-grid,.hub-grid.cols-3,.skill-grid,.benefit-grid,.footer-grid,.contact-grid,.postit-board{grid-template-columns:1fr;}
+  footer.site{padding:36px 20px 24px;}
+}
+
+
+</style>
+</head>
+<body class="bg-grid">
+
+<div class="wf-bar">
+  <span class="wf-tag">MAQUETTE UX/UI</span>
+  <b>cadreIActif</b> · Production Éditoriale & Contenus
+  <select onchange="if(this.value)location.href=this.value">
+    <option value="">Naviguer vers une autre page du sitemap ↓</option>
+    <option value="/wireframes/index.html">Accueil</option><option value="/wireframes/pour-vous/index.html">Pour vous (BtoC)</option><option value="/wireframes/pour-vous/cadre-augmente.html">→ Le Cadre Augmenté</option><option value="/wireframes/pour-vous/cockpit-ia.html">→ Le Cockpit IA</option><option value="/wireframes/solutions-entreprises/index.html">Entreprises & Organisations</option><option value="/wireframes/solutions-entreprises/communication/index.html">→ Pôle Communication</option><option value="/wireframes/solutions-entreprises/communication/production-editoriale.html">→→ Production éditoriale</option><option value="/wireframes/solutions-entreprises/communication/metier-communicant.html">→→ Métier communicant</option><option value="/wireframes/solutions-entreprises/transformation-pilotage/index.html">→ Transformation & Pilotage</option><option value="/wireframes/solutions-entreprises/associations-reseaux/index.html">→ Associations & Réseaux</option><option value="/wireframes/formats/index.html">Formats d'intervention</option><option value="/wireframes/formats/conferences-ateliers.html">→ Conférences & Ateliers</option><option value="/wireframes/formats/formations-action.html">→ Formations Action</option><option value="/wireframes/formats/conseil-strategique.html">→ Conseil & Accompagnement</option><option value="/wireframes/blog/index.html">Blog & Insights</option><option value="/wireframes/a-propos/index.html">À propos</option><option value="/wireframes/contact/index.html">Contact</option>
+  </select>
+</div>
+
+<nav class="site">
+  <a class="nav-logo" href="/wireframes/index.html">cadre<span>I</span>Actif</a>
+  <div class="nav-links"><div class="nav-item"><a class="nav-link" href="/wireframes/index.html">Accueil</a></div><div class="nav-item"><span class="nav-link">Pour vous ▾</span><div class="nav-drop"><a href="/wireframes/pour-vous/cadre-augmente.html"><b>Le Cadre Augmenté</b><small>Coaching 1to1 — clarifiez votre trajectoire pro avec l'IA comme copilote.</small></a><a href="/wireframes/pour-vous/cockpit-ia.html"><b>Le Cockpit IA</b><small>Routines & outils — l'IA intégrée à votre quotidien professionnel.</small></a></div></div><div class="nav-item active"><span class="nav-link">Entreprises & Organisations ▾</span><div class="nav-drop"><a href="/wireframes/solutions-entreprises/communication/index.html"><b>Pôle Communication</b><small>Production éditoriale & efficacité du métier de communicant.</small></a><a href="/wireframes/solutions-entreprises/transformation-pilotage/index.html"><b>Transformation & Pilotage</b><small>Managers, DSI, RH — sécurité, productivité, conduite du changement.</small></a><a href="/wireframes/solutions-entreprises/associations-reseaux/index.html"><b>Associations & Réseaux</b><small>ESS, fondations, fédérations — mesure d'impact, pilotage de projets.</small></a></div></div><div class="nav-item"><span class="nav-link">Formats ▾</span><div class="nav-drop"><a href="/wireframes/formats/conferences-ateliers.html"><b>Conférences & Ateliers</b><small>Sensibiliser et déclencher, en 1h à 1/2 journée.</small></a><a href="/wireframes/formats/formations-action.html"><b>Formations Action</b><small>Monter en compétence sur vos cas réels.</small></a><a href="/wireframes/formats/conseil-strategique.html"><b>Conseil & Accompagnement</b><small>Structurer une trajectoire IA sur mesure, dans la durée.</small></a></div></div><div class="nav-item"><a class="nav-link" href="/wireframes/blog/index.html">Blog & Insights</a></div><div class="nav-item"><a class="nav-link" href="/wireframes/a-propos/index.html">À propos</a></div></div>
+  <a class="btn-nav" href="/wireframes/contact/index.html">☎ Réserver un échange</a>
+</nav>
+
+<div class="crumb"><span class="seg">BtoB · Communication</span><a href="/wireframes/index.html">Accueil</a><span>／</span><a href="/wireframes/solutions-entreprises/index.html">Entreprises & Organisations</a><span>／</span><a href="/wireframes/solutions-entreprises/communication/index.html">Communication</a><span>／</span><span>Production Éditoriale</span></div>
+<div class="pg-hero rv">
+  <span class="pg-eyebrow">Contenus · Pôle Communication</span>
+  <h1 class="pg-title">Production Éditoriale & Contenus — <em>votre voix, en plus grand</em>.</h1>
+  <p class="pg-sub">Structurez une production de contenus IA-augmentée — articles, newsletters, réseaux sociaux, supports internes — qui reste fidèle à votre ligne éditoriale et à votre singularité de marque.</p>
+  <div class="pg-pills"><div class="pill">📝 Contenus multi-formats</div><div class="pill">🎯 Ligne éditoriale préservée</div><div class="pill">⚙️ Process reproductible</div></div>
+  <div class="pg-ctas">
+    <a class="btn-primary" href="/wireframes/contact/index.html">☎ Réserver un échange</a>
+    <a class="btn-ghost" href="#reponse">Voir la méthode ↓</a>
+  </div>
+</div>
+
+<div class="pba">
+  <section class="pba-step step-friction" id="probleme">
+    <div class="wrap-md">
+      <div class="pba-num"><span class="n">1</span>Le problème</div>
+      <h2>Le constat, sans détour.</h2>
+      <div class="diag-list"><div class="diag-item"><span class="dot"></span><p><strong>La standardisation des contenus —</strong> Les contenus produits à l'IA se ressemblent tous — votre marque perd ce qui la rendait reconnaissable.</p></div><div class="diag-item"><span class="dot"></span><p><strong>Le goulot d'étranglement éditorial —</strong> Une équipe restreinte doit alimenter de plus en plus de canaux, avec les mêmes ressources.</p></div><div class="diag-item"><span class="dot"></span><p><strong>Le brief mal calibré —</strong> Sans méthode de dialogue avec l'IA, les livrables sont à retravailler presque intégralement.</p></div><div class="diag-item"><span class="dot"></span><p><strong>La gouvernance de marque absente —</strong> Chacun utilise l'IA à sa façon, sans garde-fou éditorial commun à l'équipe.</p></div></div>
+    </div>
+  </section>
+
+  <section class="pba-step step-reponse" id="reponse">
+    <div class="wrap-md">
+      <div class="pba-num"><span class="n">2</span>La réponse</div>
+      <h2>Une charte de dialogue IA, calibrée sur votre marque.</h2>
+      <div class="skill-grid"><div class="skill-card"><div class="sk-ico">🎙️</div><h4>Calibrage de la voix de marque</h4><p>Des gabarits de brief qui encodent votre ton, votre vocabulaire et vos lignes rouges éditoriales.</p></div><div class="skill-card"><div class="sk-ico">🔁</div><h4>Process de production reproductible</h4><p>Un workflow multi-formats — du brief au contenu publié — que toute l'équipe peut suivre.</p></div><div class="skill-card"><div class="sk-ico">🔍</div><h4>Veille & sourcing fiable</h4><p>Des routines de veille avec vérification systématique des sources, avant toute publication.</p></div></div>
+    </div>
+  </section>
+
+  <section class="pba-step step-benefice" id="benefice">
+    <div class="wrap-md">
+      <div class="pba-num"><span class="n">3</span>Le bénéfice</div>
+      <h2>Plus de contenus, la même exigence de marque.</h2>
+      <div class="benefit-grid"><div class="benefit-card"><div class="benefit-stat">x2 à x3</div><p>de volume de production<small>Sur les formats couverts par le process, à qualité éditoriale constante.</small></p></div><div class="benefit-card"><div class="benefit-stat">1</div><p>charte de dialogue IA<small>Partagée par toute l'équipe de communication.</small></p></div><div class="benefit-card"><div class="benefit-stat">0</div><p>perte de singularité<small>La voix de marque reste le critère de validation de chaque contenu.</small></p></div></div>
+    </div>
+  </section>
+
+  <section class="pba-step step-action" id="action">
+    <div class="wrap-md action-box">
+      <div class="pba-num" style="color:var(--yellow);">4 · L'action</div>
+      <h2>Prêt à passer à l'étape suivante ?</h2>
+      <p>Cette compétence se déploie via une formation action dédiée à vos équipes de communication, sur vos formats et vos cas réels.</p>
+      <div class="action-links">
+        <a class="btn-yellow" href="/wireframes/formats/formations-action.html">Voir le format « Formations Action » →</a>
+        <a class="btn-ghost" style="border-color:rgba(255,255,255,.35);color:#fff;" href="/wireframes/contact/index.html">☎ Réserver un échange</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<footer class="site">
+  <div class="footer-grid">
+    <div>
+      <a class="f-logo" href="/wireframes/index.html">cadreIActif</a>
+      <p class="tag">Le partenaire de réflexion qui structure vos idées, décuple vos compétences et sécurise votre usage de l'IA. Performance réelle, pas de gadgets.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pour vous</h5>
+      <a href="/wireframes/pour-vous/index.html">Vue d'ensemble</a>
+      <a href="/wireframes/pour-vous/cadre-augmente.html">Le Cadre Augmenté</a>
+      <a href="/wireframes/pour-vous/cockpit-ia.html">Le Cockpit IA</a>
+    </div>
+    <div class="footer-col">
+      <h5>Entreprises</h5>
+      <a href="/wireframes/solutions-entreprises/communication/index.html">Pôle Communication</a>
+      <a href="/wireframes/solutions-entreprises/transformation-pilotage/index.html">Transformation &amp; Pilotage</a>
+      <a href="/wireframes/solutions-entreprises/associations-reseaux/index.html">Associations &amp; Réseaux</a>
+    </div>
+    <div class="footer-col">
+      <h5>Formats</h5>
+      <a href="/wireframes/formats/conferences-ateliers.html">Conférences &amp; Ateliers</a>
+      <a href="/wireframes/formats/formations-action.html">Formations Action</a>
+      <a href="/wireframes/formats/conseil-strategique.html">Conseil &amp; Accompagnement</a>
+    </div>
+    <div class="footer-col">
+      <h5>cadreIActif</h5>
+      <a href="/wireframes/a-propos/index.html">À propos</a>
+      <a href="/wireframes/blog/index.html">Blog &amp; Insights</a>
+      <a href="/wireframes/contact/index.html">Contact</a>
+      <a href="https://www.linkedin.com/in/isabellehoudaille-ia-digital-innovation-creativite/" target="_blank">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <p>cadreIActif · SASU · SIREN 100 634 658 · TVA exonérée — art. 261-4-4° CGI · 4 rue Jean Jaurès, 92270 Bois-Colombes</p>
+    <p>Organisme de formation enregistré sous le numéro 11923048992 auprès du préfet de région d'Île-de-France. Cet enregistrement ne vaut pas agrément de l'État.</p>
+  </div>
+</footer>
+
+</body>
+</html>
