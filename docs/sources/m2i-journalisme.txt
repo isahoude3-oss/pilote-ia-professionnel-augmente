@@ -1,0 +1,1221 @@
+========== PAGE 1 ==========
+Une marque du groupe
+Intégrer l’IA 
+dans sa pratique 
+journalistique
+Juin 2026
+
+========== PAGE 2 ==========
+2
+MERCI !
+Contact
+Votre interlocuteur
+Guillaume DUPLAA
+Directeur de pôle IA 
+06 33 60 55 38
+g.duplaa@merkutio.fr
+m2iformation.fr
+
+========== PAGE 3 ==========
+3
+Présentez-vous 
+Votre utilisation actuelle des IAG ? 
+Vos attentes : 
+Faisons connaissance
+m2iformation.fr
+
+========== PAGE 4 ==========
+Fondements et vérification
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 5 ==========
+5
+Testons nous ! 
+• 1. « De nouveaux partenaires créatifs, presque des collègues, pour rêver
+plus grand et résoudre des problèmes complexes. »
+• 2. « Des systèmes capables de créer du contenu original (texte, image, 
+son) à partir d'exemples appris. Elles ne pensent pas : elles prédisent. »
+• 3. « Des systèmes algorithmiques conçus pour produire des contenus et 
+automatiser des tâches complexes, intégrés aux flux de travail. »
+• 4. « Un ordinateur qui a observé des années comment on écrit et dessine : 
+demandez-lui un dragon rose qui mange des crêpes, il le fait en secondes. 
+»
+• 5. « Vous leur donnez une idée, elles pondent texte, image ou son plus 
+vite qu'un Béarnais ne dit adishatz. Leur logique est implacable. »
+•
+• Humain ou machine ? À vous de juger.
+m2iformation.fr
+
+========== PAGE 6 ==========
+6
+PanoramIA
+Juin 2026
+m2iformation.fr
+
+========== PAGE 7 ==========
+7
+Prise en main
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 8 ==========
+8
+Qu’est-ce qu’un prompt ?
+Un prompt, c’est l’instruction 
+donnée à une IA générative
+(comme ChatGPT ou Génial) pour 
+lui dire :
+•
+Ce que vous voulez faire (ex. 
+résumer, réécrire, comparer).
+•
+Dans quel format (ex. 3 puces, 
+tableau, 120 mots).
+•
+Avec quelles contraintes (ton 
+institutionnel, public visé, éléments à 
+inclure/éviter).
+En résumé, le prompt est votre brief à 
+l’IA. Plus il est précis, plus la sortie est 
+utile.
+Sans prompt précis → réponse 
+vague.
+Avec prompt structuré → livrable 
+exploitable immédiatement.
+Les prompts sont la clé de voûte 
+de l’usage quotidien de l’IA.
+m2iformation.fr
+
+========== PAGE 9 ==========
+9
+Astuces pour définir un prompt
+9
+Commencez vos prompts par un 
+verbe ou un terme explicite
+« Rédige », « Résume », « Compare », 
+« Analyse », « Reformule », « Crée »
+ou encore un terme concret : « un 
+communiqué », « un post LinkedIn », 
+« un slogan »
+m2iformation.fr
+
+========== PAGE 10 ==========
+10
+Astuces pour définir un prompt
+10
+Plus vous êtes précis, moins vous 
+laissez de place à la surprise
+Privilégiez des formulations détaillées plutôt que 
+vagues
+Prompt vague : « Rédige un post sur la 
+protection de l’environnement. »
+Prompt précis : « Rédige un post Twitter de 280 
+caractères sur la protection de l’environnement, 
+mettant en avant la réduction des déchets 
+plastiques, avec un ton pédagogique et un appel à 
+l’action. »
+m2iformation.fr
+
+========== PAGE 11 ==========
+11
+Atelier : dis moi ton prompt 
+m2iformation.fr
+
+========== PAGE 12 ==========
+12
+Fondamentaux de l’IA générative
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 13 ==========
+13
+Histoire de l’accélération
+m2iformation.fr
+
+========== PAGE 14 ==========
+14
+IA, Machine Learning, Deep Learning...
+m2iformation.fr
+
+========== PAGE 15 ==========
+15
+Un LLM, c’est quoi ?
+m2iformation.fr
+
+========== PAGE 16 ==========
+16
+Les tokens
+m2iformation.fr
+
+========== PAGE 17 ==========
+17
+Le mécanisme d’attention
+m2iformation.fr
+
+========== PAGE 18 ==========
+18
+En résumé
+m2iformation.fr
+
+========== PAGE 19 ==========
+19
+m2iformation.fr
+
+========== PAGE 20 ==========
+20
+Éthique et déontologie
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 21 ==========
+21
+7 conseils pour éviter les hallucinations
+m2iformation.fr
+
+========== PAGE 22 ==========
+22
+Biais et effets miroirs
+m2iformation.fr
+
+========== PAGE 23 ==========
+23
+Impact environnemental
+m2iformation.fr
+
+========== PAGE 24 ==========
+24
+Respect de la propriété intellectuelle
+m2iformation.fr
+
+========== PAGE 25 ==========
+25
+Données, sources, confidentialité
+m2iformation.fr
+
+========== PAGE 26 ==========
+26
+Ce que l'IA ne peut pas faire : les limites irréductibles
+m2iformation.fr
+
+========== PAGE 27 ==========
+27
+m2iformation.fr
+
+========== PAGE 28 ==========
+28
+m2iformation.fr
+
+========== PAGE 29 ==========
+29
+m2iformation.fr
+
+========== PAGE 30 ==========
+30
+Les principes universels
+Charte de Paris 
+(RSF)
+•
+L'éthique 
+gouverne la 
+technologie
+•
+Le jugement 
+humain reste 
+central
+•
+Aider le public à 
+discerner le vrai 
+du faux
+Syndicat National 
+des Journalistes 
+(SNJ)
+•
+Cadre juridique 
+strict
+•
+Protection des 
+droits d'auteur
+•
+Stop au 
+"moissonnage 
+illicite"
+Conseil de 
+Déontologie 
+(CDJM)
+•
+Le journaliste est 
+responsable de 
+tout contenu 
+publié
+•
+Contrôle éditorial 
+humain non 
+négociable
+Le cadre déontologique
+m2iformation.fr
+
+========== PAGE 31 ==========
+31
+Presse écrite et web
+Faible risque 
+(OK, pas de mention)
+Outils internes : correction 
+orthographique, traduction 
+interne (DeepL), transcription 
+d'interviews (Whisper, Trint), 
+synthèse de documents, 
+optimisation SEO.
+Risque modéré 
+(Supervision + Transparence)
+Aide à la rédaction (brouillons, 
+titres, résumés). 
+Usage proscrit 
+(INTERDIT)
+Publier un texte généré par IA 
+sans relecture, vérification 
+approfondie et validation 
+humaine.
+Recommandations 
+m2iformation.fr
+
+========== PAGE 32 ==========
+32
+Télévision
+Le défi n°1 de la TV est le deepfake visuel. La loi SREN s'applique directement et pénalement.
+Usage proscrit (INTERDIT)
+Créer ou diffuser de fausses images 
+d'actualité pour représenter le réel. 
+Position stricte de l'AFP, Le Monde et AP.
+Usage autorisé (très 
+encadré)
+Utiliser une image IA pour illustrer un sujet 
+sur l'IA. Règle : Marquage visuel 
+permanent et explicite, comme 
+"Reconstitution" ou "Image générée par 
+IA".
+Outils de détection
+Recherche inversée, analyse 
+d'incohérences (mains, yeux, reflets), 
+outils techniques (watermarking, standard 
+C2PA).
+m2iformation.fr
+
+========== PAGE 33 ==========
+33
+Radio 
+Pour la radio, le clonage vocal est le défi majeur. 
+Le SNJ a spécifiquement alerté sur ce risque.
+INTERDIT
+Cloner la voix d'une personne sans son consentement explicite. 
+C'est un délit (Loi SREN).
+Risque modéré
+Voix de synthèse générique pour lire des contenus. Radio 
+France teste ElevenLabs avec supervision stricte.
+Faible risque
+Transcription (Trint, GoodTape, Whisper), aide au montage, 
+nettoyage audio.
+Recommandations
+m2iformation.fr
+
+========== PAGE 34 ==========
+34
+Le Monde
+•
+Images : INTERDICTION d'utiliser des IA génératives
+•
+Textes : OK pour l'assistance (traduction DeepL) avec supervision 
+en 3 étapes
+•
+Mention : Transparence explicite obligatoire
+Agence France-Presse (AFP)
+•
+Règle : INTERDICTION de produire ou distribuer des contenus IA
+•
+Exception : Reproduire un contenu IA s'il est le sujet de l'article 
+(avec mention claire)
+•
+Vigilance : Exige des pigistes qu'ils ne fournissent pas de contenu IA
+Exemples
+m2iformation.fr
+
+========== PAGE 35 ==========
+35
+Recherche et veille automatisée
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 36 ==========
+36
+Le clan des 7
+m2iformation.fr
+
+========== PAGE 37 ==========
+37
+Axe 1 : sourcing externe
+L'IA comme radar
+Quoi ? L'IA surveille le web et les réseaux sociaux pour détecter 
+des pistes, des tendances et des signaux faibles dans l'information 
+publique.
+Risque : ÉLEVÉ L'IA s'entraîne sur des données biaisées, 
+incomplètes ou fausses. Le principe "Garbage In, Garbage Out"
+s'applique pleinement.
+Axe 2 : sourcing interne
+L'IA comme archiviste augmenté
+Quoi ? Vous ancrez l'IA dans un corpus de documents vérifiés 
+(PDF, archives, transcriptions) pour les analyser et les interroger de 
+manière approfondie.
+Risque : FAIBLE L'IA ne peut (en théorie) pas inventer de faits en 
+dehors de vos documents contrôlés. Le risque principal devient le 
+biais d'interprétation.
+Deux axes 
+m2iformation.fr
+
+========== PAGE 38 ==========
+38
+Sourcing externe pour la détection de signaux
+•
+Reuters News Tracer : utilise l'IA pour repérer et aider à valider des 
+informations en temps réel sur Twitter, souvent avant leur reprise 
+médiatique
+•
+Radio France avec DataminR : Outil de veille et de détection de 
+signaux faibles sur les réseaux sociaux
+•
+Semafor "Signals" : Un flux de breaking news multi-sources alimenté 
+par l'IA en partenariat avec Microsoft
+Trois commandements
+Utiliser pour trouver
+Exploitez ces outils pour identifier des pistes et 
+des angles d'investigation
+Ne jamais faire confiance
+Ne prenez JAMAIS la synthèse de l'IA pour 
+argent comptant
+Toujours vérifier
+Remontez TOUJOURS à la source primaire 
+(tweet original, rapport, témoin)
+L’IA comme radar
+m2iformation.fr
+
+========== PAGE 39 ==========
+39
+Les moteurs de recherche IA
+39
+Pour l’usage quotidien
+Les outils comme Perplexity.ai ou les fonctions de recherche avancée de 
+ChatGPT peuvent servir de Google améliorés pour démarrer une recherche. 
+Mais attention : tout ce qu'ils produisent doit être traité comme une source 
+non vérifiée.
+m2iformation.fr
+
+========== PAGE 40 ==========
+40
+NotebookLM
+m2iformation.fr
+
+========== PAGE 41 ==========
+41
+Fact-checking et détection de 
+désinformation
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 42 ==========
+42
+m2iformation.fr
+
+========== PAGE 43 ==========
+43
+6 étapes pour Fact-Checker
+m2iformation.fr
+
+========== PAGE 44 ==========
+44
+L'outil Fact Check Explorer répertorie des articles de sources 
+indépendantes et spécialisées dans le fact-checking.
+Fact Check Explorer
+- 44 -
+https://toolbox.google.com/factcheck/explorer/search/list:recent;hl=fr
+m2iformation.fr
+
+========== PAGE 45 ==========
+45
+SynthID
+- 45 -
+SynthID Detector (Google I/O 2025) : détection watermark IA pour 
+images/vidéo/texte
+m2iformation.fr
+
+========== PAGE 46 ==========
+46
+Les signes qui trahissent les images et deepfakes générés par IA
+Votre œil est le premier détecteur : l'IA peine encore avec la physique et la biologie du réel. Cherchez l'« uncanny valley ».
+Le 
+visage
+•
+Clignements : absents ou trop mécaniques.
+•
+Expressions : figées, « mortes » émotionnellement.
+•
+Lip-sync : lèvres désynchronisées du son.
+La 
+physique
+•
+Artefacts : zones floues/déformées (contours, cheveux, oreilles).
+•
+Éclairage : ombres contradictoires, lumière sans source.
+•
+Anatomie : dents, mains, doigts mal générés.
+•
+Arrière-plans : déformés, motifs répétitifs impossibles.
+Astuce : lisez au ralenti / image par image (plugin InVID) : les défauts sautent aux yeux.
+Détection manuelle des indices visuels
+m2iformation.fr
+
+========== PAGE 47 ==========
+47
+Les tics de langage qui trahissent l'IA
+L'IA produit du "vraisemblable", pas nécessairement du "vrai".
+Le syndrome de la nappe repassée
+Trop parfait, trop fluide, sans aspérité ni voix propre.
+Le rythme métronomique
+Phrases de longueur uniforme, ponctuation régulière et prévisible.
+Le manque d’authenticité
+•
+Pas d'anecdotes vécues, d'exemples concrets ni de détails sensoriels.
+•
+Pas de prise de position ni d'opinion éditoriale.
+•
+Excès de mots passe-partout, banalités, listes génériques.
+•
+Équilibre parfait, neutralité artificielle.
+L’incohérence stylistique
+Ruptures de ton/registre entre paragraphes : une compilation, pas une écriture 
+organique.
+Détection manuelle des indices textuels
+m2iformation.fr
+
+========== PAGE 48 ==========
+48
+Les signaux qui révèlent le clonage vocal
+Le clonage vocal est bluffant (quelques secondes suffisent), mais des artefacts subsistent : l'IA reproduit mal l'émotion authentique et l'irrégularité de la parole spontanée.
+Caractéristiques de la voix
+•
+Intonation plate, robotique, ou cadence trop 
+régulière et mécanique
+•
+Émotion absente ou mal placée (ton joyeux 
+sur sujet grave).
+•
+Pas de variations naturelles de débit, 
+d'emphase, d'accent.
+Les bruits humains
+•
+Respirations absentes ou placées au milieu 
+d'un mot.
+•
+Mots mal prononcés, syllabes mangées, 
+transitions absentes.
+•
+Pas de micro-hésitations ni de « euh ».
+L’environnement sonore
+•
+Aucun bruit de fond ambiant (suspect pour une interview terrain).
+•
+Bruit de fond artificiel, répétitif, ou semblant être en boucle
+•
+Acoustique incohérente avec le lieu présumé de l'enregistrement
+Traçabilité en développement : des filigranes audio inaudibles authentifieront les enregistrements légitimes.
+Détection manuelle des indices auditifs
+m2iformation.fr
+
+========== PAGE 49 ==========
+49
+C2PA
+- 49 -
+C2PA / Project Origin : chaîne de provenance certifiée (Adobe, 
+Microsoft, BBC…)
+m2iformation.fr
+
+========== PAGE 50 ==========
+50
+Pendant ces deux jours, vous travaillez pour une rédaction fictive : La Dépêche du Grand Ouest, quotidien régional + site web, 18 journalistes, des 
+moyens comptés, une exigence intacte.
+Trois missions jalonnent la formation :
+• Mission 1 : Démêler le vrai du faux (veille, fact-checking, deepfakes)
+• Mission 2 : Rendre l'enquête citable par l'IA (rédaction, E-E-A-T, GEO)
+• Mission 3 : Du terrain au multiformat (transcription, audio, image, déontologie)
+Règle du jeu : l'IA assiste, vous décidez. Aucune méthode imposée.
+Fil rouge : La Dépêche du Grand Ouest
+m2iformation.fr
+
+========== PAGE 51 ==========
+51
+BRIEFING : 21h, veille de second tour.
+Une vidéo d'un candidat « en train d'avouer une fraude » devient virale. Bouclage dans 90 minutes. Publier ? Ignorer ? Démentir ?
+VOTRE MISSION (par binôme)
+1. Veille : remonter à la source primaire (qui poste, quand, d'où) : Perplexity, X, recherche inversée.
+2. Vérifier : appliquer les 6 étapes du fact-checking ; passer la vidéo au crible des indices visuels/auditifs + un détecteur.
+3. Décider : rédiger en 5 lignes la position de la rédaction (publier / s'abstenir / alerter) et la mention IA éventuelle.
+LIVRABLE : une note de décision argumentée. 30 min, outils libres.
+Mission 1 : Démêler le vrai du faux
+m2iformation.fr
+
+========== PAGE 52 ==========
+Production et diffusion
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 53 ==========
+53
+Rédaction et optimisation SEO
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 54 ==========
+54
+Analyse de communiqué de 
+presse
+Demander à l'IA d'agir en "stratège PR" pour évaluer la valeur 
+informative : analyser les 5 W, la force des données, la crédibilité des 
+citations et le respect du style AP.
+Synthèse de 
+réunion éditoriale
+"Agis en tant que chef de pupitre. Transforme cette transcription en 
+résumé concis. Extraire les points d'action, assigne-les aux reporters et 
+liste les échéances."
+Génération 
+d’idées
+"Agis en tant que rédacteur en chef créatif. Propose 3 angles de 
+reportage alternatifs et non évidents axés sur l'intérêt humain et l'impact 
+local."
+Recherche et 
+classement
+"Agis en tant que documentaliste. Liste les 5 sources académiques ou 
+gouvernementales les plus crédibles des 2 dernières années. Classe-
+les par fiabilité."
+Modèles de prompts
+m2iformation.fr
+
+========== PAGE 55 ==========
+55
+Le Retrieval-Augmented Generation (RAG) est la principale solution technique aux 
+hallucinations des LLM et un impératif stratégique pour l'intégrité journalistique. 
+Retrieval (Récupération)
+Le système récupère des informations pertinentes dans une base de 
+connaissances externe, spécifique et contrôlée (archives, documents 
+judiciaires, bases de données).
+Generation (Génération)
+Le LLM utilise ces informations récupérées (le contexte "ancré") en 
+plus de ses connaissances pré-entraînées pour formuler sa réponse 
+vérifiée.
+RAG : ancrer l’IA dans la réalité
+m2iformation.fr
+
+========== PAGE 56 ==========
+56
+Les LLM excellent dans les tâches de réécriture fondamentales pour le travail journalistique : résumer des 
+textes longs, extraire des informations clés et simplifier le langage. Un cas d'usage puissant est le contrôle 
+de la tonalité et des biais.
+Principe clé : La question n'est pas "quel modèle est le meilleur?", mais "quel modèle est le meilleur pour cette 
+tâche précise?". 
+Techniques de réécriture
+m2iformation.fr
+
+========== PAGE 57 ==========
+57
+Pour les tâches journalistiques
+Modèle
+Force distinctive
+Faiblesse typique
+Cas d’usage principal
+ChatGPT
+Créativité, fluidité, brainstorming
+Coût, parfois "paresseux"
+Génération de titres, rédaction 
+de paragraphes d'attaque
+Claude
+Fenêtre de contexte massive 
+(1M tokens)
+Moins performant sur infos 
+temps réel
+Analyse de documents très 
+longs, RAG sur archives
+Gemini
+Intégration recherche temps réel
+Peut halluciner des sources
+Vérification des faits en temps 
+réel, résumé de l'actualité
+Mistral
+Souveraineté des données, 
+vitesse
+Écosystème d'outils moins 
+mature
+Workflows internes sécurisés, 
+données sensibles
+Comparaison des LLM
+m2iformation.fr
+
+========== PAGE 58 ==========
+58
+On publie plus, on est vu moins
++100 %
+de publications sur Instagram en un an…
+−31 %
+…pour une portée organique en chute libre
+11,7 %
+des Français publient encore (−5 pts en 5 ans) : on scrolle, 
+on ne poste plus
+6 / 10
+posts LinkedIn français passent déjà par une IA
+Publier plus ne fonctionne plus. Publier mieux est la seule option.
+m2iformation.fr
+
+========== PAGE 59 ==========
+59
+Ce que veulent les algorithmes
+✓CE QUI EST RÉCOMPENSÉ
+Le temps passé : watch time (Instagram, TikTok), temps de lecture 
+(LinkedIn).
+Le partage privé : un envoi en DM ou une sauvegarde vaut 3 à 5 fois 
+un like.
+La conversation profonde : sur LinkedIn, un commentaire pèse 15 
+fois un like.
+L’originalité : contenu natif, jamais réchauffé ni reposté.
+✗CE QUI EST PÉNALISÉ
+Le volume pour le volume : publier plus ne porte plus.
+Les likes seuls : métrique faible, facile à truquer, en perte de poids.
+Les liens sortants : jusqu’à −60 % de portée sur LinkedIn (même en 
+1er commentaire).
+L’appât à engagement et le repost d’agrégateur : 10 reposts ou plus 
+en 30 jours = exclu des recommandations.
+Un même basculement partout : la rétention et le partage privé priment sur le volume.
+m2iformation.fr
+
+========== PAGE 60 ==========
+60
+Les bons réflexes par plateforme
+LINKEDIN
+Écrire pour le temps de lecture, pas pour le 
+like.
+Provoquer le commentaire long (15× un like) 
+- et y répondre.
+Garder le lien hors du post.
+Privilégier carrousel 8-10 slides et vidéo
+verticale 30-90 s.
+INSTAGRAM
+Accrocher dans les 3 premières secondes 
+(audition sur les non-abonnés).
+Créer du contenu qu’on a envie d’envoyer en 
+DM.
+Viser la sauvegarde : contenu utile, de 
+référence.
+Bannir le repost brut.
+TIKTOK
+Viser 70 % de complétion (seuil de viralité 
+2026).
+Boucler la vidéo pour déclencher le replay.
+Mot-clé dit, écrit à l’écran et en légende 
+(social search).
+Tenir une ligne de niche (autorité 
+thématique).
+m2iformation.fr
+
+========== PAGE 61 ==========
+61
+Le slop : l’IA noie les feeds
+• Le « slop » - contenu générique produit en masse par IA, sans 
+valeur ajoutée, qui sature les fils.
+• L’alerte de Mosseri (Instagram, 2026) - l’IA rend l’authenticité « 
+infiniment reproductible » - donc suspecte.
+• Chaque contenu IA générique publié érode la confiance - les 
+« 3 leçons que m’a apprises… » formatés ne trompent plus 
+personne.
+• Le vrai problème n’est pas l’IA - c’est qu’elle nous fait tous
+écrire pareil. Mieux vaut 1 post incarné que 10 posts lisses.
+m2iformation.fr
+
+========== PAGE 62 ==========
+62
+Publier + ne marche plus ! 
+m2iformation.fr
+
+========== PAGE 63 ==========
+63
+IA en coulisses, humain sur scène
+L’IA - EN COULISSES (invisible)
+Brainstorm et angles éditoriaux.
+Analyse de data et de performance.
+Structure, plan, première trame.
+Veille, synthèse, relecture.
+Personnalisation à grande échelle.
+L’HUMAIN - SUR SCÈNE (visible)
+La voix, le style, le ton de marque.
+L’émotion et l’expérience vécue.
+Le point de vue, la prise de position.
+La décision finale de publier.
+La relation et la conversation.
+L’IA accélère, l’humain décide. Toujours.
+m2iformation.fr
+
+========== PAGE 64 ==========
+64
+De la SEO à la GEO
+Un changement de paradigme fondamental déplace l'objectif de visibilité en ligne du 
+SEO (Search Engine Optimization) au GEO (Generative Engine Optimization). 
+L'objectif n'est plus le clic, mais la citation.
+L’objectif n'est 
+plus le clic, 
+mais la citation.
+Le nouveau référencement
+m2iformation.fr
+
+========== PAGE 65 ==========
+65
+E-E-A-T
+Experience, Expertise, Authoritativeness, 
+Trustworthiness : le signal de qualité 
+numéro un. Signatures claires, biographies 
+robustes, citations d'experts nommés, 
+réputation de fiabilité.
+Gain d’information
+Offrir de nouvelles perspectives, des 
+données uniques, des statistiques 
+originales, ou des citations d'experts 
+exclusives. Prime algorithmique au 
+reportage original.
+Formatage structurel
+Structure sémantique HTML claire, 
+Summary Boxes, listes à puces, 
+implémentation rigoureuse du Schéma pour 
+les articles de presse, FAQ et profils 
+d'auteur.
+Être une source IA de confiance
+m2iformation.fr
+
+========== PAGE 66 ==========
+66
+Ces "nouvelles" stratégies algorithmiques représentent, en 
+réalité, un retour aux fondamentaux du journalisme de 
+qualité. Les "hacks" SEO du passé (bourrage de mots-clés, 
+création de contenu de faible valeur) sont désormais 
+activement pénalisés par l'IA.
+Les algorithmes sont enfin conçus pour rechercher des signaux de fiabilité et 
+d'originalité. Par conséquent, la meilleure (et peut-être la seule) stratégie GEO durable 
+pour une organisation de presse est de réinvestir massivement dans :
+•
+Le reportage original et exclusif
+•
+Les données exclusives et vérifiées
+•
+L'expertise démontrée et reconnue
+•
+La transparence et la traçabilité des sources
+Retour au journalisme de qualité
+m2iformation.fr
+
+========== PAGE 67 ==========
+67
+BRIEFING : Une enquête exclusive sur l'eau potable.
+Le trafic Google s'effondre, mais ChatGPT et Perplexity « répondent » sur le sujet… sans jamais vous citer.
+VOTRE MISSION (par binôme)
+1. Structurer : retravailler titre, chapô 5W, intertitres, encadré « ce qu'il faut retenir ».
+2. Renforcer l'E-E-A-T : signature experte, sources nommées, données originales mises en avant.
+3. Optimiser GEO : formuler 3 questions qu'un lecteur poserait à une IA et vérifier que l'article y répond explicitement.
+LIVRABLE : une version « citable » + la liste des signaux GEO ajoutés. 30 min, méthode DIRECTE conseillée.
+Mission 2 : Rendre l'enquête citable par l'IA
+m2iformation.fr
+
+========== PAGE 68 ==========
+68
+Transcription et montage 
+multimédia
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 69 ==========
+69
+Le marché de la transcription IA est saturé ; les outils se distinguent par leurs usages, leur précision et leur sécurité.
+Axés sur la rédaction
+Trint : pensé pour les rédactions (collaboration, storyboarding).
+Hybrides IA + Humain
+Rev / Happy Scribe : IA rapide (~90 %) + relecture humaine (99 %+).
+Édition intégrée
+Descript : monter l'audio/vidéo en éditant le texte.
+Assistants de réunion
+Otter.ai : transcription en direct + résumés automatiques.
+Transcription audio
+m2iformation.fr
+
+========== PAGE 70 ==========
+70
+Niveau 1 : FAIBLE
+Scénario : Conférence de presse, discours 
+public, réunion éditoriale
+Outil : Otter.ai / Trint
+Justif. : vitesse, coût, collaboration. 
+Confidentialité non critique.
+Niveau 2 : MOYEN
+Scénario : Interview standard pour un 
+reportage (source citée)
+Outil : Rev (Humain) / Happy Scribe 
+(Humain)
+Justif. : précision de citation (99 %+) 
+prioritaire. L'IA seule ne suffit pas.
+Niveau 3 : CRITIQUE
+Scénario : Interview avec un lanceur 
+d'alerte, source anonyme, données sous 
+embargo
+Outil : Whisper (Local/On-device) ou 
+services avec NDA juridiques
+Justif. : sécurité des données et 
+protection des sources priment. Rien ne 
+quitte l'appareil.
+Matrice de décision pour la transcription
+m2iformation.fr
+
+========== PAGE 71 ==========
+71
+Le marché de la vidéo IA se structure en trois niveaux 
+selon l'objectif éditorial : Vitesse, Contrôle ou Concept.
+Niveau 3 : Les 
+applications
+Exemple : CapCut
+Axées sur la vitesse et la simplicité. 
+Idéales pour le contenu social-first et 
+mobile-first.
+Niveau 2 : Les 
+plateformes
+Exemple : Runway ML
+Intègrent des outils d'édition avancés 
+pour un contrôle créatif maximal.
+Niveau 1 : Les 
+modèles
+Exemples : Sora, Veo
+Génèrent la matière première vidéo à un niveau de fidélité sans précédent.
+Montage vidéo IA
+m2iformation.fr
+
+========== PAGE 72 ==========
+72
+Générateurs de musique basés sur l’IA, accessibles en ligne, qui 
+démocratisent la création musicale et la rendent ultra-rapide, sans besoin 
+de matériel ou de savoir-faire technique.
+• Suno se démarque par sa simplicité et sa rapidité ;
+• Udio par sa personnalisation avancée et la qualité studio.
+Générer de la musique
+https://suno.com/
+https://www.udio.com/
+m2iformation.fr
+
+========== PAGE 73 ==========
+73
+Avant/aujourd’hui
+Avant : le prompt image “classique”
+(Midjourney v4-v5, DALL·E 2, Stable Diffusion)
+Logique descriptive
+Accumulation de mots-clés
+Prompt centré sur :
+•
+le sujet
+•
+le style
+•
+l’esthétique
+Peu ou pas de raisonnement du modèle
+Résultat souvent :
+•
+aléatoire
+•
+itératif par tâtonnement
+« On décrit ce qu’on veut voir »
+Aujourd’hui : le prompt image “structuré et 
+piloté”
+(NanoBanana Pro, ChatGPT Image 1.5)
+Logique intentionnelle
+Le prompt décrit :
+•
+un objectif
+•
+un contexte
+•
+des contraintes
+Le modèle :
+•
+comprend la scène
+•
+interprète des règles
+•
+respecte une cohérence globale
+Possibilité de :
+•
+corrections ciblées
+•
+itérations maîtrisées
+•
+inpainting raisonné
+« On explique ce qu’on veut obtenir »
+m2iformation.fr
+
+========== PAGE 74 ==========
+74
+Nano Banana 2
+m2iformation.fr
+
+========== PAGE 75 ==========
+75
+La méthode ICECARE
+I
+Image - Sujet & scène
+Décrivez le sujet, l'environnement, les 
+personnes (genre, tenue, contexte). Soyez 
+explicite.
+Deux collaborateurs (mixité, tenue sobre) en discussion dans un open space lumineux. Ambiance 
+collaborative.
+C
+Cadrage
+Plan moyen, gros plan, plan large… Définit la 
+proximité avec le sujet.
+Plan moyen légèrement décentré, caméra à hauteur d'homme. Point de vue neutre et professionnel.
+E
+Éclairage
+Lumière naturelle, artificielle, dorée… Crée 
+l'ambiance émotionnelle.
+Lumière naturelle diffuse, journée légèrement couverte. Homogène, sans contraste excessif.
+C
+Coloration
+Palette attendue : saturée, désaturée, chaude, 
+froide…
+Tons neutres et professionnels, bleu doux, gris clair. Légèrement désaturé. Aucun filtre stylisé.
+A
+Ambiance
+Atmosphère, émotions, expressions, actions en 
+cours.
+Calme, professionnelle, bienveillante. Expressions naturelles, légèrement positives. Aucune mise en scène 
+héroïque.
+R
+Réalisme
+Du photoréalisme à l'illustration stylisée.
+Photoréaliste, style corporate contemporain. Pas d'effet cartoon ni illustration. Exception: visuels festifs.
+E
+Esthétique
+Le style général : corporate, éditorial, 
+artistique…
+Photographie institutionnelle contemporaine. Sobriété visuelle. Aucun style cinéma ou publicité grand 
+public.
+m2iformation.fr
+
+========== PAGE 76 ==========
+76
+BRIEFING : Retour de reportage.
+Une interview audio de 25 min, enregistrée dans un café bruyant, avec une source sensible. Il faut un sujet web + un format court réseaux, avant ce soir.
+VOTRE MISSION (par binôme)
+1. Transcrire en sécurité : choisir l'outil selon le niveau de confidentialité (matrice de décision).
+2. Nettoyer l'audio et extraire 3 citations fortes.
+3. Décliner : générer un visuel d'illustration (Nano Banana / méthode ICECARE) en respectant la déontologie image.
+LIVRABLE : transcription + 1 visuel conforme + plan du format court. 30 min.
+Mission 3 : Du terrain au multiformat
+m2iformation.fr
+
+========== PAGE 77 ==========
+77
+Datajournalisme et visualisation
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 78 ==========
+78
+Avant : 80% 
+exploration
+Explorer et nettoyer les données, rechercher 
+les insights manuellement
+Transition IA
+L'IA gère automatiquement la phase 
+exploratoire et trouve les insights
+Maintenant : 100% 
+explicatif
+Vérifier l'insight par reportage, construire le 
+récit et le storytelling
+L'IA libère le datajournaliste de la fouille de données et recentre sa valeur sur la vérification et la construction narrative. Le travail se divise désormais 
+entre visualisation "Exploratoire" (neutre, automatisée par l'IA) et "Explicative" (narrative, humaine).
+Rôle du datajournalisme
+m2iformation.fr
+
+========== PAGE 79 ==========
+79
+Stratégie de diffusion et 
+engagement
+Intégrer l’IA dans sa pratique journalistique
+m2iformation.fr
+
+========== PAGE 80 ==========
+80
+Tension éthique fondamentale
+La personnalisation algorithmique crée un risque majeur : si un algorithme ne montre aux lecteurs que ce avec quoi ils sont déjà d'accord, 
+il ne remplit pas la mission journalistique d'exposer les citoyens à une diversité de points de vue.
+Mission commerciale
+•
+Augmenter l'engagement
+•
+Maximiser le temps passé
+•
+Optimiser les conversions
+Mission journalistique
+•
+Informer le public
+•
+Exposer à la diversité
+•
+Garantir la sérendipité
+Le rôle critique du rédacteur en chef à l'ère de l'IA est de gouverner l'algorithme de recommandation, en équilibrant engagement et importance 
+éditoriale.
+Un défi 
+m2iformation.fr
+
+========== PAGE 81 ==========
+81
+1. Gouvernance
+Définir les règles éthiques des algorithmes, équilibrer 
+engagement commercial et mission de service public
+2. Vérification
+Auditer activement les modèles IA, sonder leurs biais, tester leur 
+résistance à la désinformation
+3. Ancrage (RAG)
+"Sourcer" l'IA en l'ancrant dans des données vérifiées, garantir 
+une production basée sur des faits contrôlés
+4. Orchestration
+Concevoir des chaînes de prompts, utiliser le meilleur modèle 
+pour chaque sous-tâche
+L'IA est un multiplicateur de force : elle gère l'exploration, les brouillons et la diffusion. Le journaliste garde le terrain, la vérification, la narration et le 
+jugement éthique.
+Journalisme augmenté
+m2iformation.fr
+
+========== PAGE 82 ==========
+82
+Chatbot, assistant, agent
+Trois objets différents - un seul a une boucle.
+CHATBOT
+Répond à un message.
+Aucune action, aucun objectif
+persistant.
+Le contexte, c’est vous.
+ASSISTANT
+Répond et exécute à la 
+demande.
+Des outils, mais piloté pas à 
+pas par l’humain.
+C’est votre GPT, votre Projet 
+Claude.
+AGENT
+Poursuit un OBJECTIF.
+Boucle : perçoit, planifie, agit, 
+observe.
+Décide lui-même de ses 
+prochaines étapes.
+m2iformation.fr
+
+========== PAGE 83 ==========
+83
+À la découverte des assistants IA
+- 83 -
+m2iformation.fr
+
+========== PAGE 84 ==========
+84
+Les étapes pour la construction d’un assistant
+m2iformation.fr
+
+========== PAGE 85 ==========
+85
+Les instructions
+m2iformation.fr
+
+========== PAGE 86 ==========
+86
+Un LLM dans une boucle
+PERÇOIT
+→
+PLANIFIE
+→
+AGIT
+→
+OBSERVE
+… et recommence, jusqu’à atteindre son objectif.
+Un agent = un LLM dans une boucle, avec des outils et un objectif.
+Des outils - recherche web, fichiers, mails, CRM, API : l’agent agit, il ne fait pas que rédiger.
+Un objectif - « publie la veille chaque lundi à 8h », pas « résume cet article ».
+Le marché bascule - 40 % des applications d’entreprise intégreront des agents spécialisés fin 2026, contre moins de 5 % en 2025 
+(Gartner).
+m2iformation.fr
+
+========== PAGE 87 ==========
+87
+Des agents au quotidien
+VEILLE AUTOMATISÉE
+Chaque lundi 8h : l’agent lit vos 30 
+sources, filtre, synthétise.
+Livraison : note structurée dans 
+Teams ou par mail.
+Gain constaté : 4 à 6 h par 
+semaine et par personne.
+REPORTING SOCIAL MEDIA
+Le 1er du mois : collecte des KPIs, 
+comparaison M/M-1.
+Top 3 / flop 3 des posts, analyse 
+qualitative, recommandations.
+Livraison : slides prêtes pour le 
+CODIR.
+BRIEF AUTOMATIQUE
+Un événement déclencheur (RDV 
+signé, demande presse).
+L’agent compile contexte, 
+historique, angles possibles.
+Livraison : brief en boîte mail avant 
+la réunion.
+Garde-fou : un agent = un utilisateur de plus dans votre SI. Permissions minimales, humain dans la boucle.
+m2iformation.fr
+
+========== PAGE 88 ==========
+88
+Les premiers navigateurs agentiques
+m2iformation.fr
+
+========== PAGE 89 ==========
+89
+Votre plan d'action 30 jours
+3 RÉFLEXES À EMPORTER
+•
+1. Toujours remonter à la source primaire : l'IA est un point de départ, jamais une preuve.
+•
+2. Transparence : mentionner l'usage de l'IA quand il est déterminant.
+•
+3. Réinvestir l'humain là où il est irremplaçable : terrain, vérification, jugement éditorial.
+•
+CETTE SEMAINE
+•
+Déléguer 1 tâche récurrente à l'IA (veille, transcription, réécriture).
+•
+Créer 1 prompt DIRECTE réutilisable et le tester sur un cas réel.
+•
+CE MOIS-CI
+•
+Cartographier les usages IA acceptables dans la rédaction (matrice de risque).
+•
+Construire 1 assistant / GPT spécialisé sur votre sujet.
+m2iformation.fr
+
+========== PAGE 90 ==========
+90
+Ce n’est qu’un aiurevoir
+m2iformation.fr
+
+========== PAGE 91 ==========
+LA FORMATION
+AU PLUS PRÈS
+DE CHEZ VOUS !
+BELGIQUE - LUXEMBOURG - PORTUGAL - ESPAGNE
+8 MARQUES EXPERTES
+Leader européen de la formation
+professionnelle continue
+

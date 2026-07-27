@@ -1,0 +1,1292 @@
+========== PAGE 1 ==========
+LE MANAGER AUGMENTÉ 
+20 cas d'usage premium pour passer du manager qui utilise l'IA au manager augmenté 
+CadreIActif · Intelligence Professionnelle Augmentée · Méthode PACE™ 
+OUTILS COUVERTS 
+🟢 ChatGPT Free/Plus 
+🔵 Copilot / Gemini Workspace 
+🟣 Claude Pro (20€) 
+⚙️ Automation (Make/n8n) 
+ 
+PACE™ — Problématiser · Amplifier · Challenger · Évaluer : les 4 mouvements cognitifs du manager augmenté. L'IA est présente à chaque étape comme copilote, jamais comme 
+décideur. 
+  CATÉGORIE 1 — VEILLE & INTELLIGENCE ÉCONOMIQUE   
+N° / Titre 
+Point de douleur du 
+manager 
+Solution IA 
+proposée 
+Démo par outil — pas à pas 
+Niveau 
+Gain de 
+temps 
+estimé 
+Lien PACE™ & 
+CadreIActif 
+Question réflexive 
+pour l'apprenant 
+1.1 
+Veille 
+concurrentielle 
+automatisée 
+Veille & 
+Intelligence éco. 
+Point de douleur 
+La veille est une corvée 
+hebdomadaire que 
+personne ne fait 
+vraiment. Les signaux 
+importants passent 
+entre les mailles. Le 
+manager réagit, il 
+n'anticipe plus. 
+Solution IA 
+L'IA surveille en 
+continu les sources 
+définies (actualités, 
+concurrents, 
+réglementations) et 
+produit chaque lundi 
+un briefing de 5 points 
+actionnables, priorisé 
+selon les enjeux du 
+manager. 
+🟢 Prompt : « Fais une veille 
+hebdomadaire sur 
+[secteur/concurrent]. Résume en 5 
+bullets actionnables pour un 
+Directeur Qualité. » 
+🔵 Perplexity Pro : recherche web 
+structurée + sources citées en temps 
+réel. 
+🟣 Claude Pro + Project : contexte 
+métier mémorisé. Chaque semaine : 
+« Voici les 5 signaux qui comptent 
+pour toi. » 
+⚙️ Make/n8n : pipeline automatisé. 
+Chaque lundi matin, la synthèse 
+arrive dans la boîte mail sans aucune 
+action manuelle. 
+⭐⭐ 
+Intermédiaire 
+2-
+3h/semaine 
+Lien PACE™ 
+PROBLÉMATISER : l'IA 
+structure les signaux en 
+problèmes actionnables. 
+AMPLIFIER : elle croise 
+les sources que le 
+manager n'aurait pas 
+lues. 
+Question réflexive 
+« Si vous aviez ce 
+briefing chaque lundi, 
+sur quoi 
+concentreriez-vous 
+votre attention que 
+vous manquez 
+aujourd'hui ? » 
+1.2 
+Analyse 
+rapide d'un 
+document 
+complexe 
+Veille & 
+Intelligence éco. 
+Point de douleur 
+Appels d'offres, 
+contrats, rapports de 
+40 pages. Le manager 
+lit en diagonale, rate 
+des clauses 
+importantes, prend des 
+risques par manque de 
+temps. 
+Solution IA 
+Coller le document 
+dans l'IA. En 3 
+minutes : résumé 
+exécutif, points de 
+vigilance, clauses 
+atypiques, 5 
+questions à poser 
+avant signature. 
+🟢 Upload PDF + Prompt : « Analyse 
+ce document. Résume en 5 points, 
+identifie les clauses à risque, liste ce 
+que je dois clarifier avant de signer. » 
+🔵 Copilot M365 : « Résume ce 
+document SharePoint et identifie les 
+points d'attention. » — aucune 
+manipulation de fichier. 
+🟣 Claude Pro : fenêtre de contexte 
+longue (200K tokens). Idéal pour 
+documents très longs. Résultat : 
+bullet points + tableau 
+risques/opportunités. 
+⭐ Débutant 
+2-4h par 
+document 
+Lien PACE™ 
+CHALLENGER : l'IA 
+joue le rôle du lecteur 
+critique que le manager 
+n'a pas eu le temps 
+d'être. ÉVALUER : elle 
+priorise les risques. 
+Question réflexive 
+« Combien de 
+documents importants 
+lisez-vous vraiment en 
+profondeur chaque 
+mois ? Que manquez-
+vous dans les autres ? 
+» 
+1.3 
+Point de douleur 
+Construire un 
+benchmark prend une 
+Solution IA 
+Définir 5 critères de 
+comparaison. L'IA 
+🟢 Prompt : « Compare les pratiques 
+qualité de [3 concurrents nommés] 
+sur ces 5 critères : [liste]. Format 
+tableau. Sources citées. » 
+⭐⭐ 
+Intermédiaire 
+3-5 jours → 
+30 min 
+Lien PACE™ 
+AMPLIFIER : l'IA étend 
+le champ d'observation 
+Question réflexive 
+« Sur quelles 
+décisions ce 
+
+
+========== PAGE 2 ==========
+N° / Titre 
+Point de douleur du 
+manager 
+Solution IA 
+proposée 
+Démo par outil — pas à pas 
+Niveau 
+Gain de 
+temps 
+estimé 
+Lien PACE™ & 
+CadreIActif 
+Question réflexive 
+pour l'apprenant 
+Benchmark 
+sectoriel en 30 
+minutes 
+Veille & 
+Intelligence éco. 
+semaine. Résultat : il 
+n'est jamais fait, ou fait 
+trop tard pour être utile 
+à la décision. 
+produit le tableau 
+comparatif, avec 
+sources, chiffres clés 
+et recommandation 
+différenciante. 
+🔵 Perplexity Pro : benchmark en 
+temps réel avec sources vérifiables. 
+🟣 Claude Pro : synthèse analytique 
++ angle différenciant identifié + 3 
+recommandations actionnables pour 
+l'entreprise. 
+au-delà du possible 
+humain. ÉVALUER : elle 
+hiérarchise ce qui 
+compte vraiment pour la 
+décision. 
+benchmark vous 
+aurait-il permis d'aller 
+plus vite ou plus loin 
+ces 6 derniers mois ? 
+» 
+ 
+  CATÉGORIE 2 — CONTENUS & PRISE DE PAROLE   
+N° / Titre 
+Point de douleur du 
+manager 
+Solution IA 
+proposée 
+Démo par outil — pas à pas 
+Niveau 
+Gain de 
+temps 
+estimé 
+Lien PACE™ & 
+CadreIActif 
+Question réflexive 
+pour l'apprenant 
+2.1 
+Réunion 
+enregistrée → 
+4 livrables 
+distincts 
+Contenus & 
+Prise de parole 
+Point de douleur 
+Après une réunion de 
+2 heures, il reste à 
+rédiger le CR, lister les 
+actions, préparer le 
+message direction et 
+informer l'équipe. 4 
+tâches distinctes, 2 
+heures de plus. 
+Solution IA 
+Transcrire la 
+réunion (audio ou 
+Teams). L'IA produit 
+: CR synthétique + 
+décisions + actions 
+par responsable + 
+message ciblé par 
+partie prenante. 
+🟢 Coller la transcription + Prompt : « 
+Génère : 1) CR 300 mots 2) Tableau 
+décisions/actions/responsables/délais 3) 
+Message équipe 4) Synthèse pour ma 
+direction. » 
+🔵 Copilot M365 : « Résume cette 
+réunion Teams et génère les 4 livrables. 
+» — intégration native, zéro manipulation. 
+🟣 Claude Pro : livrables plus structurés, 
+ton calibré par audience, format 
+directement réutilisable. 
+⚙️ Make + Fireflies : transcription auto → 
+génération IA → envoi automatique aux 
+parties prenantes. Zéro intervention. 
+⭐⭐ 
+Intermédiaire 
+1h30-2h 
+par 
+réunion 
+Lien PACE™ 
+PROBLÉMATISER : 
+chaque livrable répond 
+à une question 
+différente selon 
+l'audience. AMPLIFIER : 
+l'IA décline le même 
+contenu en 4 registres 
+de communication. 
+Question réflexive 
+« Si chaque réunion 
+importante produisait 
+automatiquement ces 
+4 livrables, comment 
+changerait la qualité 
+de votre 
+communication 
+managériale ? » 
+2.2 
+Présentation 
+CODIR en 45 
+minutes 
+Contenus & 
+Prise de parole 
+Point de douleur 
+Préparer une 
+présentation CODIR 
+prend 3 heures 
+minimum. Le manager 
+passe plus de temps 
+sur la forme que sur le 
+fond — et arrive moins 
+bien préparé sur le 
+fond. 
+Solution IA 
+Écrire ses idées en 
+vrac en 10 minutes. 
+L'IA structure le 
+plan, rédige les 
+titres de slides, les 
+notes orateur, le 
+brief visuel pour 
+Canva ou 
+PowerPoint. 
+🟢 Prompt : « J'ai ces idées [liste]. 
+Structure une présentation de 8 slides 
+pour un CODIR. Pour chaque slide : titre 
+accrocheur + 3 bullets + note orateur. » 
+🔵 Copilot PowerPoint : génère la 
+présentation dans PowerPoint avec 
+design intégré. Format CODIR 
+directement. 
+🟣 Claude Pro : plan + notes orateur 
+détaillées + 3 questions probables du DG 
+avec éléments de réponse préparés. 
+⭐ Débutant 
+2h30 → 45 
+min 
+Lien PACE™ 
+AMPLIFIER : l'IA 
+transforme les idées 
+brutes en structure 
+convaincante. 
+CHALLENGER : elle 
+anticipe les questions 
+de l'audience. 
+Question réflexive 
+« Si la mise en forme 
+était automatique, 
+combien de temps de 
+plus passeriez-vous à 
+préparer votre fond et 
+votre position ? » 
+2.3 
+Newsletter 
+interne équipe 
+hebdomadaire 
+Contenus & 
+Prise de parole 
+Point de douleur 
+La communication 
+interne régulière tombe 
+aux oubliettes sous la 
+charge opérationnelle. 
+L'équipe manque de 
+sens et de lien. Le 
+manager sait qu'il 
+Solution IA 
+Chaque vendredi, 
+saisir 5 événements 
+clés de la semaine. 
+L'IA rédige une 
+newsletter interne 
+structurée, au ton 
+calibré selon la 
+culture d'équipe. 
+🟢 Prompt : « Voici 5 événements de ma 
+semaine [liste]. Rédige une newsletter 
+interne de 200 mots. Ton : direct, humain, 
+énergisant. » 
+🟣 Claude Pro + Project : contexte 
+d'équipe mémorisé. Le ton et les thèmes 
+récurrents sont retenus d'une semaine à 
+l'autre. 
+⭐ Débutant 
+1h → 10 
+min 
+Lien PACE™ 
+AMPLIFIER : l'IA donne 
+une voix régulière au 
+manager sans charge 
+rédactionnelle. 
+ÉVALUER : cohérence 
+du message sur la 
+durée. 
+Question réflexive 
+« Quel serait l'impact 
+sur l'engagement de 
+votre équipe si chaque 
+semaine ils recevaient 
+un message sincère 
+de vous — même 
+court ? » 
+
+
+========== PAGE 3 ==========
+N° / Titre 
+Point de douleur du 
+manager 
+Solution IA 
+proposée 
+Démo par outil — pas à pas 
+Niveau 
+Gain de 
+temps 
+estimé 
+Lien PACE™ & 
+CadreIActif 
+Question réflexive 
+pour l'apprenant 
+devrait, mais n'a pas le 
+temps. 
+⚙️ Make : chaque vendredi à 17h, un 
+formulaire de 5 champs → génération 
+auto → envoi Teams ou email. Rituel 
+managérial automatisé. 
+2.4 
+Prise de 
+parole 
+préparée en 
+20 minutes 
+Contenus & 
+Prise de parole 
+Point de douleur 
+Les prises de parole 
+(CODIR, client, 
+conférence) sont 
+préparées dans le train 
+ou pas du tout. Le 
+manque de 
+préparation coûte de la 
+crédibilité. 
+Solution IA 
+Saisir le contexte 
+(audience, durée, 
+message clé, 3 
+points). L'IA génère 
+le plan, l'accroche, 
+les transitions, la 
+conclusion 
+mémorable et 5 
+questions possibles 
+avec réponses. 
+🟢 Prompt : « Je prends la parole devant 
+[audience] pour [durée] sur [sujet]. 
+Génère : accroche, plan en 3 parties, 
+transitions, conclusion + 5 questions 
+probables et mes réponses. » 
+🟣 Claude Pro : simulation des questions 
+de l'audience en roleplay. Le manager 
+s'entraîne face à un contradicteur qui 
+connaît son sujet. 
+⭐ Débutant 
+2h → 20 
+min 
+Lien PACE™ 
+PROBLÉMATISER : 
+clarifier le message 
+central avant de 
+construire la structure. 
+CHALLENGER : simuler 
+les objections avant de 
+monter sur scène. 
+Question réflexive 
+« Sur quelles prises de 
+parole avez-vous senti 
+que votre niveau de 
+préparation vous a 
+coûté de la crédibilité 
+? » 
+2.5 
+Post LinkedIn 
+/ article de 
+fond métier 
+Contenus & 
+Prise de parole 
+Point de douleur 
+Le manager a des 
+convictions, une 
+expertise, un point de 
+vue. Il ne prend jamais 
+le temps de les 
+formaliser. Son réseau 
+ne le voit pas. Sa 
+valeur externe est 
+invisible. 
+Solution IA 
+Dicter ou taper une 
+idée brute en 5 
+minutes. L'IA la 
+transforme en 
+contenu structuré, 
+dans son ton, 
+différenciant. 15 
+minutes pour 
+devenir visible sur 
+son marché. 
+🟢 Prompt : « J'ai cette idée brute [texte]. 
+Transforme-la en post LinkedIn de 1500 
+signes. Accroche forte. Structure 3 
+parties. Appel à réflexion final. » 
+🟣 Claude Pro : article long format 
+(1500-2500 mots), ton calibré, 
+argumentation étayée, structure 
+publication native LinkedIn. 
+⭐ Débutant 
+3-4h → 15 
+min 
+Lien PACE™ 
+AMPLIFIER : l'IA 
+amplifie une conviction 
+en contenu à forte 
+portée. ÉVALUER : elle 
+challenge la solidité de 
+l'argument avant 
+publication. 
+Question réflexive 
+« Quelle conviction 
+professionnelle mérite 
+d'être entendue par 
+votre marché — et que 
+vous n'avez jamais 
+formalisée ? » 
+ 
+  CATÉGORIE 3 — DÉCISION & ANALYSE STRATÉGIQUE   
+N° / Titre 
+Point de douleur du 
+manager 
+Solution IA 
+proposée 
+Démo par outil — pas à pas 
+Niveau 
+Gain de 
+temps 
+estimé 
+Lien PACE™ & 
+CadreIActif 
+Question réflexive 
+pour l'apprenant 
+3.1 
+Challenger 
+sa décision 
+avant de 
+l'annoncer 
+Décision & 
+Analyse 
+stratégique 
+Point de douleur 
+Les décisions 
+importantes sont prises 
+seul, sous pression, 
+avec les mêmes angles 
+de vue. Les angles 
+morts ne sont 
+découverts qu'après — 
+quand il est trop tard. 
+Solution IA 
+Soumettre la décision 
+à l'IA avant de 
+l'annoncer. Elle joue le 
+devil's advocate : 5 
+meilleures objections, 
+angles morts, 
+alternatives non 
+envisagées, risques 
+sous-estimés. 
+🟢 Prompt : « Je vais décider [X]. 
+Joue le rôle de mon adversaire le plus 
+intelligent. Liste les 5 meilleures 
+objections. » 
+🟣 Claude Pro + PACE™ : « 
+Problématise, amplifie, challenge, 
+évalue ma décision [X]. Sois un 
+sparring partner de niveau COO. Pas 
+de complaisance. » 
+⭐⭐⭐ 
+Avancé 
+Évite 1 
+erreur 
+coûteuse 
+Lien PACE™ 
+C'est le cas d'usage 
+PACE™ par excellence. 
+Les 4 mouvements 
+s'enchaînent : définir le 
+vrai problème → 
+amplifier les enjeux → 
+challenger la décision → 
+évaluer l'option retenue. 
+Question réflexive 
+« Sur vos 3 dernières 
+décisions importantes, 
+laquelle aurait 
+bénéficié d'un 
+contradicteur 
+intelligent avant d'être 
+annoncée ? » 
+3.2 
+Point de douleur 
+Les enquêtes client ou 
+collaborateur 
+Solution IA 
+Coller les verbatims 
+bruts. L'IA identifie les 
+🟢 Prompt : « Voici 50 verbatims 
+clients [coller]. Identifie les 5 thèmes 
+⭐⭐ 
+Intermédiaire 
+2 jours → 
+15 min 
+Lien PACE™ 
+PROBLÉMATISER : l'IA 
+fait émerger les vrais 
+Question réflexive 
+« Dans vos dernières 
+enquêtes, combien de 
+
+
+========== PAGE 4 ==========
+N° / Titre 
+Point de douleur du 
+manager 
+Solution IA 
+proposée 
+Démo par outil — pas à pas 
+Niveau 
+Gain de 
+temps 
+estimé 
+Lien PACE™ & 
+CadreIActif 
+Question réflexive 
+pour l'apprenant 
+Analyse de 
+verbatims 
+satisfaction 
+en 15 
+minutes 
+Décision & 
+Analyse 
+stratégique 
+produisent des 
+centaines de verbatims 
+que personne n'analyse 
+vraiment. Les signaux 
+faibles restent 
+invisibles. 
+thèmes, les signaux 
+faibles, les 
+formulations 
+révélatrices, et produit 
+une synthèse avec 
+recommandations 
+priorisées. 
+principaux, les signaux faibles, et 3 
+recommandations prioritaires. » 
+🔵 Copilot M365 : analyse 
+directement le fichier Excel de 
+verbatims dans SharePoint. 
+🟣 Claude Pro : upload du fichier 
+complet (500+ verbatims). Analyse 
+thématique fine + sentiment analysis 
++ hiérarchisation des enjeux par 
+fréquence/intensité. 
+problèmes cachés dans 
+la masse des verbatims. 
+AMPLIFIER : elle capte 
+ce que l'œil humain rate. 
+verbatims avez-vous 
+vraiment lus ? Que 
+pourrait-il s'y trouver 
+que vous n'avez pas 
+vu ? » 
+3.3 
+Cartographie 
+des risques 
+projet en 20 
+minutes 
+Décision & 
+Analyse 
+stratégique 
+Point de douleur 
+Les analyses de risque 
+sont bâclées ou 
+inexistantes faute de 
+temps. Les projets 
+dérapent sur des 
+risques que tout le 
+monde avait vaguement 
+perçus mais jamais 
+formalisés. 
+Solution IA 
+Décrire le projet en 5 
+lignes. L'IA produit la 
+matrice de risques 
+complète 
+(probabilité/impact) 
+avec un plan de 
+mitigation pour chaque 
+risque identifié. 
+🟢 Prompt : « Voici mon projet 
+[description]. Génère une matrice de 
+risques : probabilité / impact / plan de 
+mitigation. Format tableau. » 
+🔵 Copilot si le projet est documenté 
+dans M365 : « Analyse les risques du 
+projet [nom] à partir des documents 
+disponibles. » 
+🟣 Claude Pro : matrice enrichie + 
+signaux d'alerte précoce + 3 
+scénarios de crise et réponses 
+préparées. 
+⭐⭐ 
+Intermédiaire 
+1 journée → 
+20 min 
+Lien PACE™ 
+CHALLENGER : l'IA 
+force à confronter les 
+scénarios négatifs que le 
+manager évite 
+instinctivement. 
+ÉVALUER : elle priorise 
+les risques à traiter en 
+premier. 
+Question réflexive 
+« Quel projet récent a 
+dérapé sur un risque 
+que vous aviez perçu 
+mais pas formalisé ? 
+Qu'aurait changé une 
+matrice construite en 
+amont ? » 
+3.4 
+Tableau de 
+bord de 
+pilotage en 
+langage 
+naturel 
+Décision & 
+Analyse 
+stratégique 
+Point de douleur 
+Le manager suit ses 
+indicateurs dans sa 
+tête, dans des fichiers 
+éparpillés, ou dans des 
+tableaux de bord 
+conçus par d'autres qui 
+ne correspondent pas à 
+ses vrais enjeux. 
+Solution IA 
+Décrire oralement les 
+indicateurs à suivre. 
+L'IA génère la 
+structure du tableau de 
+bord, les formules, et 
+le template de revue 
+mensuelle associé. 
+Zéro compétence 
+technique. 
+🟢 Prompt : « Je veux suivre ces 
+indicateurs [liste]. Génère la structure 
+d'un tableau de bord mensuel avec 
+les formules Excel correspondantes. » 
+🔵 Copilot Excel : génère directement 
+les formules et le tableau dans Excel 
+depuis une description en langage 
+naturel. 
+🟣 Claude Pro : conception du 
+dashboard + guide d'utilisation + 
+template de revue mensuelle + 
+indicateurs de dérive à surveiller. 
+⭐⭐ 
+Intermédiaire 
+2-3 jours → 
+2h 
+Lien PACE™ 
+PROBLÉMATISER : 
+clarifier ce qui compte 
+vraiment avant de 
+construire le système de 
+suivi. ÉVALUER : définir 
+les seuils d'alerte et les 
+critères de décision. 
+Question réflexive 
+« Aujourd'hui, avez-
+vous un système de 
+pilotage qui vous dit 
+vraiment ce que vous 
+devez savoir — ou ce 
+que vous avez eu le 
+temps de mettre en 
+place ? » 
+ 
+  CATÉGORIE 4 — AUTOMATISATIONS & WORKFLOWS   
+N° / Titre 
+Point de douleur du 
+manager 
+Solution IA 
+proposée 
+Démo par outil — pas à pas 
+Niveau 
+Gain de temps 
+estimé 
+Lien PACE™ & 
+CadreIActif 
+Question réflexive 
+pour l'apprenant 
+4.1 
+Assistant IA 
+personnel 
+sans coder 
+Automatisations 
+& Workflows 
+Point de douleur 
+Le manager ré-explique 
+son contexte à chaque 
+nouvelle session IA. 
+L'outil ne le connaît 
+pas. Chaque utilisation 
+Solution IA 
+Créer un Project 
+Claude Pro avec le 
+contexte métier, les 
+préférences de 
+format, le 
+vocabulaire maison. 
+L'IA connaît son 
+🟢 ChatGPT : onglet « Custom 
+Instructions » — saisir son rôle, 
+contexte, format attendu. L'IA 
+s'adapte à chaque nouvelle 
+conversation. 
+🟣 Claude Pro Projects : contexte 
+permanent + documents de 
+référence chargés + instructions 
+⭐ Débutant 
+5-10 min 
+gagnées par 
+session 
+Lien PACE™ 
+C'est le premier pas 
+vers le Cockpit 
+d'Intelligence 
+Augmentée. L'assistant 
+devient un copilote 
+Question réflexive 
+« Si votre IA vous 
+connaissait aussi bien 
+que votre meilleur 
+collaborateur, 
+comment changerait 
+
+
+========== PAGE 5 ==========
+N° / Titre 
+Point de douleur du 
+manager 
+Solution IA 
+proposée 
+Démo par outil — pas à pas 
+Niveau 
+Gain de temps 
+estimé 
+Lien PACE™ & 
+CadreIActif 
+Question réflexive 
+pour l'apprenant 
+repart de zéro. La 
+friction tue l'adoption. 
+environnement dès 
+l'ouverture. 
+Initialisation : 30 
+minutes. Bénéfice : 
+permanent. 
+persistantes. Le plus puissant des 3 
+sur ce cas. 
+cognitif permanent, pas 
+un outil ponctuel. 
+votre façon de 
+l'utiliser ? » 
+4.2 
+Compte rendu 
+automatisé → 
+envoi 
+automatique 
+Automatisations 
+& Workflows 
+Point de douleur 
+Après chaque réunion : 
+transcrire, synthétiser, 
+mettre en forme, 
+envoyer. 4 tâches 
+manuelles en série. La 
+plupart des comptes 
+rendus arrivent trop 
+tard ou jamais. 
+Solution IA 
+L'audio ou la 
+transcription Teams 
+déclenche un 
+workflow automatisé. 
+En 5 minutes : CR 
+généré, mis en forme 
+selon le template, 
+envoyé aux bonnes 
+personnes. Sans 
+intervention. 
+🔵 Copilot M365 : transcription + 
+résumé Teams natif. 
+Déclenchement automatique après 
+chaque réunion si activé. 
+🟣 Claude API (via Make) : 
+génération du CR avec le contexte 
+métier mémorisé. Ton et format 
+calibrés à l'organisation. 
+⚙️ Make/n8n : Fireflies transcrit → 
+Claude génère → email 
+automatique aux participants dans 
+les 10 minutes. Pipeline visible en 
+démo live. 
+⭐⭐⭐ 
+Avancé 
+45 min par 
+réunion + 
+100% de taux 
+de diffusion 
+Lien PACE™ 
+AMPLIFIER : 
+l'automatisation 
+démultiplie l'impact sans 
+effort supplémentaire. 
+Vision systémique : l'IA 
+comme infrastructure, 
+pas comme outil. 
+Question réflexive 
+« Si tous vos comptes 
+rendus étaient 
+envoyés dans les 10 
+minutes, qu'est-ce 
+que ça changerait 
+dans la culture de 
+décision de votre 
+organisation ? » 
+4.3 
+Base de 
+connaissances 
+FAQ 
+dynamique 
+Automatisations 
+& Workflows 
+Point de douleur 
+Le manager répond aux 
+mêmes questions 10 
+fois par mois. Chaque 
+nouvelle recrue 
+repasse par les mêmes 
+cycles d'apprentissage. 
+L'expertise ne se 
+capitalise pas. 
+Solution IA 
+Compiler les 
+questions les plus 
+fréquentes. L'IA 
+génère une base de 
+connaissances 
+structurée, 
+facilement mise à 
+jour, accessible à 
+tous. Les questions 
+récurrentes ne 
+mobilisent plus 
+l'attention. 
+🟢 Prompt : « Voici 20 questions 
+fréquentes de mon équipe [liste] et 
+mes réponses brutes. Transforme-
+les en FAQ structurée, claire, prête 
+à être publiée sur notre intranet. » 
+🔵 Copilot + SharePoint : génère et 
+héberge la FAQ directement dans 
+l'espace de travail de l'équipe. 
+🟣 Claude Pro : FAQ enrichie + 
+catégorisation + index + mise à jour 
+facilitée par conversation. La base 
+s'améliore au fil des usages. 
+⚙️ Make : lien avec un système de 
+tickets (Zendesk, Freshdesk) — les 
+nouvelles questions alimentent 
+automatiquement la base. 
+⭐⭐ 
+Intermédiaire 
+2-4h/mois 
+d'interruptions 
+évitées 
+Lien PACE™ 
+AMPLIFIER : 
+transformer l'expertise 
+individuelle en 
+intelligence collective. 
+ÉVALUER : la base 
+devient un actif 
+organisationnel, pas une 
+dépendance à une 
+personne. 
+Question réflexive 
+« Quelle proportion 
+de votre temps est 
+consacrée à répondre 
+à des questions 
+auxquelles quelqu'un 
+d'autre pourrait 
+répondre si 
+l'information était 
+accessible ? » 
+4.4 
+Proposition 
+commerciale 
+personnalisée 
+en 15 minutes 
+Automatisations 
+& Workflows 
+Point de douleur 
+Les propositions 
+commerciales 
+génériques ne 
+convertissent pas. Les 
+propositions 
+personnalisées 
+prennent une demi-
+journée. Résultat : ni 
+l'un ni l'autre n'est fait 
+correctement. 
+Solution IA 
+Saisir le contexte du 
+prospect (secteur, 
+enjeux, historique). 
+L'IA génère une 
+proposition complète, 
+personnalisée, dans 
+le format et le ton de 
+l'entreprise. 
+🟢 Prompt : « Voici le contexte du 
+prospect [description]. Génère une 
+proposition commerciale de 800 
+mots. Structure : problème identifié 
+→ solution proposée → valeur 
+démontrée → prochaines étapes. » 
+🔵 Copilot + modèles 
+Word/PowerPoint SharePoint : 
+génère la propale dans le template 
+officiel de l'entreprise directement. 
+🟣 Claude Pro + Project : contexte 
+client mémorisé, style maison 
+défini, propositions de plus en plus 
+précises à mesure que la relation 
+avec l'outil se construit. 
+⭐⭐ 
+Intermédiaire 
+4h → 15 min 
+par propale 
+Lien PACE™ 
+PROBLÉMATISER : 
+partir du problème 
+client, pas de l'offre 
+produit. AMPLIFIER : 
+montrer la valeur au-
+delà du prix. ÉVALUER : 
+l'IA challenge la 
+cohérence de la 
+proposition. 
+Question réflexive 
+« Si chaque 
+proposition que vous 
+envoyez montrait que 
+vous avez vraiment 
+compris le problème 
+du prospect, quel 
+serait l'impact sur 
+votre taux de 
+conversion ? » 
+ 
+
+
+========== PAGE 6 ==========
+  CATÉGORIE 5 — DÉVELOPPEMENT PERSONNEL & LEADERSHIP   
+N° / Titre 
+Point de douleur du 
+manager 
+Solution IA 
+proposée 
+Démo par outil — pas à pas 
+Niveau 
+Gain de temps 
+estimé 
+Lien PACE™ & 
+CadreIActif 
+Question réflexive 
+pour l'apprenant 
+5.1 
+Journal de 
+décision 
+augmenté 
+(hebdo 15 
+min) 
+Développement 
+personnel & 
+Leadership 
+Point de douleur 
+Les managers prennent 
+des dizaines de 
+décisions par mois 
+sans jamais les 
+analyser. Les mêmes 
+biais reviennent. Les 
+mêmes erreurs se 
+répètent. Personne ne 
+progresse vraiment 
+comme décideur. 
+Solution IA 
+15 minutes par 
+semaine : 
+documenter une 
+décision importante 
+(contexte, 
+alternatives, critères, 
+résultat attendu). L'IA 
+aide à la documenter 
+et identifie les 
+patterns sur 3 mois. 
+🟣 Claude Pro + Notion : « Voici 
+ma décision de la semaine 
+[contexte]. Aide-moi à la 
+documenter selon le format 
+PACE™. Identifie le pattern par 
+rapport aux 3 semaines 
+précédentes. » 
+⭐⭐⭐ 
+Avancé 
+Investissement : 
+15 min/semaine. 
+ROI : décisions 
+meilleures sur 
+la durée. 
+Lien PACE™ 
+C'est PACE™ en 
+boucle longue : 
+Problématiser / 
+Amplifier / Challenger / 
+Évaluer appliqués 
+chaque semaine à ses 
+propres décisions. 
+Méta-compétence du 
+manager augmenté. 
+Question réflexive 
+« Dans 3 mois, si 
+vous pouviez 
+analyser vos 12 
+dernières décisions 
+importantes, qu'est-ce 
+que vous y 
+découvririez sur votre 
+façon de décider ? » 
+5.2 
+Simulation 
+d'entretien 
+annuel avec 
+l'IA comme 
+N+1 
+Développement 
+personnel & 
+Leadership 
+Point de douleur 
+Les entretiens annuels 
+(vers le haut ou vers le 
+bas) se préparent mal. 
+Le manager arrive avec 
+de bonnes intentions et 
+des formulations 
+approximatives qui 
+ratent leur cible. 
+Solution IA 
+L'IA joue le rôle du 
+N+1 et pose des 
+questions difficiles. 
+Le manager 
+s'entraîne, teste ses 
+formulations, identifie 
+ses zones de flou. Il 
+arrive préparé, 
+confiant. 
+🟢 Prompt : « Tu es mon N+1. Je 
+vais te présenter mes résultats de 
+l'année. Pose-moi les questions les 
+plus difficiles que tu pourrais me 
+poser. Sois exigeant. » 
+🟣 Claude Pro en roleplay : 
+simulation complète de l'entretien 
+avec feedback en fin de session sur 
+les formulations à renforcer et les 
+angles morts détectés. 
+⭐⭐ 
+Intermédiaire 
+Préparation x3 
+en qualité — 
+même durée 
+Lien PACE™ 
+CHALLENGER : l'IA 
+incarne le contradicteur 
+que le manager n'aurait 
+jamais eu sinon. 
+ÉVALUER : feedback 
+immédiat sur la solidité 
+des arguments. 
+Question réflexive 
+« La dernière fois que 
+vous avez eu un 
+entretien annuel 
+important, comment 
+étiez-vous préparé — 
+et comment auriez-
+vous voulu l'être ? » 
+5.3 
+Miroir cognitif 
+: identifier 
+ses angles 
+morts 
+Développement 
+personnel & 
+Leadership 
+Point de douleur 
+Les biais cognitifs du 
+manager passent 
+inaperçus parce que 
+son environnement 
+valide en général ses 
+positions. Les angles 
+morts se payent cher 
+au moment des crises. 
+Solution IA 
+Décrire une situation 
+bloquante ou une 
+décision qui ne 
+produit pas les effets 
+attendus. L'IA, 
+instruite sur les biais 
+cognitifs 
+managériaux, 
+propose 3 
+hypothèses sur ce 
+qui n'est peut-être 
+pas vu. 
+🟣 Claude Pro uniquement : « 
+Voici une situation où je bloque 
+[description]. Analyse les 3 biais 
+cognitifs les plus probables dans 
+mon raisonnement. Pas de 
+validation. Questions de réflexion. » 
+⭐⭐⭐ 
+Avancé 
+Inestimable — 
+évite des 
+décisions 
+structurellement 
+biaisées 
+Lien PACE™ 
+C'est le cas d'usage 
+signature de 
+CadreIActif. Il ne peut 
+pas exister sans 
+PACE™ : 
+Problématiser le vrai 
+problème (pas le 
+symptôme) est le seul 
+point d'entrée valide. 
+Question réflexive 
+« Si vous pouviez 
+avoir accès à un 
+miroir cognitif honnête 
+avant chaque 
+décision importante, 
+qu'est-ce que vous 
+seriez prêt à y voir ? » 
+ 
+ 
+Ce catalogue est un avant-goût. Chaque cas d'usage est la porte d'entrée vers un module de formation ou un parcours d'accompagnement complet. 
+CadreIActif · Isabelle Houdaille · contact@cadreiactif.com · Intelligence Professionnelle Augmentée 
+
+

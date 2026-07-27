@@ -1,0 +1,615 @@
+<title>cadreIActif — Référentiel des 5 offres</title>
+<style>
+:root{
+  --graphite:#1E1E1E; --orange:#E8734A; --orange-dark:#C8562F; --orange-wash:#FCEEE7;
+  --brume:#F7F7F5; --paper:#FFFFFF; --or:#E8C547; --cendre:#5C5C5C; --line:rgba(30,30,30,.12);
+  --shadow:0 4px 20px rgba(30,30,30,.06);
+  --sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+:root[data-theme="dark"]{
+  --graphite:#F2F1EC; --orange:#F0916A; --orange-dark:#F5B18F; --orange-wash:#33241D;
+  --brume:#17140F; --paper:#201C16; --or:#E8C547; --cendre:#B9B3A6; --line:rgba(242,241,236,.14);
+  --shadow:0 4px 24px rgba(0,0,0,.35);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --graphite:#F2F1EC; --orange:#F0916A; --orange-dark:#F5B18F; --orange-wash:#33241D;
+    --brume:#17140F; --paper:#201C16; --or:#E8C547; --cendre:#B9B3A6; --line:rgba(242,241,236,.14);
+    --shadow:0 4px 24px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box;}
+body{font-family:var(--sans);background:var(--brume);color:var(--graphite);line-height:1.6;margin:0;}
+a{color:var(--orange-dark);}
+.layout{display:grid;grid-template-columns:252px 1fr;max-width:1280px;margin:0 auto;min-height:100vh;}
+nav.toc{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:32px 20px;border-right:1px solid var(--line);}
+nav.toc .kicker{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cendre);margin-bottom:6px;}
+nav.toc h1{font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin:0 0 28px;line-height:1.3;}
+nav.toc ol{list-style:none;margin:0 0 24px;padding:0;counter-reset:offre;}
+nav.toc li{counter-increment:offre;margin-bottom:2px;}
+nav.toc a{display:flex;gap:10px;padding:8px 10px;border-radius:4px;text-decoration:none;color:var(--graphite);font-size:.85rem;font-weight:600;}
+nav.toc a:hover{background:var(--orange-wash);}
+nav.toc a::before{content:counter(offre);flex-shrink:0;width:20px;height:20px;border-radius:3px;background:var(--graphite);color:var(--paper);font-size:.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+nav.toc .meta{font-size:.76rem;color:var(--cendre);border-top:1px solid var(--line);padding-top:16px;}
+nav.toc .meta p{margin:0 0 10px;}
+main{padding:48px 56px 120px;min-width:0;}
+.intro{max-width:720px;margin-bottom:32px;}
+.intro .kicker{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-dark);font-weight:700;margin-bottom:12px;}
+.intro h1{font-size:1.9rem;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:0 0 16px;text-wrap:balance;}
+.intro p{color:var(--cendre);font-size:1rem;margin:0 0 12px;}
+
+.strategie{max-width:720px;margin-bottom:32px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:20px 24px;box-shadow:var(--shadow);}
+.strategie h3{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--orange-dark);margin:0 0 12px;font-weight:700;}
+.strategie p{font-size:.9rem;margin:0 0 10px;}
+.strategie p:last-child{margin-bottom:0;}
+
+.usage-note{max-width:720px;margin-bottom:56px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:20px 24px;box-shadow:var(--shadow);}
+.usage-note h3{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--orange-dark);margin:0 0 12px;font-weight:700;}
+.usage-note table{width:100%;border-collapse:collapse;font-size:.86rem;}
+.usage-note td{padding:6px 10px 6px 0;vertical-align:top;border-bottom:1px solid var(--line);}
+.usage-note tr:last-child td{border-bottom:none;}
+.usage-note td.k{font-weight:700;width:34%;color:var(--graphite);}
+.usage-note .caveat{margin-top:14px;font-size:.82rem;color:var(--cendre);border-top:1px solid var(--line);padding-top:12px;}
+
+/* FICHE */
+.fiche{max-width:880px;margin-bottom:104px;scroll-margin-top:24px;border-top:3px solid var(--graphite);padding-top:10px;}
+.fiche .num{font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--orange-dark);text-transform:uppercase;margin-bottom:8px;}
+.fiche h2{font-size:1.65rem;font-weight:800;letter-spacing:-.015em;margin:0 0 6px;text-wrap:balance;}
+.fiche .souscat{font-size:.9rem;color:var(--cendre);margin:0 0 10px;font-style:italic;}
+.fiche .marche{font-size:.86rem;color:var(--cendre);margin:0 0 26px;}
+.fiche .marche b{color:var(--graphite);}
+
+.rowgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:20px 22px;box-shadow:var(--shadow);}
+.card h3{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--orange-dark);margin:0 0 12px;font-weight:700;}
+.card p{font-size:.9rem;margin:0 0 8px;}
+.card p:last-child{margin-bottom:0;}
+.card ul{margin:0;padding-left:16px;font-size:.9rem;}
+.card li{margin-bottom:6px;}
+
+.peur{margin-bottom:14px;}
+.peur:last-child{margin-bottom:0;}
+.peur b{display:block;color:var(--graphite);font-size:.9rem;margin-bottom:2px;}
+.peur span{font-size:.88rem;color:var(--cendre);}
+
+.langage{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.langage div{background:var(--brume);border-radius:4px;padding:12px 14px;}
+.langage .label{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--cendre);font-weight:700;margin-bottom:4px;}
+.langage p{font-style:italic;font-size:.88rem;margin:0;}
+
+.accroche{background:var(--graphite);color:var(--brume);border-radius:6px;padding:22px 26px;font-size:1.05rem;font-weight:600;line-height:1.45;margin-bottom:10px;position:relative;}
+.accroche::before{content:'"';position:absolute;top:-6px;left:16px;font-size:2.4rem;color:var(--or);font-weight:800;font-style:normal;}
+
+table.matrice{width:100%;border-collapse:collapse;font-size:.87rem;}
+table.matrice th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--cendre);padding:0 12px 8px;border-bottom:2px solid var(--graphite);}
+table.matrice td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.matrice td.livrable{font-weight:700;width:22%;}
+.wrap-x{overflow-x:auto;}
+
+.usecases{margin-bottom:18px;}
+.usecases h3{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--orange-dark);margin:0 0 14px;font-weight:700;}
+.uc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:20px 22px;box-shadow:var(--shadow);}
+.uc{display:flex;gap:10px;font-size:.87rem;padding:7px 0;border-bottom:1px solid var(--line);}
+.uc:nth-last-child(-n+2){border-bottom:none;}
+.uc b{flex-shrink:0;width:20px;color:var(--orange-dark);font-variant-numeric:tabular-nums;}
+
+.pilier-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:8px;}
+.pilier{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;box-shadow:var(--shadow);}
+.pilier h4{font-size:.85rem;font-weight:800;margin:0 0 8px;letter-spacing:-.005em;}
+.pilier .ad{font-size:.66rem;text-transform:uppercase;letter-spacing:.06em;color:var(--cendre);font-weight:700;margin:8px 0 3px;}
+.pilier p{font-size:.85rem;margin:0 0 4px;}
+.pilier .quote{font-style:italic;color:var(--cendre);}
+.pilier .gain{margin-top:8px;font-size:.82rem;font-weight:700;color:var(--orange-dark);}
+
+.sanctuaire{background:var(--orange-wash);border-left:3px solid var(--orange);border-radius:0 6px 6px 0;padding:16px 20px;font-size:.9rem;}
+.sanctuaire b{color:var(--orange-dark);display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+
+.declinaison-head{display:flex;align-items:baseline;gap:12px;margin:36px 0 18px;}
+.declinaison-head .tag{background:var(--graphite);color:var(--paper);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:3px 10px;border-radius:100px;}
+.declinaison-head h3{font-size:1.2rem;font-weight:800;margin:0;letter-spacing:-.01em;}
+
+.source{font-size:.78rem;color:var(--cendre);border-left:3px solid var(--or);padding:8px 14px;background:var(--paper);border-radius:0 4px 4px 0;margin-top:8px;margin-bottom:18px;}
+.source b{color:var(--graphite);}
+.note{font-size:.78rem;color:var(--cendre);border-left:3px solid var(--graphite);padding:8px 14px;background:var(--paper);border-radius:0 4px 4px 0;margin-top:8px;margin-bottom:18px;}
+.note b{color:var(--graphite);}
+.caseref{border:1px dashed var(--orange);border-radius:6px;padding:16px 18px;margin-bottom:18px;background:var(--orange-wash);}
+.caseref h4{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--orange-dark);margin:0 0 8px;font-weight:700;}
+.caseref p{font-size:.88rem;margin:0 0 6px;}
+.caseref p:last-child{margin-bottom:0;}
+
+@media (max-width: 860px){
+  .layout{grid-template-columns:1fr;}
+  nav.toc{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line);}
+  main{padding:32px 20px 80px;}
+  .rowgrid,.langage,.uc-grid,.pilier-grid{grid-template-columns:1fr;}
+}
+</style>
+
+<div class="layout">
+  <nav class="toc">
+    <div class="kicker">cadreIActif</div>
+    <h1>Référentiel des 5 offres</h1>
+    <ol>
+      <li><a href="#offre1">L'Actif Augmenté</a></li>
+      <li><a href="#offre2">Le Cockpit d'Intelligence Augmenté</a></li>
+      <li><a href="#offre3">L'Équipe de Communication</a></li>
+      <li><a href="#offre4">Le Créateur de Contenu Augmenté</a></li>
+      <li><a href="#offre5">Les Entreprises à Impact</a></li>
+    </ol>
+    <div class="meta">
+      <p><b>v7 — architecture finale des 5 portes d'entrée.</b> Les fiches 4a et 4b reprennent fidèlement les fiches 5 et 11 du Référentiel de Segmentation Global V4 ; les fiches 1, 2, 3 et 5 sont construites dans le même format, faute de fiche source équivalente.</p>
+      <p><b>Offre 1</b> (<i>L'Actif Augmenté</i>) accueille désormais aussi bien le contributeur individuel que le manager qui n'a pas encore été formé — l'acculturation y est le format signature. <b>Offre 2</b> (<i>Le Cockpit d'Intelligence Augmenté</i>) est la suite naturelle, explicitement construite autour de Claude, pour qui a dépassé l'acculturation et veut construire ses propres outils.</p>
+      <p><b>Offre 3</b> (<i>L'Équipe de Communication</i>) reste une porte d'entrée à part entière — acculturation d'équipe d'abord, gouvernance ensuite — plutôt que d'être absorbée dans l'Offre 2.</p>
+      <p>Le repositionnement professionnel n'a toujours pas d'offre dédiée : il reste traité comme une application du <b>personal branding</b> (Pilier 6 de l'Offre 4a).</p>
+    </div>
+  </nav>
+
+  <main>
+    <div class="intro">
+      <div class="kicker">Structure de chaque fiche</div>
+      <h1>Écosystème → Peurs → Levier → Langage → Accroche → PACE™ → 12 cas → Sanctuaire</h1>
+      <p>Chaque fiche traduit une psychologie réelle en argumentaire vendable — le « Masque » est ce que la cible dit en public, le « Secret » ce qu'elle n'ose confier qu'en tête-à-tête. C'est cet écart qui donne l'accroche commerciale.</p>
+    </div>
+
+    <div class="strategie">
+      <h3>Positionnement cadreIActif — ce que ces 5 offres ont en commun</h3>
+      <p>Le marché de la formation IA se scinde en deux extrêmes mal desservis : d'un côté des ateliers de sensibilisation génériques qui ne changent rien au quotidien réel de qui les suit ; de l'autre des formations techniques (prompt engineering, outils) qui ignorent la psychologie du métier et la peur qu'elles sont censées traiter. cadreIActif se positionne entre les deux, avec un socle commun aux 5 offres : la méthode PACE™ (Problématiser · Amplifier · Challenger · Évaluer), l'écosystème Claude comme colonne vertébrale technique (Claude.ai, Projects, Claude Code, agents personnalisés — plutôt qu'un empilement d'outils génériques), et un principe non négociable : partir des peurs réelles et non dites du métier avant de parler d'outils.</p>
+      <p>L'observation de marché qui structure l'ensemble : la demande explicite (« former mes équipes à l'IA ») cache presque toujours une demande implicite plus profonde — retrouver de la légitimité, de la visibilité ou de la sérénité face à un changement qu'on subit sans cadre. Les 5 offres ci-dessous sont ordonnées du besoin le plus individuel et le plus urgent (Offre 1) au besoin le plus collectif et le plus stratégique (Offre 5).</p>
+    </div>
+
+    <div class="usage-note">
+      <h3>Mode d'emploi — comment miner ce document pour une landing page</h3>
+      <table>
+        <tr><td class="k">Accroche</td><td>Candidate directe pour un titre de hero section.</td></tr>
+        <tr><td class="k">Masque / Secret</td><td>Le sous-titre de tension qui suit le titre — nomme le non-dit sans le juger.</td></tr>
+        <tr><td class="k">Matrice PACE™</td><td>La section « Avant / Après » — un seul livrable concret vaut mieux qu'une liste de bénéfices abstraits.</td></tr>
+        <tr><td class="k">12 cas d'usage</td><td>Le bloc « ce que vous apprendrez » — reformulables en punchlines courtes.</td></tr>
+        <tr><td class="k">Sanctuaire des 30 %</td><td>Le bloc de réassurance anti-objection : « l'IA ne remplace pas votre valeur, voici pourquoi ».</td></tr>
+      </table>
+      <div class="caveat"><b>Convention de sourcing :</b> les citations « Masque » / « Secret » sont des verbatims-types issus de la méthodologie de segmentation cadreIActif — une reconstitution de ce que la cible pense tout bas, pas des citations recueillies et sourcées. Les <b>statistiques</b>, elles, sont toutes sourcées ci-dessous à leur point d'usage ; aucun chiffre non vérifié n'a été laissé dans cette version. Les extraits marqués « cadrage réel » (piliers de l'Offre 4a, benchmark VINCI) sont des verbatims exacts issus de documents de travail transmis par Isabelle, non des inventions.</div>
+    </div>
+
+    <!-- ============ OFFRE 1 ============ -->
+    <section class="fiche" id="offre1">
+      <div class="num">Offre 1 — Construite pour cadreIActif · aucune fiche source équivalente</div>
+      <h2>L'Actif Augmenté</h2>
+      <p class="souscat">Pour le particulier — contributeur individuel ou manager d'équipe — mal accompagné par son entreprise sur le sujet IA, qui investit lui-même dans sa montée en compétences pour ne pas se faire larguer. Ce n'est pas une offre de recherche d'emploi : on reste dans son poste, on refuse juste de décrocher. L'acculturation est le format signature de cette offre.</p>
+      <p class="marche"><b>Marché :</b> B2C pur, autofinancé ou CPF · <b>Sensibilité :</b> Anxieuse, comparative, en quête de légitimité</p>
+
+      <div class="rowgrid">
+        <div class="card">
+          <h3>Écosystème &amp; pratiques réelles</h3>
+          <p>Salarié, cadre ou manager d'équipe, dans une entreprise qui n'a proposé aucune formation IA officielle — que l'on pilote une équipe ou non ne change pas ce constat de départ. Observe des collègues plus jeunes ou plus à l'aise progresser plus vite, apprend seul le soir sur des tutoriels épars. Outils : ChatGPT gratuit, essais isolés sans méthode.</p>
+          <p><b>IA clandestine :</b> l'utilise en cachette de ses collègues et parfois de sa propre équipe, par peur d'admettre qu'elle en a besoin — ou à l'inverse s'interdit de trop s'en servir de peur de passer pour quelqu'un qui « triche » ou ne travaille plus vraiment.</p>
+        </div>
+        <div class="card">
+          <h3>Budget</h3>
+          <p>Personnel, mobilisable via le CPF quand il existe, sinon autofinancé et sensible au prix — mais déclenchable dès que la peur du décrochage devient plus forte que la réticence à payer.</p>
+          <h3 style="margin-top:16px;">Levier d'achat réel</h3>
+          <p>Reprendre la main sur sa propre trajectoire avant que l'écart avec ses pairs ne devienne visible aux yeux de tous — investir maintenant, en silence, plutôt que subir plus tard, en public.</p>
+        </div>
+      </div>
+
+      <div class="caseref">
+        <h4>Format signature — l'atelier d'acculturation</h4>
+        <p>Session collective courte (2 à 4h), déjà testée en conditions réelles : démystifier l'IA générative sans jargon, construire un vocabulaire commun, désamorcer la peur par la pratique guidée plutôt que par le discours, et repartir avec 2 ou 3 usages personnels immédiatement applicables — pas une liste de fonctionnalités.</p>
+        <p>C'est la porte d'entrée la plus basse du référentiel : elle précède logiquement l'Offre 2 (pour qui veut aller plus loin) et l'Offre 3 (sa version collective pour une équipe de communication).</p>
+      </div>
+
+      <div class="card" style="margin-bottom:18px;">
+        <h3>Cartographie des peurs inconscientes</h3>
+        <div class="peur"><b>Le décrochage silencieux</b><span>Peur de se réveiller dans deux ans complètement dépassé par des collègues qui auront pris une avance irrattrapable, sans qu'aucun signal d'alarme officiel n'ait jamais été donné par l'entreprise.</span></div>
+        <div class="peur"><b>La honte de ne pas savoir demander</b><span>Peur de révéler à son manager, ses pairs ou — pour un manager — à sa propre équipe qu'elle ne maîtrise pas un outil que « tout le monde » semble déjà utiliser, et de perdre en crédibilité rien qu'en posant la question.</span></div>
+      </div>
+
+      <div class="langage" style="margin-bottom:18px;">
+        <div><div class="label">Le Masque</div><p>« Mon entreprise ne nous a pas encore formés officiellement, on n'a pas encore de cadre pour ça. »</p></div>
+        <div><div class="label">Le Secret</div><p>« Je vois bien que certains collègues sont déjà hyper à l'aise avec l'IA, et moi je bricole tout seul le soir en espérant que ça ne se voie pas. »</p></div>
+      </div>
+
+      <div class="accroche">N'attendez pas que votre entreprise décide pour vous quand vous former à l'IA. Prenez une longueur d'avance pendant que d'autres attendent une formation qui ne viendra peut-être jamais.</div>
+
+      <div class="card wrap-x" style="margin-bottom:18px;">
+        <h3>Matrice de transformation PACE™</h3>
+        <table class="matrice">
+          <tr><th>Livrable critique</th><th>Avant — le processus épuisant</th><th>Après — le processus augmenté</th></tr>
+          <tr><td class="livrable">Une journée de travail type</td><td>Tâches répétitives chronophages, sentiment diffus de retard face à des collègues plus rapides, aucune méthode personnelle, usage isolé et culpabilisé de l'IA.</td><td>Une méthode personnelle reproductible, un gain de temps mesurable dès la première semaine, la capacité à en parler ouvertement en réunion d'équipe plutôt qu'à le cacher.</td></tr>
+        </table>
+      </div>
+
+      <div class="usecases">
+        <h3>Les 12 cas d'usage</h3>
+        <div class="uc-grid">
+          <div class="uc"><b>01</b>Diagnostic personnel des tâches à automatiser en priorité dans son poste actuel.</div>
+          <div class="uc"><b>02</b>Prise en main progressive d'un outil IA, sans jargon technique.</div>
+          <div class="uc"><b>03</b>Rédaction augmentée de ses emails et comptes rendus quotidiens.</div>
+          <div class="uc"><b>04</b>Synthèse rapide de documents longs (rapports, contrats, notes internes).</div>
+          <div class="uc"><b>05</b>Préparation augmentée d'une réunion ou d'un entretien annuel.</div>
+          <div class="uc"><b>06</b>Structuration d'idées en amont d'une prise de parole interne.</div>
+          <div class="uc"><b>07</b>Organisation personnelle et priorisation augmentée de sa charge de travail.</div>
+          <div class="uc"><b>08</b>Veille automatisée sur son secteur ou son métier.</div>
+          <div class="uc"><b>09</b>Auto-évaluation de ses compétences IA face aux usages réels du marché.</div>
+          <div class="uc"><b>10</b>Argumentaire pour proposer une évolution ou une formation à son manager ou à sa direction.</div>
+          <div class="uc"><b>11</b>Journal de progression personnel pour mesurer ses propres gains de temps.</div>
+          <div class="uc"><b>12</b>Premiers pas vers un agent personnel simple — passerelle douce vers le Cockpit (Offre 2).</div>
+        </div>
+      </div>
+
+      <div class="sanctuaire"><b>Sanctuaire des 30 %</b>La capacité d'écoute fine d'un collègue en difficulté, le jugement contextuel qui sait s'écarter de la procédure au bon moment, la légitimité relationnelle construite sur la durée dans l'équipe.</div>
+      <div class="note">Distinction avec l'Offre 2 : même cible potentielle (y compris un manager), mais ici l'objectif est l'acculturation et l'autonomie de base ; l'Offre 2 s'adresse à qui a déjà dépassé ce stade et veut construire ses propres outils avec Claude.</div>
+    </section>
+
+    <!-- ============ OFFRE 2 ============ -->
+    <section class="fiche" id="offre2">
+      <div class="num">Offre 2 — Construite pour cadreIActif (produit déjà en vente)</div>
+      <h2>Le Cockpit d'Intelligence Augmenté</h2>
+      <p class="souscat">Pour les entrepreneurs et les managers qui ont déjà passé le cap de l'acculturation (Offre 1) et veulent aller plus loin : construire leurs propres outils et agents avec Claude, sans dépendre d'un service informatique.</p>
+      <p class="marche"><b>Marché :</b> B2B Direct (managers, directions opérationnelles) et B2C Premium (entrepreneurs, indépendants) · <b>Sensibilité :</b> Pragmatique, orientée résultat, saturée de « hacks IA » génériques</p>
+
+      <div class="rowgrid">
+        <div class="card">
+          <h3>Écosystème &amp; pratiques réelles</h3>
+          <p>Pilote une équipe ou son activité seul. Utilise déjà ChatGPT gratuit ou Claude ponctuellement, sans méthode. Teste des prompts trouvés en ligne sans transformation réelle du quotidien — le socle Claude (Claude.ai, Projects pour la mémoire de contexte, Claude Code pour construire sans coder) reste largement sous-exploité.</p>
+          <p><b>IA clandestine :</b> prépare ses présentations CODIR et rédige ses comptes rendus avec l'IA sans le dire à son équipe — « je ne veux pas qu'on pense que je ne travaille plus autant. »</p>
+        </div>
+        <div class="card">
+          <h3>Budget</h3>
+          <p>Budget formation managériale côté entreprise ; arbitrage direct avec le chiffre d'affaires côté entrepreneur/indépendant. Preuve de marché : le pilote réel se vend 390€ de lancement (720€ ensuite).</p>
+          <h3 style="margin-top:16px;">Levier d'achat réel</h3>
+          <p>Passer d'un usage opportuniste et anxiogène à une méthode reproductible construite autour de Claude, qui redonne du temps réel et une longueur d'avance visible — sans dépendre d'un service informatique.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:18px;">
+        <h3>Cartographie des peurs inconscientes</h3>
+        <div class="peur"><b>L'usure de la loterie</b><span>Peur diffuse de perdre du temps à retenter des prompts sans méthode, avec des résultats inégaux qui ne rassurent jamais vraiment sur la fiabilité de l'outil.</span></div>
+        <div class="peur"><b>Le syndrome du secrétaire dépossédé</b><span>Crainte de n'utiliser l'IA que pour des tâches basses pendant que d'autres, mieux formés, l'utilisent pour décider et prendre de la hauteur.</span></div>
+      </div>
+
+      <div class="langage" style="margin-bottom:18px;">
+        <div><div class="label">Le Masque</div><p>« Je maîtrise déjà bien l'IA, j'utilise ChatGPT régulièrement. »</p></div>
+        <div><div class="label">Le Secret</div><p>« Je n'ose pas demander à mon équipe ce qu'elle utilise vraiment — j'ai peur de découvrir que je suis en retard. »</p></div>
+      </div>
+
+      <div class="accroche">68 % des salariés peinent à absorber le rythme et le volume de leur travail, 46 % déclarent un épuisement professionnel. Ce programme ne donne pas de prompts miracles — il apprend à penser avec elle, avec Claude comme copilote.</div>
+      <div class="source"><b>Source :</b> Microsoft &amp; LinkedIn, <i>Work Trend Index Annual Report</i>, mai 2024.</div>
+
+      <div class="card wrap-x" style="margin-bottom:18px;">
+        <h3>Matrice de transformation PACE™</h3>
+        <table class="matrice">
+          <tr><th>Livrable critique</th><th>Avant — le processus épuisant</th><th>Après — le processus augmenté</th></tr>
+          <tr><td class="livrable">Présentation CODIR et décision argumentée</td><td>3h de mise en forme, angles morts découverts après coup, questions du board mal anticipées.</td><td>Plan et argumentaire produits en 45 minutes avec Claude ; la décision est challengée par l'IA en amont (devil's advocate) ; les questions du board sont anticipées avec réponses préparées.</td></tr>
+        </table>
+      </div>
+
+      <div class="usecases">
+        <h3>Les 12 cas d'usage (resserrés du catalogue réel à 20 cas)</h3>
+        <div class="uc-grid">
+          <div class="uc"><b>01</b>Veille concurrentielle automatisée — briefing hebdomadaire actionnable.</div>
+          <div class="uc"><b>02</b>Analyse rapide d'un document complexe en 3 minutes.</div>
+          <div class="uc"><b>03</b>Réunion enregistrée → 4 livrables distincts.</div>
+          <div class="uc"><b>04</b>Présentation CODIR en 45 minutes.</div>
+          <div class="uc"><b>05</b>Post LinkedIn / article de fond en 15 minutes.</div>
+          <div class="uc"><b>06</b>Challenger sa décision avant de l'annoncer.</div>
+          <div class="uc"><b>07</b>Analyse de verbatims clients ou collaborateurs.</div>
+          <div class="uc"><b>08</b>Cartographie des risques projet en 20 minutes.</div>
+          <div class="uc"><b>09</b>Assistant IA personnel sans coder, avec un Projet Claude dédié — la brique de base du Cockpit.</div>
+          <div class="uc"><b>10</b>Premier outil ou agent construit avec Claude Code, sans compétence technique.</div>
+          <div class="uc"><b>11</b>Journal de décision augmenté — identifier ses patterns.</div>
+          <div class="uc"><b>12</b>Miroir cognitif — identifier ses angles morts de décideur.</div>
+        </div>
+      </div>
+
+      <div class="sanctuaire"><b>Sanctuaire des 30 %</b>La crédibilité relationnelle construite en direct avec l'équipe, la capacité à trancher dans l'incertitude sans donnée complète, l'énergie de mobilisation en période de crise.</div>
+      <div class="note">Adaptable par direction sans changer la mécanique : le référentiel source donne une accroche et 12 cas sur-mesure pour DAF, DRH, Supply Chain, Juridique, Marketing et R&amp;D. Suite naturelle de l'Offre 1 pour qui a déjà fait le chemin de l'acculturation.</div>
+    </section>
+
+    <!-- ============ OFFRE 3 ============ -->
+    <section class="fiche" id="offre3">
+      <div class="num">Offre 3 — Construite pour cadreIActif</div>
+      <h2>L'Équipe de Communication</h2>
+      <p class="souscat">Le pendant collectif de l'Offre 4 : ici, l'unité de vente n'est pas le communicant seul mais la direction de communication et son équipe. Comme pour l'Offre 1, l'acculturation d'équipe est le point de départ — mais taillée sur le métier de la communication, pas générique — avant la gouvernance au quotidien.</p>
+      <p class="marche"><b>Marché :</b> B2B Direct (directions de communication, RP, marque employeur) · <b>Sensibilité :</b> Prudente, exposée juridiquement, coincée entre productivité attendue et conformité</p>
+
+      <div class="rowgrid">
+        <div class="card">
+          <h3>Écosystème &amp; pratiques réelles</h3>
+          <p>Direction de communication de 5 à 20 personnes dans une ETI ou une grosse PME : communication interne (newsletter, intranet, kits managériaux), communication externe et RP, un peu de marketing en soutien de l'équipe commerciale, organisation d'événements (salons, séminaires, webinaires), production de contenu décliné sur de nombreux supports. Chacun a ses propres habitudes IA pour rédiger, décliner ou illustrer — jamais harmonisées, jamais pensées pour le volume réel de tâches chronophages et répétitives du service.</p>
+          <p><b>IA clandestine :</b> le community manager génère ses visuels avec une IA image sans mention légale ; l'attaché de presse traduit ses communiqués avec un outil gratuit sans relecture ; le chargé de com interne recopie à la main la même information sur l'intranet, le site et les signatures email faute de savoir automatiser — personne ne sait ce que font vraiment les autres, ni ce qui pourrait leur faire gagner des heures chaque semaine.</p>
+        </div>
+        <div class="card">
+          <h3>Budget</h3>
+          <p>Budget de conformité / gouvernance des données de la direction de la communication, ou enveloppe de transformation des outils éditoriaux et de production.</p>
+          <h3 style="margin-top:16px;">Levier d'achat réel</h3>
+          <p>Un cadre construit avec l'équipe elle-même plutôt qu'imposé par la DSI, qui légitime la direction de communication comme pilote de son propre sujet IA plutôt que simple relais de contraintes juridiques.</p>
+        </div>
+      </div>
+
+      <div class="caseref">
+        <h4>Format signature — l'atelier d'acculturation d'équipe</h4>
+        <p>Même logique que l'Offre 1, mais construite exclusivement sur le quotidien réel de l'équipe de communication : ses outils (Canva, plateformes de RP, Mailjet), ses peurs spécifiques (mort de la signature de marque, RGPD sur les visuels et témoignages), ses formats (post LinkedIn, communiqué, newsletter). Objectif : que l'équipe reparte avec un vocabulaire commun et un premier diagnostic partagé de ses propres usages IA — condition préalable à la charte et à la gouvernance qui suivent.</p>
+      </div>
+
+      <div class="card" style="margin-bottom:18px;">
+        <h3>Cartographie des peurs inconscientes</h3>
+        <div class="peur"><b>La responsabilité sans visibilité</b><span>Angoisse du/de la DirCom d'être tenu·e pour responsable d'un contenu publié avec une IA générative — image sans droits, citation inventée, RGPD non respecté — sans même l'avoir vu passer.</span></div>
+        <div class="peur"><b>Le frein accusé d'immobilisme</b><span>Peur d'interdire l'IA à l'équipe et de passer pour la direction qui freine la productivité, pendant que chaque membre continue en silence, sans cadre ni partage.</span></div>
+      </div>
+
+      <div class="langage" style="margin-bottom:18px;">
+        <div><div class="label">Le Masque</div><p>« Notre charte éditoriale couvre déjà ce genre d'usages. »</p></div>
+        <div><div class="label">Le Secret</div><p>« Je n'ai en réalité aucune idée de ce que chaque membre de mon équipe fait vraiment avec ces outils, canal par canal. »</p></div>
+      </div>
+
+      <div class="accroche">L'usage caché de l'IA existe déjà dans votre équipe de communication — un visuel généré sans mention, une traduction non relue, un post écrit par un outil que vous n'avez jamais vu. La question n'est pas de l'interdire, c'est de le rendre visible avant qu'un incident ne vous l'apprenne.</div>
+
+      <div class="card wrap-x" style="margin-bottom:18px;">
+        <h3>Matrice de transformation PACE™</h3>
+        <table class="matrice">
+          <tr><th>Livrable critique</th><th>Avant — le processus épuisant</th><th>Après — le processus augmenté</th></tr>
+          <tr><td class="livrable">Kit de communication managériale pour annoncer une réorganisation</td><td>Décliner le message de la direction pour 15 managers différents, anticiper les questions difficiles de chaque équipe, tout sous 48h avant l'annonce officielle, en réunion de crise.</td><td>L'IA génère un kit complet — message-cadre, FAQ anticipée par typologie d'équipe, éléments de langage — en une heure ; la direction de communication valide et ajuste au lieu de rédiger de zéro.</td></tr>
+        </table>
+      </div>
+
+      <div class="usecases">
+        <h3>Les 12 cas d'usage (quotidien réel d'une équipe de communication en ETI/PME)</h3>
+        <div class="uc-grid">
+          <div class="uc"><b>01</b>Newsletter interne mensuelle — synthèse automatisée des contributions éparses de chaque service en un numéro cohérent.</div>
+          <div class="uc"><b>02</b>Kit de communication managériale pour relayer un message sensible (réorganisation, résultats), avec FAQ anticipée par équipe.</div>
+          <div class="uc"><b>03</b>Assistant RAG interne — interroger la mémoire collective de l'équipe (charte éditoriale, anciens communiqués, brand guidelines) au lieu de redemander à un collègue.</div>
+          <div class="uc"><b>04</b>Kit événementiel complet (salon, lancement, séminaire) — visuels, invitations, relances, supports de stand générés à partir d'un brief unique.</div>
+          <div class="uc"><b>05</b>Déclinaison multi-supports d'un même contenu (article long → post LinkedIn, newsletter, story, script vidéo court) sans perdre la voix de marque.</div>
+          <div class="uc"><b>06</b>Génération de visuels réseaux sociaux et supports de présentation à partir de la charte graphique, mention légale IA intégrée automatiquement.</div>
+          <div class="uc"><b>07</b>Argumentaire commercial et fiches produit tenus à jour, déclinés par segment client, en soutien de l'équipe commerciale.</div>
+          <div class="uc"><b>08</b>Automatisation d'une même information sur tous les canaux (intranet, site, signatures email, réseaux sociaux) en un seul geste plutôt que quatre mises à jour manuelles.</div>
+          <div class="uc"><b>09</b>Cartographie des usages IA réels de l'équipe, canal par canal (audit Shadow AI de départ).</div>
+          <div class="uc"><b>10</b>Charte d'usage IA éditoriale et cas pratique RGPD — ce qui est publiable en l'état, ce qui exige une relecture humaine, ce qu'on a le droit de coller dans un outil IA.</div>
+          <div class="uc"><b>11</b>Cadre de mentions légales et de droits à l'image pour les visuels générés par IA.</div>
+          <div class="uc"><b>12</b>Plan de gouvernance à 90 jours, avec agent de veille partagé (sectoriel, concurrentiel, e-réputation) et jalons de revue.</div>
+        </div>
+      </div>
+
+      <div class="sanctuaire"><b>Sanctuaire des 30 %</b>La confiance managériale construite dans la transparence plutôt que dans le contrôle, l'arbitrage humain des cas gris qu'aucune charte ne couvre, la responsabilité assumée par la direction de communication devant la direction générale.</div>
+      <div class="note">Distinction avec l'Offre 4 : ici on acculture puis on outille et on gouverne l'équipe dans son ensemble (niveau direction) ; l'Offre 4, <i>Le Créateur de Contenu Augmenté</i>, forme la pratique individuelle de production de chaque créateur de contenu. Les deux se vendent ensemble ou séparément selon la maturité du client.</div>
+    </section>
+
+    <!-- ============ OFFRE 4 ============ -->
+    <section class="fiche" id="offre4">
+      <div class="num">Offre 4 — Reprend les Fiches 5 et 11 du référentiel source, enrichie du cadrage réel Élodie</div>
+      <h2>Le Créateur de Contenu Augmenté</h2>
+      <p class="souscat">Pour tout professionnel dont le métier est de créer du contenu — pour sa propre entreprise ou pour le compte d'un client (agence, indépendant, pigiste). Au-delà de la production, la formation installe un véritable système IA (gabarits, bibliothèque de prompts, agent ou automatisation avec Claude) pour automatiser ce qui peut l'être — pas seulement des techniques d'écriture ponctuelles.</p>
+      <p class="marche">Deux déclinaisons d'un même socle méthodologique — produire vite sans perdre sa voix — parce que la déontologie d'un créateur de contenu en entreprise et celle d'un journaliste ou d'un attaché de presse ne se recouvrent pas.</p>
+
+      <div class="declinaison-head"><span class="tag">Déclinaison A</span><h3>Communication d'entreprise</h3></div>
+      <p class="marche"><b>Marché :</b> B2B Direct, communication corporate / marque employeur / employee advocacy · <b>Sensibilité :</b> Créative, stylistique, jalouse de son originalité</p>
+
+      <div class="rowgrid">
+        <div class="card">
+          <h3>Écosystème &amp; pratiques réelles</h3>
+          <p>Gère énormément de sujets à la fois, en interne pour son entreprise ou pour le compte de clients en agence/freelance : communication corporate, marque employeur, employee advocacy, contenus LinkedIn, réécriture d'articles, stratégie éditoriale. S'informe via Stratégies, CB News, Visibrain. Outils : Canva, Suite Adobe, plateformes de RP, Mailjet.</p>
+          <p><b>IA clandestine :</b> déclinaison massive de posts LinkedIn à partir d'un article de blog, recherche d'idées de titres accrocheurs pour des communiqués institutionnels — un usage déjà réel, mais opportuniste, sans méthode ni système.</p>
+        </div>
+        <div class="card">
+          <h3>Budget</h3>
+          <p>Budget éditorial, enveloppe de production de contenus de marque ou transformation des outils de communication interne.</p>
+          <h3 style="margin-top:16px;">Levier d'achat réel</h3>
+          <p>L'assurance d'injecter la charte sémantique intime de l'entreprise pour démultiplier la production sans jamais trahir le style — le frein n'est pas technique, c'est vouloir garder sa voix, son identité éditoriale et son expertise.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:18px;">
+        <h3>Cartographie des peurs inconscientes</h3>
+        <div class="peur"><b>La mort de la signature de marque</b><span>Angoisse de voir les communications s'uniformiser dans un style « corporatiste tiède », reconnaissable comme généré par IA.</span></div>
+        <div class="peur"><b>La rationalisation des effectifs</b><span>Crainte que la direction générale ne réduise l'équipe créative sous prétexte qu'un abonnement IA génère des textes en une seconde.</span></div>
+      </div>
+
+      <div class="langage" style="margin-bottom:18px;">
+        <div><div class="label">Le Masque</div><p>« L'IA produit des contenus insipides, sans la nuance culturelle indispensable à notre réputation. »</p></div>
+        <div><div class="label">Le Secret</div><p>« Mes équipes passent leurs journées sur de la reformulation basique. Si la DG s'aperçoit de notre vitesse réelle, nos budgets vont fondre. »</p></div>
+      </div>
+
+      <div class="accroche">Ne laissez pas l'IA lisser votre communication. Apprenez à cloner la voix unique de votre marque pour produire davantage sans jamais perdre votre identité stratégique.</div>
+
+      <div class="usecases">
+        <h3>Les 6 piliers (cadrage réel — verbatims exacts, entretien Élodie)</h3>
+        <div class="pilier-grid">
+          <div class="pilier">
+            <h4>Pilier 1 — Productivité éditoriale</h4>
+            <div class="ad">Aujourd'hui</div><p>Rédaction lente, réécritures manuelles, adaptation de formats chronophage.</p>
+            <div class="ad">Demain</div><p>Transformer un article en 10 contenus ; décliner un post corporate en post dirigeant ; transformer une interview en série LinkedIn ; générer des variantes rapidement.</p>
+            <div class="gain">Gain mesuré : 30 à 50 % de temps gagné.</div>
+          </div>
+          <div class="pilier">
+            <h4>Pilier 2 — Préserver sa voix</h4>
+            <p><b>Son sujet n°1.</b></p>
+            <p class="quote">Masque : « L'IA écrit à ma place. »</p>
+            <p class="quote">Ce qu'il faut lui faire comprendre : « L'IA écrit comme toi quand tu lui apprends à écrire comme toi. »</p>
+            <p>Leviers : création d'un profil éditorial, extraction de sa tonalité, bibliothèque d'exemples, personnalisation des réponses.</p>
+            <div class="gain">« C'est souvent le déclic le plus puissant. »</div>
+          </div>
+          <div class="pilier">
+            <h4>Pilier 3 — Stratégie éditoriale</h4>
+            <p>IA comme partenaire de réflexion : angles éditoriaux, calendrier éditorial, territoires de marque, tendances, benchmark concurrents, cartographie des audiences.</p>
+            <div class="gain">« Elle arrête d'utiliser l'IA comme rédacteur. Elle commence à l'utiliser comme stratège junior. »</div>
+          </div>
+          <div class="pilier">
+            <h4>Pilier 4 — Pilotage et reporting</h4>
+            <p>Sujet souvent oublié. L'IA aide à analyser les performances, comprendre pourquoi un post marche, produire des synthèses, préparer des reportings, générer des recommandations.</p>
+            <div class="gain">Objectif : passer du reporting descriptif au reporting stratégique.</div>
+          </div>
+          <div class="pilier">
+            <h4>Pilier 5 — Influence interne</h4>
+            <p>Très important : elle doit convaincre son boss. L'IA aide à construire des argumentaires, préparer des présentations, défendre des choix éditoriaux, préparer des COMEX, anticiper les objections.</p>
+            <div class="gain">« Là on touche directement à sa visibilité. »</div>
+          </div>
+          <div class="pilier">
+            <h4>Pilier 6 — Personal branding &amp; marque employeur</h4>
+            <p>Sujet latent mais probablement très fort — et le seul endroit du référentiel où l'on traite la visibilité professionnelle individuelle : pas d'offre séparée pour la recherche d'emploi ou le repositionnement, ce besoin est traité ici, comme une simple variante d'objectif du même travail de fond.</p>
+            <div class="ad">Aujourd'hui</div><p>Profil LinkedIn sous-exploité, difficulté à parler d'elle-même — et pour qui vise un repositionnement, la peur supplémentaire d'être invisible aux yeux d'un algorithme de recrutement avant même qu'un humain n'ait lu son parcours.</p>
+            <div class="ad">Demain</div><p>Positionnement clair, storytelling professionnel, posts d'expertise, visibilité externe — que l'objectif soit de rayonner dans son poste actuel ou de préparer, en douceur et sans le crier, un repositionnement sur le marché.</p>
+            <div class="gain">« L'IA devient un coach de marque personnelle. »</div>
+          </div>
+        </div>
+      </div>
+      <div class="source"><b>Source :</b> cadrage exact transmis par Isabelle (entretien de qualification Élodie), transcrit verbatim — structure Aujourd'hui/Demain, citations entre guillemets reproduites à l'identique.</div>
+
+      <div class="caseref">
+        <h4>Cas réel accompagné — illustration du Pilier 6</h4>
+        <p><b>Benchmark de 20 finfluenceurs pour VINCI</b> (mission réelle, méthodologie cadreIActif) : scoring pondéré notoriété (40 %) / image de marque (60 %) sur 20 profils, classement par influence et par sérieux éditorial, matrice influence × sérieux, angles éditoriaux conseillés (« comprendre le modèle économique de VINCI ») vs déconseillés (« faut-il acheter l'action VINCI ? »), plan d'activation en trois vagues avec KPI qualitatifs par profil.</p>
+        <p>C'est la même rigueur méthodologique — cartographier, scorer, distinguer angle pédagogique et angle promotionnel interdit — qui s'applique à l'échelle d'une marque employeur ou d'un dirigeant qui veut incarner son expertise sans s'exposer juridiquement. Un exemple concret et chiffré à réutiliser tel quel dans une étude de cas commerciale.</p>
+      </div>
+
+      <div class="card wrap-x" style="margin-bottom:18px;">
+        <h3>Matrice de transformation PACE™</h3>
+        <table class="matrice">
+          <tr><th>Livrable critique</th><th>Avant — le processus épuisant</th><th>Après — le processus augmenté</th></tr>
+          <tr><td class="livrable">Plan de communication de crise (bad buzz)</td><td>Des heures d'angoisse en cellule d'urgence à peser chaque mot sous la pression de la direction, dans la fatigue et la panique.</td><td>Le cockpit génère 4 scénarios de réponse. L'IA joue le rôle d'un Challenger (médias hostiles) pour traquer la moindre faille d'interprétation.</td></tr>
+        </table>
+      </div>
+
+      <div class="usecases">
+        <h3>Les 12 cas d'usage</h3>
+        <div class="uc-grid">
+          <div class="uc"><b>01</b>Déclinaison multicanale d'un communiqué (LinkedIn, intranet, newsletter).</div>
+          <div class="uc"><b>02</b>Clonage sémantique — écrire selon le guide de style de la marque.</div>
+          <div class="uc"><b>03</b>Simulateur de crise — attaques de journalistes ou d'internautes.</div>
+          <div class="uc"><b>04</b>Personal branding du dirigeant ou du communicant lui-même — positionnement, storytelling professionnel et posts d'expertise LinkedIn, en poste ou en vue d'un repositionnement.</div>
+          <div class="uc"><b>05</b>Ajustement de posture d'un discours du CEO.</div>
+          <div class="uc"><b>06</b>Synthèse de RP — tonalité et thématiques d'une revue de presse.</div>
+          <div class="uc"><b>07</b>Storyboarding de vidéos corporate.</div>
+          <div class="uc"><b>08</b>FAQ internes lors d'une fusion ou restructuration.</div>
+          <div class="uc"><b>09</b>Optimisation SEO éditoriale sans dénaturer le style d'auteur.</div>
+          <div class="uc"><b>10</b>Plan de marque employeur — cartographier et activer les ambassadeurs internes (employee advocacy).</div>
+          <div class="uc"><b>11</b>Manifeste RSE — mettre en récit des données d'impact.</div>
+          <div class="uc"><b>12</b>Mise en place d'un système IA personnel — gabarits, bibliothèque de prompts et agent Claude pour automatiser la production récurrente.</div>
+        </div>
+      </div>
+
+      <div class="sanctuaire"><b>Sanctuaire des 30 %</b>L'intelligence situationnelle émotionnelle, l'entretien des relations de confiance avec les journalistes clés, l'incarnation physique lors des prises de parole.</div>
+
+      <div class="declinaison-head"><span class="tag">Déclinaison B</span><h3>Journalisme, RP et Rédaction</h3></div>
+      <p class="marche"><b>Marché :</b> B2B (rédactions, agences RP) ou B2C (indépendants, pigistes, attachés de presse freelance) · <b>Sensibilité :</b> Éthique, protectrice, obsédée par la vérité et la relation de confiance avec la presse</p>
+
+      <div class="rowgrid">
+        <div class="card">
+          <h3>Écosystème &amp; pratiques réelles</h3>
+          <p>Évolue en rédaction web/papier, en agence de relations presse ou en pigiste indépendant. Soumis au flux tendu des dépêches, à la course à l'audience côté rédaction, et à la nécessité de connaître intimement chaque journaliste ciblé côté RP. Outils : CMS WordPress, flux AFP, bases de contacts presse, enregistrement audio, montage.</p>
+          <p><b>IA clandestine :</b> retranscription automatique d'interviews de 2h via Speech-to-Text, traduction rapide d'articles étrangers, suggestions de titres SEO, et côté RP, personnalisation automatisée — parfois trop mécanique — des accroches de pitch aux journalistes.</p>
+        </div>
+        <div class="card">
+          <h3>Budget</h3>
+          <p>Enveloppe de formation de reconversion (AFDAS/CPF) ou lignes d'innovation des rédactions et agences RP face à la crise des médias et à la pression sur les résultats de couverture presse.</p>
+          <h3 style="margin-top:16px;">Levier d'achat réel</h3>
+          <p>Un protocole de fact-checking et de ciblage média augmenté pour accélérer le traitement des sources et des relations presse sans jamais trahir la déontologie.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:18px;">
+        <h3>Cartographie des peurs inconscientes</h3>
+        <div class="peur"><b>La fausse information propagée</b><span>Peur viscérale de relayer sans le vouloir une infox ou une image manipulée par IA, détruisant sa carte de presse et sa réputation.</span></div>
+        <div class="peur"><b>Le pillage industriel du terrain</b><span>Angoisse de voir sa valeur d'enquête balayée par des fermes de contenus qui réécrivent ses articles en 10 secondes pour capter le trafic — et côté RP, la peur de voir un pitch personnalisé démasqué comme généré en masse, ce qui grillerait la relation avec le journaliste.</span></div>
+      </div>
+
+      <div class="langage" style="margin-bottom:18px;">
+        <div><div class="label">Le Masque</div><p>« L'IA générative menace la démocratie. Une machine ne fera jamais d'investigation sur le terrain, ni de vraie relation avec un journaliste. »</p></div>
+        <div><div class="label">Le Secret</div><p>« Nous utilisons tous l'IA pour retranscrire ou personnaliser nos pitchs par manque de temps. Si la source ou le journaliste le sait, la confiance s'effondrera. »</p></div>
+      </div>
+
+      <div class="accroche">Protégez la déontologie de votre plume et la confiance de vos contacts presse. Apprenez à utiliser l'IA comme une cellule de contre-enquête et de ciblage média pour traquer les biais et redonner du temps à l'investigation et à la relation humaine.</div>
+
+      <div class="card wrap-x" style="margin-bottom:18px;">
+        <h3>Matrice de transformation PACE™</h3>
+        <table class="matrice">
+          <tr><th>Livrable critique</th><th>Avant — le processus épuisant</th><th>Après — le processus augmenté</th></tr>
+          <tr><td class="livrable">Enquête à partir de fuites de données (5 000 pages)</td><td>Des mois de lecture manuelle épuisante, journalistes au bord du burn-out, risque permanent de rater la connexion clé.</td><td>L'IA ingère les documents de manière hermétique. Le journaliste applique PACE™ pour croiser les entités nommées et faire surgir les signaux financiers instantanément.</td></tr>
+        </table>
+      </div>
+
+      <div class="usecases">
+        <h3>Les 12 cas d'usage</h3>
+        <div class="uc-grid">
+          <div class="uc"><b>01</b>Retranscription intelligente — extraire les citations clés d'un long audio.</div>
+          <div class="uc"><b>02</b>Analyse de fuites (leaks) — croiser des entités dans des bases volumineuses.</div>
+          <div class="uc"><b>03</b>Traduction croisée des angles de la presse internationale.</div>
+          <div class="uc"><b>04</b>Titrage SEO éthique, sans tomber dans le clic-bait.</div>
+          <div class="uc"><b>05</b>Veille concurrentielle — simuler l'angle d'une rédaction adverse.</div>
+          <div class="uc"><b>06</b>Condensation de rapports institutionnels denses en une page.</div>
+          <div class="uc"><b>07</b>Fact-checking de communiqués — débusquer biais et greenwashing.</div>
+          <div class="uc"><b>08</b>Structuration de dossiers d'enquête transversaux.</div>
+          <div class="uc"><b>09</b>Ciblage média — identifier et prioriser les bons journalistes pour un sujet donné, sans pitch générique.</div>
+          <div class="uc"><b>10</b>Mise en place d'un système IA personnel — automatiser veille, retranscription et premier jet pour les formats réguliers (chroniques, brèves, newsletters).</div>
+          <div class="uc"><b>11</b>Contre-enquête logique — sparring-partner sur les failles d'une controverse.</div>
+          <div class="uc"><b>12</b>Media training augmenté — simulation de questions difficiles avant une interview ou un point presse.</div>
+        </div>
+      </div>
+
+      <div class="sanctuaire"><b>Sanctuaire des 30 %</b>Le courage d'aller interroger des sources anonymes sur le terrain, la sensibilité humaine pour recueillir un témoignage intime, la relation de confiance construite avec un journaliste au fil des années, la responsabilité morale de sa signature.</div>
+      <div class="source"><b>Source :</b> cadre déontologique de référence (support M2i) — Charte de Paris (RSF), Syndicat National des Journalistes, Conseil de Déontologie du Journalisme et des Médias — et fil rouge pédagogique « La Dépêche du Grand Ouest » pour ancrer les cas dans une rédaction fictive plutôt que des exercices abstraits.</div>
+    </section>
+
+    <!-- ============ OFFRE 5 ============ -->
+    <section class="fiche" id="offre5">
+      <div class="num">Offre 5 — Construite pour cadreIActif · aucune fiche source équivalente</div>
+      <h2>Les Entreprises à Impact à l'Ère de l'IA</h2>
+      <p class="souscat">Animation de réseaux et impact — associations, fondations, fédérations et entreprises à mission qui doivent prouver leur impact sans jamais paraître l'instrumentaliser.</p>
+      <p class="marche"><b>Marché :</b> B2B associatif (associations, fondations, fédérations) et B2B mission (entreprises à mission) · <b>Sensibilité :</b> Vigilante, économe, méfiante envers tout ce qui ressemble à du greenwashing</p>
+
+      <div class="rowgrid">
+        <div class="card">
+          <h3>Écosystème &amp; pratiques réelles</h3>
+          <p>Équipe réduite (2 à 8 personnes, parfois bénévoles), multi-casquettes — souvent en charge à la fois de l'action de terrain, du reporting et de l'animation du réseau de partenaires, adhérents ou antennes locales. Rend compte à un conseil d'administration, des financeurs, ou un comité de mission. Outils : Excel, Canva, ChatGPT gratuit ponctuellement, aucun outil dédié à l'analyse d'impact ni à l'animation de réseau.</p>
+          <p><b>IA clandestine :</b> rédige des dossiers de subvention ou résume des rapports terrain à l'IA sans oser le mentionner aux financeurs, par peur que cela paraisse « moins sincère » ou « moins mérité ».</p>
+        </div>
+        <div class="card">
+          <h3>Budget</h3>
+          <p>55 % des associations disposent d'une enveloppe numérique dédiée, mais 81 % la financent sur leurs fonds propres et seules 13 % bénéficient de subventions publiques fléchées — l'IA n'est pas encore isolée comme ligne budgétaire à part.</p>
+          <h3 style="margin-top:16px;">Levier d'achat réel</h3>
+          <p>Transformer un reporting subi en outil de conviction, construit au fil de l'eau plutôt qu'à la dernière minute, sans recruter de compétence data. 75 % des Français se disent plus enclins à donner à une association qui « rend compte » à ses donateurs — documenter son impact est un investissement direct dans la collecte.</p>
+        </div>
+      </div>
+      <div class="source"><b>Sources :</b> Solidatech &amp; Recherches &amp; Solidarités, <i>La place du numérique dans le projet associatif</i>, 5<sup>e</sup> édition, novembre 2025 (budget) · Don en Confiance, <i>Baromètre de la confiance</i>, 2021 (75 % rendre compte).</div>
+
+      <div class="card" style="margin-bottom:18px;">
+        <h3>Cartographie des peurs inconscientes</h3>
+        <div class="peur"><b>Le soupçon de l'artifice</b><span>Peur que communiquer son impact à l'aide de l'IA soit perçu comme une preuve de moins bonne foi, alors que la sincérité de l'action ne fait aucun doute.</span></div>
+        <div class="peur"><b>L'angoisse de l'audit qui tombe</b><span>Pour l'entreprise à mission : crainte de découvrir, au moment de l'audit de l'Organisme Tiers Indépendant (OTI) — obligatoire tous les 2 à 3 ans selon la taille de l'entreprise, loi PACTE 2019 — que les décisions de l'année n'ont jamais été tracées comme liées à la mission.</span></div>
+      </div>
+
+      <div class="langage" style="margin-bottom:18px;">
+        <div><div class="label">Le Masque</div><p>« Notre mission se prouve par nos actions, pas par des éléments de langage. »</p></div>
+        <div><div class="label">Le Secret</div><p>« On sait qu'on a un impact réel, mais on est incapables de le documenter proprement avant qu'on nous le demande. »</p></div>
+      </div>
+
+      <div class="accroche">Ne laissez pas votre impact rester une conviction. Apprenez à le documenter au fil de l'eau, pour qu'il devienne une preuve — pas un rapport de dernière minute.</div>
+
+      <div class="card wrap-x" style="margin-bottom:18px;">
+        <h3>Matrice de transformation PACE™</h3>
+        <table class="matrice">
+          <tr><th>Livrable critique</th><th>Avant — le processus épuisant</th><th>Après — le processus augmenté</th></tr>
+          <tr><td class="livrable">Rapport de comité de mission ou dossier financeurs</td><td>Compilation de dernière minute de données éparses, angoisse de l'oubli, reporting perçu comme une corvée administrative.</td><td>Un système de traçabilité continue des décisions liées à la mission ; un rapport structuré par l'IA à partir de données déjà collectées ; une communication d'impact qui convainc sans verser dans le greenwashing.</td></tr>
+        </table>
+      </div>
+
+      <div class="usecases">
+        <h3>Les 12 cas d'usage</h3>
+        <div class="uc-grid">
+          <div class="uc"><b>01</b>Cartographie continue des décisions liées à la mission.</div>
+          <div class="uc"><b>02</b>Synthèse accélérée de dossiers de subvention.</div>
+          <div class="uc"><b>03</b>Analyse de rapports terrain volumineux.</div>
+          <div class="uc"><b>04</b>Template de reporting d'impact réutilisable d'une année sur l'autre.</div>
+          <div class="uc"><b>05</b>Préparation du rapport annuel du comité de mission.</div>
+          <div class="uc"><b>06</b>Veille réglementaire légère (obligations sectorielles, échéances OTI).</div>
+          <div class="uc"><b>07</b>Communication donateurs — traduire des données arides en récit.</div>
+          <div class="uc"><b>08</b>Détection des formulations à risque de greenwashing avant publication.</div>
+          <div class="uc"><b>09</b>Animation de réseau — newsletter et brief type pour antennes locales ou partenaires, sans réécrire chaque envoi de zéro.</div>
+          <div class="uc"><b>10</b>Cartographie des parties prenantes du réseau à informer selon le sujet (adhérents, antennes, financeurs, grand public).</div>
+          <div class="uc"><b>11</b>Comparateur d'impact d'une année sur l'autre, en langage clair.</div>
+          <div class="uc"><b>12</b>Préparation à l'audit OTI — cohérence décisions / objectifs de mission.</div>
+        </div>
+      </div>
+
+      <div class="sanctuaire"><b>Sanctuaire des 30 %</b>La conviction incarnée du dirigeant associatif ou du porteur de mission, la relation de confiance construite avec les financeurs et le réseau de partenaires dans la durée, l'authenticité du témoignage de terrain qu'aucune donnée ne remplace.</div>
+    </section>
+
+  </main>
+</div>
